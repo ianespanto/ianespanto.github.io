@@ -130,10 +130,10 @@ export default function App() {
 			tl.to(transitionText.current, 1.4, { alpha: 1, y: 0, ease: 'power4.inOut' }, 'l+=.1');
 			tl.staggerFrom(
 				transitionCharRef.current,
-				1.5,
-				{ ease: 'power4.inOut', y: gsap.utils.wrap([-20, 20]), alpha: 0 },
-				0.05,
-				'l+=.3'
+				2,
+				{ ease: 'elastic.inOut(1.2, 0.4)', y: gsap.utils.wrap([-60, 60]), alpha: 0 },
+				0.03,
+				'l+=.2'
 			);
 			tl.add(() => {
 				setPageTransInProgress(false);
@@ -141,7 +141,7 @@ export default function App() {
 			}, 'l+=1.5');
 			tl.to(transitionBox.current, 1.5, { y: '-100%', ease: 'power4.inOut' }, 'l+=1.5');
 			tl.to(transitionText.current, 1.4, { y: '-100%', ease: 'power4.inOut' }, 'l+=1.6');
-			tl.to(transitionText.current, 1, { alpha: 0, ease: 'power4.inOut' }, 'l+=1.6');
+			tl.to(transitionText.current, 1.4, { alpha: 0, ease: 'power4.inOut' }, 'l+=1.6');
 
 			tl.eventCallback('onComplete', () => {
 				document.body.classList.remove('no-action');
@@ -184,7 +184,8 @@ export default function App() {
 	useEffect(() => {
 		const resizeHandler = () => {
 			setWindowSize(viewport());
-			gsap.set([transitionBox.current, transitionText.current], {
+			gsap.to([transitionBox.current, transitionText.current], {
+				duration: 0.2,
 				height: viewport().h,
 			});
 			if (viewport().w > 640) {
