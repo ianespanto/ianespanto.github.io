@@ -15,7 +15,7 @@ import { viewport } from './components/utils/helpers';
 export default function App() {
 	gsap.registerPlugin(ScrollToPlugin);
 
-	const playIntroTransition = 0;
+	const playIntroTransition = 1;
 
 	const location = useLocation();
 	const mainWrapper = useRef(null);
