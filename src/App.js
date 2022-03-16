@@ -185,7 +185,7 @@ export default function App() {
 		const resizeHandler = () => {
 			setWindowSize(viewport());
 			gsap.to([transitionBox.current, transitionText.current], {
-				duration: 0.2,
+				duration: 0.4,
 				height: viewport().h,
 			});
 			if (viewport().w > 640) {
@@ -290,7 +290,7 @@ export default function App() {
 							<span className="loading-name-overlay" ref={loadingNameOverlay}></span>
 						</span>
 						<span className="loading-title" ref={loadingTitle}>
-							interactive developer
+							frontend engineer
 						</span>
 					</div>
 					<div>
