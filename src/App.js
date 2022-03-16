@@ -225,6 +225,7 @@ export default function App() {
 				setMobileNavOpen={setMobileNavOpen}
 				creditTooltipOpen={creditTooltipOpen}
 				setCreditTooltipOpen={setCreditTooltipOpen}
+				windowSize={windowSize}
 			/>
 			<div className="wrapper" ref={mainWrapper}>
 				<Header
