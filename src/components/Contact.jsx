@@ -135,13 +135,7 @@ export default function Contact() {
 
 						<div className="form-container">
 							{success || (
-								<motion.form
-									initial={'initial'}
-									animate={'animate'}
-									variants={variants}
-									onSubmit={sendEmail}
-									noValidate
-									ref={form}>
+								<form onSubmit={sendEmail} noValidate ref={form}>
 									<div className="grid grid--gutters">
 										<div className="grid__item">
 											<div className="fg">
@@ -224,7 +218,7 @@ export default function Contact() {
 											</button>
 										</div>
 									</div>
-								</motion.form>
+								</form>
 							)}
 							{success && (
 								<motion.p

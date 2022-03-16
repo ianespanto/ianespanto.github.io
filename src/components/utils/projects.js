@@ -1,15 +1,14 @@
-import porterImg from '../../assets/img/projects/porter.jpg';
-import flexstatsImg from '../../assets/img/projects/flexstats1.jpg';
-import clearseasImg from '../../assets/img/projects/clearseas.jpg';
-import clearseasImg1 from '../../assets/img/projects/la2.jpg';
-import echoeduImg from '../../assets/img/projects/echoedu.jpg';
-import tspImg from '../../assets/img/projects/tsp.jpg';
-import laImg from '../../assets/img/projects/la.jpg';
+import flexstatsImg from '../../assets/img/projects/flexstats.jpg';
+import clearseasImg1 from '../../assets/img/projects/clearseas1.jpg';
+import clearseasImg2 from '../../assets/img/projects/clearseas2.jpg';
+import bcnuImg from '../../assets/img/projects/bcnu.jpg';
 import foundryImg from '../../assets/img/projects/foundry.jpg';
-import gbfImg from '../../assets/img/projects/tsp.jpg';
+import gbfImg from '../../assets/img/projects/gbf.jpg';
 import youthServiceFinderImg from '../../assets/img/projects/youth-service-finder.jpg';
 import asherImg from '../../assets/img/projects/asher.jpg';
+import laImg from '../../assets/img/projects/la.jpg';
 import goonerImg from '../../assets/img/projects/gooner.jpg';
+import blackjackImg from '../../assets/img/projects/blackjack.jpg';
 
 export const projects = [
 	{
@@ -65,7 +64,7 @@ export const projects = [
 		color: '#dfeef4',
 		img: gbfImg,
 		title: 'Graham Boeckh Foundation',
-		description: 'A full Wordpress theme built for a private foundation with various custom components',
+		description: 'A full Wordpress theme built for a private foundation with various custom components.',
 		footnote: 'Wordpress Theme',
 		tooltip: 'Visit Site',
 	},
@@ -73,7 +72,7 @@ export const projects = [
 		link: 'https://annualreport.bcnu.org/report/2017/',
 		id: 'bcnu',
 		color: '#e8e8ea',
-		img: echoeduImg,
+		img: bcnuImg,
 		title: 'BCNU Annual Report',
 		description: "A brochure site built for BC Nurses' Union using a Wordpress theme written from scratch.",
 		footnote: 'Brochure Site',
@@ -83,7 +82,7 @@ export const projects = [
 		link: 'https://clearseas.org/en/underwater-noise/',
 		id: 'underwater-noise',
 		color: '#c5e4ef',
-		img: clearseasImg,
+		img: clearseasImg2,
 		title: 'Underwater Noise',
 		description:
 			'One of the six bilingual microsites I have built for Clear Seas with custom Wordpress themes.',
@@ -91,7 +90,7 @@ export const projects = [
 		tooltip: 'Visit Site',
 	},
 	{
-		link: 'http://iane.atwebpages.com/archive/asher/',
+		link: 'https://ianespanto.000webhostapp.com/archive/asher/',
 		id: 'asher',
 		color: '#e9dac7',
 		img: asherImg,
@@ -102,7 +101,7 @@ export const projects = [
 		tooltip: 'View Project',
 	},
 	{
-		link: 'http://iane.atwebpages.com/archive/la/',
+		link: 'https://ianespanto.000webhostapp.com/archive/la/',
 		id: 'la',
 		color: '#dfdcd7',
 		img: laImg,
@@ -111,5 +110,26 @@ export const projects = [
 			'A single-page responsive site that showcases some simple user interactions. School Project.',
 		footnote: 'School Project',
 		tooltip: 'View Project',
+	},
+	{
+		link: 'https://ianespanto.000webhostapp.com/archive/goonerblog/',
+		id: 'gooner',
+		color: '#d7d7d7',
+		img: goonerImg,
+		title: 'Gooner Blog',
+		description:
+			'A single-page blog/news demo site that changes from columns to tabs on mobile. School Project.',
+		footnote: 'School Project',
+		tooltip: 'View Project',
+	},
+	{
+		link: 'https://ianespanto.000webhostapp.com/archive/blackjack/',
+		id: 'blackjack',
+		color: '#e8e8e8',
+		img: blackjackImg,
+		title: 'Blackjack',
+		description: 'A web game written in jQuery utilizing classes and animation libraries. School project.',
+		footnote: 'School Project',
+		tooltip: 'Play Game',
 	},
 ];
