@@ -1,0 +1,66 @@
+// Global
+
+$global-width: rem(1440);
+
+
+// Fonts
+
+$font-en: "grotesk", Helvetica, sans-serif;
+$font-ja: "grotesk", "Mplus 1p", Helvetica, sans-serif;
+// $font-cn: "grotesk", Helvetica, sans-serif;
+
+
+// UI Colors
+
+$mineshaft: #878787;
+$silver: #bfbfbf;
+$iron: #e6e7e8;
+$sand: #f8f8f8;
+$white: #fff;
+$black: #282828;
+$deepblack: #111;
+
+$red: #EF6F6C;
+$violet: #340068;
+$snow: #FFFCF9;
+$turquoise: #B1EDE8;
+$aqua: #93C4C0;
+$deepred: #6D435A;
+$platinum: #EFEDEA;
+
+// Icons
+$peach: #f9e3ae;
+$cyclamen: #ed7899;
+$paleaqua: #d1e4f3;
+
+// Projects
+$porter: #dee2e3;
+$echoedu: #e8e8ea;
+$tsp: #dfeef4;
+$blackjack: #e8e8e8;
+$gooner: #d7d7d7;
+$la: #dfdcd7;
+$asher: #e9dac7;
+
+// Breakpoints
+
+$breakpoints: (
+	mini: 0,
+	tablet: 0,
+	small: rem(480),
+	medium: rem(640),
+	portrait: rem(768),
+	between: rem(860),
+	landscape: rem(1024),
+	large: rem(1200),
+	xlarge: rem(1440)
+);
+
+// Animation & Transition
+
+$bounce: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$speed: 0.3s;
+$default-transition-duration: $speed;

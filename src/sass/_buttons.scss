@@ -1,0 +1,49 @@
+.btn {
+	border: rem(1) solid;
+	font-weight: 500;
+	// text-transform: lowercase;
+	font-size: rem(16);
+	padding: 0 rem(15);
+	min-width: rem(200);
+	height: rem(50);
+	line-height: rem(48);
+	text-align: center;
+	display: inline-block;
+	letter-spacing: rem(0.35);
+	-webkit-appearance: none;
+	@include noSelect;
+	transition: background $speed, border-color $speed;
+
+	&:hover {
+		cursor: pointer;
+	}
+	&:focus {
+		outline: none;
+	}
+
+	@include scrollOnHover($white);
+
+	&--primary {
+		background: $mineshaft;
+		border-color: $mineshaft;
+		color: $white;
+		&:hover {
+			background: $black;
+			border-color: $black;
+		}
+	}
+
+	&--full {
+		width: 100%;
+		@include bpmin(portrait) {
+			width: auto;
+		}
+	}
+
+	// &--large {
+	// 	font-size: rem(23);
+	// 	height: rem(60);
+	// 	line-height: rem(60);
+	// 	letter-spacing: rem(0.5);
+	// }
+}

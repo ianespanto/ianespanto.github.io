@@ -1,0 +1,202 @@
+::-moz-selection {
+	color: $white;
+	background: $silver;
+}
+::selection {
+	color: $white;
+	background: $silver;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	letter-spacing: rem(0.2);
+	font-weight: 500;
+	color: $silver;
+	background: $white;
+	min-height: 100vh;
+	&.mn-open {
+		overflow: hidden;
+		.wrapper {
+			@include noSelect;
+			main {
+				transform: translateX(35vw);
+				opacity: 0;
+			}
+			header {
+				transform: translateX(35vw);
+			}
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+	&,
+	button,
+	input,
+	textarea {
+		font-family: $font-en;
+	}
+	&.ja {
+		&,
+		button,
+		input,
+		textarea {
+			font-family: $font-ja;
+		}
+	}
+
+	&.no-action {
+		overflow: hidden;
+		header {
+			@extend .no-transition;
+		}
+	}
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+#root {
+	position: relative;
+}
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		background: rgba($black, 0.15);
+		opacity: 0;
+		@include noAction;
+		transition: opacity 1s $easeInOutQuart;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	outline: rem(1) solid transparent;
+	@include noSelect;
+}
+
+// Mobile Nav
+.mn {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100vh;
+	min-height: rem(380);
+	z-index: 101;
+	background: $white;
+	padding: rem(10) 0;
+	transition: transform 1s $easeInOutQuart, height $speed/2;
+	@include noSelect;
+
+	&.is-open {
+		transform: translateX(100%);
+		.mn-item {
+			opacity: 1;
+			a span {
+				transform: none;
+			}
+		}
+	}
+}
+
+.mn-header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: rem(25) rem(30);
+	line-height: 1.8;
+	color: $silver;
+	justify-content: flex-end;
+	.mn-close {
+		font-size: rem(14);
+		cursor: pointer;
+		display: inline-flex;
+	}
+	@include bpmin(small) {
+		padding: rem(25) rem(60);
+	}
+}
+
+.mn-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	.footer-nav {
+		ul li:before {
+			background: $mineshaft;
+		}
+	}
+}
+
+.mn-items {
+	height: 100%;
+	width: 100%;
+}
+
+.mn-item {
+	position: relative;
+	font-size: rem(40);
+	opacity: 0;
+	transition: opacity $speed * 2;
+	padding: rem(15) 0;
+	text-transform: lowercase;
+	// .en & {
+	// 	font-weight: 700;
+	// }
+	.is-open & {
+		@for $i from 1 through 3 {
+			&:nth-of-type(#{$i}) {
+				a span {
+					transition-delay: 0.2s + $i * 80ms;
+				}
+			}
+		}
+	}
+	@include bpmin(small) {
+		font-size: rem(50);
+	}
+	a {
+		color: $black;
+		display: block;
+		overflow: hidden;
+		span {
+			display: block;
+			transform: translateY(100%);
+			transition: transform $speed * 2 $easeInOutQuart 0.1s;
+		}
+	}
+	&.current {
+		&::before {
+			content: '';
+			position: absolute;
+			right: rem(-25);
+			top: 49%;
+			background: $red;
+			width: rem(10);
+			height: rem(10);
+			border-radius: 50%;
+			animation: (scale-blink 1s $easeInOutQuart infinite);
+		}
+	}
+}

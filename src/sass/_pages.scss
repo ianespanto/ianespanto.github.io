@@ -1,0 +1,392 @@
+// .transBox {
+// 	position: fixed;
+// 	inset: 0;
+// 	background-color: $black;
+// 	z-index: 1000;
+// 	// transform: translateY(100%);
+// }
+
+// ABOUT PAGE
+main.about {
+	padding-top: rem(180);
+	@include bpmin(large) {
+		padding-top: rem(120);
+	}
+}
+
+.about-section {
+	position: relative;
+	&::before {
+		content: '';
+		top: 0;
+		height: rem(1);
+		width: 85%;
+		background: $sand;
+		z-index: 1;
+		@include horizontalCenter;
+	}
+	@include bpmin(medium) {
+		&::before {
+			width: 65%;
+		}
+	}
+	@include bpmin(large) {
+		&::before {
+			width: 50%;
+		}
+		&:first-of-type {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+.about-heading {
+	position: absolute;
+	top: rem(-12);
+	left: 0;
+	width: 100%;
+	color: lighten($silver, 7%);
+	.en & {
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	> span {
+		font-size: rem(10);
+		background: $white;
+		padding: 0 rem(8) 0 0;
+		letter-spacing: rem(2);
+		position: relative;
+		z-index: 2;
+		margin-left: rem(25);
+	}
+	@include bpmin(medium) {
+		top: rem(-10);
+		text-align: center;
+		> span {
+			padding: 0 rem(8);
+			font-size: rem(12);
+			letter-spacing: rem(4);
+			margin-left: 0;
+		}
+	}
+	@include bpmin(large) {
+		width: auto;
+		top: rem(140);
+		left: rem(80);
+		.en & {
+			transform: rotate(-90deg) translateX(-100%);
+			transform-origin: 0% 0%;
+		}
+		.ja & {
+			@include verticalText;
+		}
+		span {
+			padding: 0;
+		}
+	}
+}
+.about-content {
+	padding: rem(60) 0 rem(120) 0;
+	@include bpmin(medium) {
+		padding: rem(70) rem(30) rem(150);
+	}
+	@include bpmin(portrait) {
+		padding: rem(70) rem(60) rem(150);
+	}
+	@include bpmin(large) {
+		padding: rem(140) rem(150);
+	}
+}
+
+// bio
+.bio-t {
+	width: 100%;
+	@include bpmin(landscape) {
+		width: auto;
+		padding-left: rem(60);
+	}
+	p {
+		margin-bottom: rem(25);
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+.bio-img {
+	@include bpmax(landscape) {
+		margin-bottom: rem(50);
+		img {
+			width: 100%;
+			max-width: rem(660);
+			margin: 0 auto;
+		}
+	}
+	@include bpmin(landscape) {
+		img {
+			width: rem(360);
+			max-width: none;
+		}
+	}
+}
+.bio-t,
+.bio-img {
+	flex: 0 1 auto;
+}
+
+// technical-expertise
+// sl = skill list
+.sl {
+	&--carousel {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+
+		.sl__i {
+			width: rem(260);
+			max-width: 100%;
+			transition: transform $speed * 2, opacity $speed * 2;
+			opacity: 0.4;
+			transform: scale(0.8);
+
+			&.is-selected {
+				opacity: 1;
+				transform: scale(1);
+				.mono-icon {
+					opacity: 0;
+				}
+				.color-icon {
+					opacity: 1;
+				}
+			}
+		}
+		.flickity-page-dots {
+			bottom: rem(70);
+			.dot {
+				width: rem(8);
+				height: rem(8);
+				margin: 0 rem(6);
+				opacity: 0.3;
+				transform: scale(0.8);
+				background: $silver;
+				transition: opacity $speed, transform $speed;
+				&.is-selected {
+					transform: scale(1);
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+	&--list {
+		display: flex;
+	}
+	.sl-icon {
+		position: relative;
+		font-size: rem(80);
+		margin-bottom: rem(20);
+		height: rem(80);
+	}
+	.mono-icon,
+	.color-icon {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		transition: opacity $speed * 2;
+	}
+	.color-icon {
+		top: 0;
+		opacity: 0;
+	}
+	.skill-heading {
+		margin-bottom: rem(15);
+		font-size: rem(22);
+	}
+	ul {
+		li {
+			line-height: 1.8;
+			font-weight: 500;
+		}
+	}
+	&__i {
+		text-align: center;
+		position: relative;
+		@include bpmin(portrait) {
+			margin-right: rem(40);
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+		@include bpmin(landscape) {
+			cursor: default;
+			&:hover {
+				.sl-icon {
+					.mono-icon {
+						opacity: 0;
+					}
+					.color-icon {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+// work-experience
+// jl = job list
+.jl {
+	&__i {
+		&:nth-of-type(2n + 1) {
+			@include bpmax(landscape) {
+				margin-bottom: rem(50);
+			}
+			@include bpmin(landscape) {
+				margin-right: rem(60);
+			}
+		}
+		p {
+			&.job-company {
+				margin-bottom: rem(15);
+			}
+			&.job-info {
+				padding-left: rem(18);
+				position: relative;
+				&::before {
+					content: '';
+					@include verticalCenter;
+					height: rem(4);
+					width: rem(4);
+					left: rem(5);
+					border-radius: 50%;
+					background: $iron;
+					@include bpmin(small) {
+						left: rem(3);
+						height: rem(6);
+						width: rem(6);
+					}
+				}
+				&.job-time {
+					margin-bottom: rem(20);
+				}
+			}
+			&.footnote {
+				font-size: rem(12);
+				@include bpmin(medium) {
+					font-size: rem(13);
+				}
+				margin-top: rem(20);
+			}
+		}
+	}
+}
+
+.job-company,
+.school-name {
+	font-size: rem(27);
+	@include bpmin(small) {
+		font-size: rem(34);
+	}
+	@include bpmin(landscape) {
+		font-size: rem(42);
+	}
+}
+
+// education
+// el = education list
+.el {
+	.school-name {
+		margin-bottom: rem(10);
+	}
+	&__i {
+		position: relative;
+		&:first-of-type {
+			padding-bottom: rem(18);
+		}
+		&:last-of-type {
+			padding-top: rem(18);
+		}
+		@include bpmin(portrait) {
+			text-align: center;
+		}
+	}
+}
+
+// profile
+.profile-section {
+	@include bpmin(medium) {
+		.about-content {
+			text-align: center;
+		}
+	}
+}
+
+#map-canvas {
+	height: rem(300);
+	@include bpmin(landscape) {
+		height: rem(400);
+	}
+}
+
+// CONTACT PAGE
+.contact {
+	&.en {
+		.hero-heading {
+			font-weight: 700;
+		}
+	}
+	.hero-heading {
+		line-height: 1.4;
+		margin-bottom: rem(40);
+		font-size: rem(28);
+		@include bpmin(small) {
+			font-size: rem(35);
+		}
+		@include bpmin(medium) {
+			font-size: rem(42);
+		}
+		@include bpmin(portrait) {
+			font-size: rem(49);
+		}
+		@include bpmin(landscape) {
+			font-size: rem(56);
+		}
+	}
+	.contact-info {
+		font-size: rem(18);
+		a {
+			line-height: 1.7;
+			display: block;
+		}
+	}
+	.contact-email {
+		margin-bottom: rem(10);
+	}
+	.hero-area {
+		padding: rem(120) 0;
+	}
+	.form-container {
+		margin-bottom: rem(150);
+		.btn {
+			margin-top: rem(10);
+		}
+	}
+	@include bpmin(medium) {
+		.contact-info {
+			font-size: rem(22);
+		}
+		.contact-email {
+			margin-bottom: 0;
+			margin-right: rem(90);
+		}
+		.hero-area {
+			padding: 20vh 0;
+		}
+	}
+}
+
+.error {
+	text-align: center;
+	color: $black;
+}

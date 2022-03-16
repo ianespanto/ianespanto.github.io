@@ -1,0 +1,439 @@
+// Headings
+// -------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.heading {
+	color: $black;
+	line-height: 1.3;
+	letter-spacing: rem(0);
+	margin-bottom: 0;
+}
+// h1 {
+// 	font-size: rem(42);
+// 	@include bpmin(medium) {
+// 		font-size: rem(52);
+// 	}
+// 	@include bpmin(portrait) {
+// 		font-size: rem(62);
+// 	}
+// }
+// h2 { font-size: rem(36); }
+// h3 { font-size: rem(30); }
+// h4 {
+// 	font-size: rem(27);
+// 	@include bpmin(small) {
+// 		font-size: rem(34);
+// 	}
+// 	@include bpmin(landscape) {
+// 		font-size: rem(42);
+// 	}
+// }
+// h5 { font-size: rem(22); }
+
+// Paragraphs
+// -------------------------
+
+p {
+	line-height: 1.8;
+	// margin-bottom: rem(25);
+	// &:last-of-type { margin-bottom: 0; }
+}
+
+p,
+.responsive-text {
+	@include responsiveText;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+// sub {
+// 	vertical-align: sub;
+// 	font-size: 50%;
+// }
+
+sup {
+	vertical-align: super;
+	font-size: 50%;
+}
+
+// Links
+// -------------------------
+
+a {
+	text-decoration: none;
+}
+
+// Fonts
+// -------------------------
+
+$fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semibold'
+	'hkgrotesk-bold';
+
+@each $font-face in $fonts {
+	@font-face {
+		font-family: 'grotesk';
+		font-style: normal;
+		@if $font-face == 'hkgrotesk-light' {
+			font-weight: 300;
+		} @else if $font-face == 'hkgrotesk-regular' {
+			font-weight: 400;
+		} @else if $font-face == 'hkgrotesk-medium' {
+			font-weight: 500;
+		} @else if $font-face == 'hkgrotesk-semibold' {
+			font-weight: 600;
+		} @else if $font-face == 'hkgrotesk-bold' {
+			font-weight: 700;
+		}
+		src: url('../assets/fonts/#{$font-face}/#{$font-face}.eot');
+		src: url('../assets/fonts/#{$font-face}/#{$font-face}.eot?#iefix')
+				format('embedded-opentype'),
+			url('../assets/fonts/#{$font-face}/#{$font-face}.woff2') format('woff2'),
+			url('../assets/fonts/#{$font-face}/#{$font-face}.woff') format('woff'),
+			url('../assets/fonts/#{$font-face}/#{$font-face}.ttf') format('truetype'),
+			url('../assets/fonts/#{$font-face}/#{$font-face}.svg') format('svg');
+	}
+}
+
+@font-face {
+	font-family: 'Mplus 1p';
+	font-style: normal;
+	font-weight: 500;
+	src: url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.eot);
+	src: url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.eot?#iefix)
+			format('embedded-opentype'),
+		url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.woff2) format('woff2'),
+		url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.woff) format('woff'),
+		url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.ttf) format('truetype');
+}
+
+// @font-face {
+// 	font-family: 'Mplus 1p';
+// 	font-style: normal;
+// 	font-weight: 700;
+// 	src: url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Bold.eot);
+// 	src: url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Bold.eot?#iefix) format('embedded-opentype'),
+// 	url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Bold.woff2) format('woff2'),
+// 	url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Bold.woff) format('woff'),
+// 	url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Bold.ttf) format('truetype');
+// }
+
+// @font-face {
+//   font-family: "Mplus-1p";
+//   font-weight: 500;
+//   font-style: normal;
+//   src: local('Mplus 1p'),
+//   local('Mplus1p-Medium');
+// }
+
+// @font-face {
+//   font-family: "Mplus-1p";
+//   font-weight: 700;
+//   font-style: normal;
+//   src: local('Mplus 1p'),
+//   local('Mplus1p-Bold');
+// }
+
+@mixin font($font, $style: normal, $weight: normal) {
+	font-family: $font, open-sans;
+	font-style: $style;
+	font-weight: $weight;
+}
+
+// Icons
+// --------------------
+
+@font-face {
+	font-family: 'icons';
+	src: url('../assets/fonts/icons/icons.eot?f53qb7');
+	src: url('../assets/fonts/icons/icons.eot?f53qb7#iefix') format('embedded-opentype'),
+		url('../assets/fonts/icons/icons.ttf?f53qb7') format('truetype'),
+		url('../assets/fonts/icons/icons.woff?f53qb7') format('woff'),
+		url('../assets/fonts/icons/icons.svg?f53qb7#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='i-'],
+[class*=' i-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icons' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	letter-spacing: 0 !important;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.i-bulb-c .path1:before {
+	content: '\e900';
+	color: rgb(249, 227, 174);
+}
+.i-bulb-c .path2:before {
+	content: '\e901';
+	margin-left: -1em;
+	color: rgb(250, 239, 222);
+}
+.i-bulb-c .path3:before {
+	content: '\e902';
+	margin-left: -1em;
+	color: rgb(172, 183, 208);
+}
+.i-bulb-c .path4:before {
+	content: '\e903';
+	margin-left: -1em;
+	color: rgb(194, 205, 231);
+}
+.i-bulb-c .path5:before {
+	content: '\e904';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path6:before {
+	content: '\e905';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path7:before {
+	content: '\e906';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path8:before {
+	content: '\e907';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path9:before {
+	content: '\e908';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path10:before {
+	content: '\e909';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path11:before {
+	content: '\e90a';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path12:before {
+	content: '\e90b';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path13:before {
+	content: '\e90c';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path14:before {
+	content: '\e90d';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb-c .path15:before {
+	content: '\e90e';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bulb:before {
+	content: '\e90f';
+}
+.i-gear-c .path1:before {
+	content: '\e927';
+	color: rgb(194, 205, 231);
+}
+.i-gear-c .path2:before {
+	content: '\e928';
+	margin-left: -1em;
+	color: rgb(172, 183, 208);
+}
+.i-gear-c .path3:before {
+	content: '\e929';
+	margin-left: -1em;
+	color: rgb(194, 205, 231);
+}
+.i-gear-c .path4:before {
+	content: '\e92a';
+	margin-left: -1em;
+	color: rgb(249, 221, 143);
+}
+.i-gear-c .path5:before {
+	content: '\e92b';
+	margin-left: -1em;
+	color: rgb(249, 221, 143);
+}
+.i-gear-c .path6:before {
+	content: '\e92c';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path7:before {
+	content: '\e92d';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path8:before {
+	content: '\e92e';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path9:before {
+	content: '\e92f';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path10:before {
+	content: '\e930';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path11:before {
+	content: '\e931';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path12:before {
+	content: '\e932';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path13:before {
+	content: '\e933';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path14:before {
+	content: '\e934';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path15:before {
+	content: '\e935';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path16:before {
+	content: '\e936';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear-c .path17:before {
+	content: '\e937';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-gear:before {
+	content: '\e938';
+}
+.i-bag-c .path1:before {
+	content: '\e939';
+	color: rgb(249, 221, 143);
+}
+.i-bag-c .path2:before {
+	content: '\e93a';
+	margin-left: -1em;
+	color: rgb(239, 200, 142);
+}
+.i-bag-c .path3:before {
+	content: '\e93b';
+	margin-left: -1em;
+	color: rgb(239, 200, 142);
+}
+.i-bag-c .path4:before {
+	content: '\e93c';
+	margin-left: -1em;
+	color: rgb(237, 120, 153);
+}
+.i-bag-c .path5:before {
+	content: '\e93d';
+	margin-left: -1em;
+	color: rgb(242, 131, 165);
+}
+.i-bag-c .path6:before {
+	content: '\e93e';
+	margin-left: -1em;
+	color: rgb(194, 205, 231);
+}
+.i-bag-c .path7:before {
+	content: '\e93f';
+	margin-left: -1em;
+	color: rgb(194, 205, 231);
+}
+.i-bag-c .path8:before {
+	content: '\e940';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path9:before {
+	content: '\e941';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path10:before {
+	content: '\e942';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path11:before {
+	content: '\e943';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path12:before {
+	content: '\e944';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path13:before {
+	content: '\e945';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path14:before {
+	content: '\e946';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path15:before {
+	content: '\e947';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path16:before {
+	content: '\e948';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path17:before {
+	content: '\e949';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path18:before {
+	content: '\e94a';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag-c .path19:before {
+	content: '\e94b';
+	margin-left: -1em;
+	color: rgb(141, 108, 159);
+}
+.i-bag:before {
+	content: '\e94c';
+}
