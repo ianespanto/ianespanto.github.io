@@ -28,7 +28,7 @@ export default function About({
 		if (sections?.current?.length > 0) {
 			sections.current.forEach((section, i) => {
 				const height = section.offsetHeight;
-				const alpha = Math.min(height / 2, 500);
+				const alpha = Math.min(height / 2, windowSize > 1024 ? 400 : 150);
 				const heightInView = windowSize.h + scrollTop - getPosition(section).y;
 
 				if (
