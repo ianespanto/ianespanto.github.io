@@ -32,21 +32,25 @@ export default function Home({
 	useEffect(() => {
 		if (!pageTransInProgress && homeHeadingWrapper.current) {
 			const animatedHeadings = gsap.timeline({ delay: 0.8 });
-			animatedHeadings.staggerFrom(
-				charRef.current,
-				1,
-				{ ease: 'elastic.out(1, 0.4)', y: 25, rotationZ: 10, alpha: 0, clearProps: 'all' },
-				0.05
-			);
+			animatedHeadings.from(charRef.current, {
+				duration: 1,
+				ease: 'elastic.out(1, 0.4)',
+				y: 25,
+				rotationZ: 10,
+				alpha: 0,
+				clearProps: 'all',
+				stagger: 0.05,
+			});
 			animatedHeadings.from(subheading.current, 0.8, { alpha: 0, clearProps: 'all' }, '-=1.2');
 		} else if (!isInitialLoad && homeHeadingWrapper.current) {
 			const animatedHeadings = gsap.timeline({ delay: 0.2 });
-			animatedHeadings.staggerTo(
-				charRef.current,
-				0.6,
-				{ ease: 'power4.inOut', y: gsap.utils.wrap([-20, 20]), alpha: 0 },
-				0.04
-			);
+			animatedHeadings.to(charRef.current, {
+				duration: 0.6,
+				ease: 'power4.inOut',
+				y: gsap.utils.wrap([-20, 20]),
+				alpha: 0,
+				stagger: 0.04,
+			});
 			animatedHeadings.to(subheading.current, 0.8, { alpha: 0 }, '-=.8');
 		}
 	}, [pageTransInProgress]);
@@ -55,7 +59,8 @@ export default function Home({
 		if (scrollDownWrap.current && scrollDownIcon.current) {
 			if (projectsRevealed.current === 0) {
 				// Down arrow animation
-				gsap.from(scrollDownIcon.current, 0.6, {
+				gsap.from(scrollDownIcon.current, {
+					duration: 0.6,
 					ease: 'elastic.out(1, 0.6)',
 					delay: 1.5,
 					y: -25,
@@ -206,7 +211,7 @@ function Project({
 	useEffect(() => {
 		const height = pItem.current.offsetHeight;
 		const alpha = Math.min(height / 2, 400);
-		const heightInView = viewport().h + scrollTop - getPosition(pItem.current).y;
+		const heightInView = windowSize.h + scrollTop - getPosition(pItem.current).y;
 
 		// project tile fade in animation
 		if (heightInView > alpha && !animated && !pageTransInProgress) {
@@ -214,7 +219,7 @@ function Project({
 			projectsRevealed.current += 1;
 			pItem.current.classList.add('in-view');
 
-			let delay = viewport().w > 860 ? (i % 2 === 0 ? 0.2 : 0.4) : 0.2;
+			let delay = windowSize.w > 860 ? (i % 2 === 0 ? 0.2 : 0.4) : 0.2;
 			const translateX = i % 2 === 0 ? -30 : 30;
 			const scaleX = i % 4 === 0 || i % 4 === 3 ? 0.032 : 0.026;
 			const tl = gsap.timeline({
@@ -222,21 +227,27 @@ function Project({
 			});
 
 			tl.add('l');
-			tl.from(pItem.current, 0.9, { x: translateX, y: 30, clearProps: 'all' }, 'l');
-			tl.from(pOverlays.current, 0.3, { alpha: 0 }, 'l');
-			tl.to(pOverlays.current, 0.3, { alpha: 0.5 }, 'l+=.3');
-			tl.to(pOverlays.current, 0.3, { alpha: 1 }, 'l+=.6');
-			tl.from(pImg.current, 1, { ease: 'power4.inOut', x: -15, alpha: 0, clearProps: 'all' }, 'l+=.9');
-			tl.staggerTo(
+			tl.from(pItem.current, { duration: 0.9, x: translateX, y: 30, clearProps: 'all' }, 'l');
+			tl.from(pOverlays.current, { duration: 0.3, alpha: 0 }, 'l');
+			tl.to(pOverlays.current, { duration: 0.3, alpha: 0.5 }, 'l+=.3');
+			tl.to(pOverlays.current, { duration: 0.3, alpha: 1 }, 'l+=.6');
+			tl.from(
+				pImg.current,
+				{ duration: 1, ease: 'power4.inOut', x: -15, alpha: 0, clearProps: 'all' },
+				'l+=.9'
+			);
+			tl.to(
 				pOverlays.current,
-				1,
-				{ ease: 'power4.inOut', transformOrigin: '100% 0%', scaleX: 0 },
-				0.05,
+				{ duration: 1, ease: 'power4.inOut', transformOrigin: '100% 0%', scaleX: 0, stagger: 0.05 },
 				'l+=.9'
 			);
 
 			if (project.id !== 'about') {
-				tl.from(pCopy.current, 1, { ease: 'power4.inOut', alpha: 0, clearProps: 'all' }, 'l+=.9');
+				tl.from(
+					pCopy.current,
+					{ duration: 1, ease: 'power4.inOut', alpha: 0, clearProps: 'all' },
+					'l+=.9'
+				);
 			}
 
 			tl.eventCallback('onComplete', () => {
@@ -268,7 +279,8 @@ function Project({
 			const width = pImgContainer.current.offsetWidth;
 			const tooltipX = offsetX < 0 ? 0 : offsetX > width ? width : offsetX;
 			const tooltipY = offsetY < 0 ? 0 : offsetY > height ? height : offsetY;
-			gsap.to(pImg.current, 0.4, {
+			gsap.to(pImg.current, {
+				duration: 0.4,
 				rotationY: ((offsetX / width) * 2 - 1) * angle,
 				rotationX: (1 - (offsetY / height) * 2) * angle,
 				transformOrigin: '50% 50%',
@@ -276,7 +288,8 @@ function Project({
 			});
 
 			if (!isAbout) {
-				gsap.to(pTooltip.current, 0.6, {
+				gsap.to(pTooltip.current, {
+					duration: 0.6,
 					rotationY: ((offsetX / width) * 2 - 1) * angle,
 					rotationX: (1 - (offsetY / height) * 2) * angle,
 					rotationZ: 0,
@@ -292,9 +305,16 @@ function Project({
 		if (viewport().w > 1024) {
 			if (!isAbout) {
 				pFooter.current.classList.remove('active');
-				gsap.to(pTooltip.current, 0.4, { alpha: 0, scale: 0.6 });
+				gsap.to(pTooltip.current, { duration: 0.4, alpha: 0, scale: 0.6 });
 			}
-			gsap.to(pImg.current, 0.4, { rotationX: 0, rotationY: 0, z: 0, alpha: 1, clearProps: 'all' });
+			gsap.to(pImg.current, {
+				duration: 0.4,
+				rotationX: 0,
+				rotationY: 0,
+				z: 0,
+				alpha: 1,
+				clearProps: 'all',
+			});
 		}
 	};
 

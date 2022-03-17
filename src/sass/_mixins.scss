@@ -280,3 +280,8 @@
 		color: $color;
 	}
 }
+
+// replacement for overflow hidden
+@mixin clipBox {
+	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}

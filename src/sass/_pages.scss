@@ -115,6 +115,13 @@ main.about {
 	}
 }
 .bio-img {
+	position: relative;
+	@include clipBox;
+
+	&__overlay {
+		@extend .pl__o;
+	}
+
 	@include bpmax(landscape) {
 		margin-bottom: rem(50);
 		img {
@@ -149,6 +156,10 @@ main.about {
 			transition: transform $speed * 2, opacity $speed * 2;
 			opacity: 0.4;
 			transform: scale(0.8);
+
+			.color-icon {
+				opacity: 0;
+			}
 
 			&.is-selected {
 				opacity: 1;
@@ -197,7 +208,7 @@ main.about {
 	}
 	.color-icon {
 		top: 0;
-		opacity: 0;
+		opacity: 1;
 	}
 	.skill-heading {
 		margin-bottom: rem(15);
@@ -220,16 +231,16 @@ main.about {
 		}
 		@include bpmin(landscape) {
 			cursor: default;
-			&:hover {
-				.sl-icon {
-					.mono-icon {
-						opacity: 0;
-					}
-					.color-icon {
-						opacity: 1;
-					}
-				}
-			}
+			// &:hover {
+			// 	.sl-icon {
+			// 		.mono-icon {
+			// 			opacity: 0;
+			// 		}
+			// 		.color-icon {
+			// 			opacity: 1;
+			// 		}
+			// 	}
+			// }
 		}
 	}
 }
@@ -322,10 +333,11 @@ main.about {
 	}
 }
 
-#map-canvas {
+.map-canvas {
 	height: rem(300);
+	// pointer-events: none;
 	@include bpmin(landscape) {
-		height: rem(400);
+		height: rem(380);
 	}
 }
 

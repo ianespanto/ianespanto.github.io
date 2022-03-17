@@ -4,9 +4,23 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Wrapper, Status } from '@googlemaps/react-wrapper';
 
 export default function Contact() {
 	gsap.registerPlugin(ScrollToPlugin);
+
+	const mapRender = status => {
+		switch (status) {
+			case Status.LOADING:
+				return null;
+			case Status.FAILURE:
+				return null;
+			case Status.SUCCESS:
+				return <Map center={{ lat: 49.2801619, lng: -123.1195242 }} zoom={13} />;
+			default:
+				return null;
+		}
+	};
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -242,7 +256,35 @@ export default function Contact() {
 						</div>
 					</div>
 				</section>
+				<div>
+					<Wrapper apiKey={'AIzaSyA5cx_LMgHlh2WB1kyBMfZ2U5DwEvdl7Lk'} render={mapRender}></Wrapper>
+				</div>
 			</main>
 		</>
 	);
+}
+
+function Map({ center, zoom }) {
+	const ref = useRef();
+
+	useEffect(() => {
+		new window.google.maps.Map(ref.current, {
+			mapId: 'bddd0e3be40d1004',
+			center,
+			zoom,
+			disableDefaultUI: true,
+			disableDoubleClickZoom: true,
+			scrollwheel: false,
+			draggable: false,
+			zoomControl: false,
+			mapTypeControl: false,
+			scaleControl: false,
+			streetViewControl: false,
+			panControl: false,
+			rotateControl: false,
+			fullscreenControl: false,
+		});
+	}, []);
+
+	return <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} ref={ref} className="map-canvas" />;
 }

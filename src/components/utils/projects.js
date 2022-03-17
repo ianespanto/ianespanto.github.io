@@ -97,7 +97,7 @@ export const projects = [
 		title: 'Asher Eyewear',
 		description:
 			'A five-page e-commerce demo site with some basic hover and scroll effects. School project.',
-		footnote: 'School Project',
+		footnote: 'E-commerce Template',
 		tooltip: 'View Project',
 	},
 	{
@@ -119,7 +119,7 @@ export const projects = [
 		title: 'Gooner Blog',
 		description:
 			'A single-page blog/news demo site that changes from columns to tabs on mobile. School Project.',
-		footnote: 'School Project',
+		footnote: 'News Site Template',
 		tooltip: 'View Project',
 	},
 	{
@@ -129,7 +129,7 @@ export const projects = [
 		img: blackjackImg,
 		title: 'Blackjack',
 		description: 'A web game written in jQuery utilizing classes and animation libraries. School project.',
-		footnote: 'School Project',
+		footnote: 'JavaScript Game',
 		tooltip: 'Play Game',
 	},
 ];

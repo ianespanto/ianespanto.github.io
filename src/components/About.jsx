@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 import Flickity from 'flickity';
 import { pageTransitionVariants, skillLists, jobList, schoolList } from './utils/variables';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { delayRedirect } from './utils/helpers';
+import { delayRedirect, getPosition } from './utils/helpers';
 
 export default function About({
 	pageTransInProgress,
@@ -15,11 +15,42 @@ export default function About({
 	scrollTop,
 	lastScrollTop,
 	windowSize,
+	entireAnimationCompleted,
 }) {
 	gsap.registerPlugin(ScrollToPlugin);
 
 	const navigate = useNavigate();
 	const location = useLocation();
+
+	const sections = useRef([]);
+
+	useEffect(() => {
+		if (sections?.current?.length > 0) {
+			sections.current.forEach((section, i) => {
+				const height = section.offsetHeight;
+				const alpha = Math.min(height / 2, 500);
+				const heightInView = windowSize.h + scrollTop - getPosition(section).y;
+
+				if (
+					heightInView > alpha &&
+					!section.classList.contains('in-view') &&
+					!pageTransInProgress &&
+					entireAnimationCompleted
+				) {
+					section.classList.add('in-view');
+
+					gsap.from(section, {
+						delay: 0.2,
+						duration: 1,
+						ease: 'power2.out',
+						y: 50,
+						alpha: 0,
+						clearProps: 'all',
+					});
+				}
+			});
+		}
+	}, [windowSize, scrollTop, pageTransInProgress, entireAnimationCompleted]);
 
 	useEffect(() => {
 		document.title = 'About · Ian Espanto';
@@ -37,7 +68,7 @@ export default function About({
 				<Bio />
 
 				{/* Technical Expertise */}
-				<div className="about-section">
+				<div className="about-section jello" ref={elm => (sections.current[0] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-heading">
 							<span>Technical Expertise</span>
@@ -48,7 +79,7 @@ export default function About({
 				</div>
 
 				{/* Work Experience */}
-				<div className="about-section">
+				<div className="about-section jello" ref={elm => (sections.current[1] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-heading">
 							<span>Work Experience</span>
@@ -68,7 +99,7 @@ export default function About({
 				</div>
 
 				{/* Education */}
-				<div className="about-section">
+				<div className="about-section jello" ref={elm => (sections.current[2] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-heading">
 							<span>Education</span>
@@ -98,7 +129,7 @@ export default function About({
 				</div>
 
 				{/* Closing */}
-				<div className="about-section profile-section">
+				<div className="about-section jello profile-section" ref={elm => (sections.current[3] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-content">
 							<p className="jello-child">
@@ -126,25 +157,35 @@ export default function About({
 
 function Bio() {
 	const bioSection = useRef(null);
-	const bioImg = useRef(null);
+	const bioImgWrap = useRef(null);
+	const bioImgOverlay = useRef(null);
+	const bioImgs = useRef([]);
 	const bioCopy = useRef([]);
 
 	useEffect(() => {
 		if (bioSection.current) {
-			// const tl = gsap.timeline({ delay: 0.8 });
-			// tl.add('l');
-			// tl.from(bioImg.current, 1.5, { ease: 'power2.out', x: -30 }, 'l');
-			// tl.from(bioImg.current, 1.5, { alpha: 0, clearProps: 'all' }, 'l');
-			// tl.staggerFrom(
-			// 	bioCopy.current,
-			// 	1.5,
-			// 	{ ease: 'power2.out', x: 30, alpha: 0, clearProps: 'all' },
-			// 	0.1,
-			// 	'l+=.15'
-			// );
-			// tl.add(() => {
-			// 	// scroll handler?
-			// }, 'l+=.8');
+			const bioTl = gsap.timeline({ delay: 0.2 });
+			bioTl.add('l');
+			bioTl.from(bioImgOverlay.current, { duration: 0.3, alpha: 0 });
+			bioTl.to(bioImgOverlay.current, { duration: 0.3, alpha: 0.5 });
+			bioTl.to(bioImgOverlay.current, { duration: 0.3, alpha: 1 });
+			bioTl.from(bioImgs.current, {
+				duration: 1,
+				ease: 'power4.inOut',
+				x: -15,
+				alpha: 0,
+				clearProps: 'all',
+			});
+			bioTl.to(
+				bioImgOverlay.current,
+				{ duration: 1, ease: 'power4.inOut', transformOrigin: '100% 0%', scaleX: 0 },
+				'-=1'
+			);
+			bioTl.from(
+				bioCopy.current,
+				{ duration: 1, ease: 'power2.out', y: 50, alpha: 0, clearProps: 'all', stagger: 0.2 },
+				'l+=.8'
+			);
 		}
 	}, []);
 
@@ -155,21 +196,24 @@ function Bio() {
 					<span>Me in a Nutshell</span>
 				</div>
 				<div className="responsive-row responsive-row--landscape about-content align-center">
-					<div className="bio-img" ref={bioImg}>
-						<img
-							className="show-landscape"
-							width="600"
-							height="800"
-							src={bioImgDesktop}
-							alt="Ian Espanto"
-						/>
+					<div className="bio-img" ref={bioImgWrap}>
 						<img
 							className="hide-landscape"
 							width="1088"
 							height="816"
 							src={bioImgMobile}
 							alt="Ian Espanto"
+							ref={elm => (bioImgs.current[0] = elm)}
 						/>
+						<img
+							className="show-landscape"
+							width="600"
+							height="800"
+							src={bioImgDesktop}
+							alt="Ian Espanto"
+							ref={elm => (bioImgs.current[1] = elm)}
+						/>
+						<div className="bio-img__overlay" ref={bioImgOverlay}></div>
 					</div>
 					<div className="bio-t">
 						<p ref={elm => (bioCopy.current[0] = elm)}>

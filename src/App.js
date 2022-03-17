@@ -54,45 +54,59 @@ export default function App() {
 				const black = '#282828';
 				const white = '#fff';
 
-				tl.set(loadingTitle.current, { x: '-50%' })
-					.to(transitionBox.current, 0.5, { ease: 'power4.inOut', backgroundColor: white })
-					.to(loading.current, 0.4, { ease: 'power4.inOut', alpha: 1 })
-					.from(loadingNameOverlay.current, 0.9, {
-						ease: 'power4.inOut',
-						scaleX: 0,
-						transformOrigin: '0% 0%',
-					})
-					.set(loadingName.current, { color: black })
-					.to(loadingNameOverlay.current, 0.9, {
-						ease: 'power4.inOut',
-						scaleX: 0,
-						transformOrigin: '100% 0%',
-					})
-					.to(transitionBox.current, 0.5, { ease: 'power4.inOut', backgroundColor: black })
-					.to(loading.current, 0.5, { color: white }, '-=.5')
-					.to(loadingName.current, 0.9, { ease: 'power4.inOut', y: '-100%', alpha: 0 }, '-=.5')
-					.from(loadingTitle.current, 0.9, { ease: 'power4.inOut', y: '100%', alpha: 0 }, '-=.9')
-					.add(() => {
-						setPageTransInProgress(false);
-					})
-					.to(loading.current, 1.5, {
-						ease: 'power4.inOut',
-						y: '-100%',
-						scale: 0.5,
-						rotationZ: 10,
-						alpha: 0,
-					})
-					.to(transitionBox.current, 1.5 / 2, { ease: 'power4.in', y: '-50%', skewY: 7 }, '-=' + 1.5)
-					.to(
-						transitionBox.current,
-						1.5 / 2,
-						{ ease: 'power4.out', y: '-100%', skewY: 0 },
-						'-=' + 1.5 / 2
-					);
+				tl.set(loadingTitle.current, { x: '-50%' });
+				tl.set(loading.current, { color: black });
+				tl.set(loadingNameOverlay.current, { backgroundColor: black });
+				tl.to(transitionBox.current, { duration: 0.5, ease: 'power4.inOut', backgroundColor: white });
+				tl.to(loading.current, { duration: 0.4, ease: 'power4.inOut', alpha: 1 });
+				tl.from(loadingNameOverlay.current, {
+					duration: 0.9,
+					ease: 'power4.inOut',
+					scaleX: 0,
+					transformOrigin: '0% 0%',
+				});
+				tl.set(loadingName.current, { color: black });
+				tl.to(loadingNameOverlay.current, {
+					duration: 0.9,
+					ease: 'power4.inOut',
+					scaleX: 0,
+					transformOrigin: '100% 0%',
+				});
+				tl.to(transitionBox.current, { duration: 0.5, ease: 'power4.inOut', backgroundColor: black });
+				tl.to(loading.current, { duration: 0.5, color: white }, '-=.5');
+				tl.to(loadingName.current, { duration: 0.9, ease: 'power4.inOut', y: '-100%', alpha: 0 }, '-=.5');
+				tl.from(
+					loadingTitle.current,
+					{ duration: 0.9, ease: 'power4.inOut', y: '100%', alpha: 0 },
+					'-=.9'
+				);
+				tl.add(() => {
+					setPageTransInProgress(false);
+				});
+				tl.to(loading.current, {
+					duration: 1.5,
+					ease: 'power4.inOut',
+					y: '-100%',
+					scale: 0.5,
+					rotationZ: 10,
+					alpha: 0,
+				});
+				tl.to(
+					transitionBox.current,
+					{ duration: 1.5 / 2, ease: 'power4.in', y: '-50%', skewY: 7 },
+					'-=' + 1.5
+				);
+				tl.to(
+					transitionBox.current,
+
+					{ duration: 1.5 / 2, ease: 'power4.out', y: '-100%', skewY: 0 },
+					'-=' + 1.5 / 2
+				);
 
 				// Animating page load percentage
 				const animatedPercentage = gsap.timeline({ delay: 1 });
-				animatedPercentage.to(count, 3.4, {
+				animatedPercentage.to(count, {
+					duration: 3.4,
 					percentage: '+=100',
 					roundProps: 'percentage',
 					onUpdate: () => {
@@ -105,7 +119,7 @@ export default function App() {
 				tl.add(() => {
 					setPageTransInProgress(false);
 				});
-				tl.to(transitionBox.current, 1.5, { y: '-100%', ease: 'power4.inOut' });
+				tl.to(transitionBox.current, { duration: 1.5, y: '-100%', ease: 'power4.inOut' });
 			}
 
 			tl.eventCallback('onComplete', () => {
@@ -126,22 +140,26 @@ export default function App() {
 			tl.set(transitionBox.current, { y: '100%' });
 			tl.set(transitionText.current, { y: '100%', alpha: 0 });
 			tl.set(transitionCharRef.current, { y: 0 });
-			tl.to(transitionBox.current, 1.5, { y: 0, ease: 'power4.inOut' }, 'l');
-			tl.to(transitionText.current, 1.4, { alpha: 1, y: 0, ease: 'power4.inOut' }, 'l+=.1');
-			tl.staggerFrom(
+			tl.to(transitionBox.current, { duration: 1.5, y: 0, ease: 'power4.inOut' }, 'l');
+			tl.to(transitionText.current, { duration: 1.4, alpha: 1, y: 0, ease: 'power4.inOut' }, 'l+=.1');
+			tl.from(
 				transitionCharRef.current,
-				2,
-				{ ease: 'elastic.inOut(1.2, 0.4)', y: gsap.utils.wrap([-60, 60]), alpha: 0 },
-				0.03,
+				{
+					duration: 2,
+					ease: 'elastic.inOut(1.2, 0.4)',
+					y: gsap.utils.wrap([-60, 60]),
+					alpha: 0,
+					stagger: 0.03,
+				},
 				'l+=.2'
 			);
 			tl.add(() => {
 				setPageTransInProgress(false);
 				gsap.set(window, { scrollTo: 0 });
 			}, 'l+=1.5');
-			tl.to(transitionBox.current, 1.5, { y: '-100%', ease: 'power4.inOut' }, 'l+=1.5');
-			tl.to(transitionText.current, 1.4, { y: '-100%', ease: 'power4.inOut' }, 'l+=1.6');
-			tl.to(transitionText.current, 1.4, { alpha: 0, ease: 'power4.inOut' }, 'l+=1.6');
+			tl.to(transitionBox.current, { duration: 1.5, y: '-100%', ease: 'power4.inOut' }, 'l+=1.5');
+			tl.to(transitionText.current, { duration: 1.4, y: '-100%', ease: 'power4.inOut' }, 'l+=1.6');
+			tl.to(transitionText.current, { duration: 1.4, alpha: 0, ease: 'power4.inOut' }, 'l+=1.6');
 
 			tl.eventCallback('onComplete', () => {
 				document.body.classList.remove('no-action');
@@ -153,11 +171,11 @@ export default function App() {
 		if (pageTransInProgress && !mobileNavOpen) {
 			const tl = gsap.timeline({ delay: 0.2 });
 			tl.set(contentWrapper.current, { clearProps: 'all' });
-			tl.to(contentWrapper.current, 1.5, { y: -200, alpha: 0, ease: 'power4.inOut' }, 'l');
+			tl.to(contentWrapper.current, { duration: 1.5, y: -200, alpha: 0, ease: 'power4.inOut' }, 'l');
 		} else if (!pageTransInProgress) {
 			const tl = gsap.timeline();
 			tl.set(contentWrapper.current, { y: 200, alpha: 0 });
-			tl.to(contentWrapper.current, 1.5, { y: 0, alpha: 1, ease: 'power4.inOut' });
+			tl.to(contentWrapper.current, { duration: 1.5, y: 0, alpha: 1, ease: 'power4.inOut' });
 		}
 
 		setCreditTooltipOpen(false);
@@ -266,6 +284,7 @@ export default function App() {
 									scrollTop={scrollTop}
 									lastScrollTop={lastScrollTop}
 									windowSize={windowSize}
+									entireAnimationCompleted={entireAnimationCompleted}
 								/>
 							}
 						/>
@@ -281,24 +300,32 @@ export default function App() {
 					</footer>
 				</div>
 			</div>
+
+			{/* full screen black box */}
 			<div className="transitionBox" ref={transitionBox}></div>
-			<div className="loading row align-center no-action" ref={loading}>
-				<div className="loading-container column align-center">
-					<div className="loading-hero-copy">
-						<span className="loading-name" ref={loadingName}>
-							<span>ian espanto</span>
-							<span className="loading-name-overlay" ref={loadingNameOverlay}></span>
-						</span>
-						<span className="loading-title" ref={loadingTitle}>
-							frontend engineer
-						</span>
-					</div>
-					<div>
-						<span className="loading-percentage">{loadingPercentage}</span>%
+
+			{/* animated text during initial load */}
+			{isInitialLoad && (
+				<div className="loading row align-center no-action" ref={loading}>
+					<div className="loading-container column align-center">
+						<div className="loading-hero-copy">
+							<span className="loading-name" ref={loadingName}>
+								<span>ian espanto</span>
+								<span className="loading-name-overlay" ref={loadingNameOverlay}></span>
+							</span>
+							<span className="loading-title" ref={loadingTitle}>
+								frontend engineer
+							</span>
+						</div>
+						<div>
+							<span className="loading-percentage">{loadingPercentage}</span>%
+						</div>
 					</div>
 				</div>
-			</div>
-			<div className="transitionText no-action threed" ref={transitionText}>
+			)}
+
+			{/* transiiton text */}
+			<div className="transitionText no-action" ref={transitionText}>
 				<span>
 					{'ian espanto'.split('').map((char, i) => (
 						<span key={`transitionTextChar_${i}`}>
