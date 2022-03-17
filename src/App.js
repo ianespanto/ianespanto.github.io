@@ -238,7 +238,6 @@ export default function App() {
 	return (
 		<>
 			<MobileNav
-				pageTransInProgress={pageTransInProgress}
 				setPageTransInProgress={setPageTransInProgress}
 				mobileNavOpen={mobileNavOpen}
 				setMobileNavOpen={setMobileNavOpen}
@@ -252,7 +251,6 @@ export default function App() {
 					setPageTransInProgress={setPageTransInProgress}
 					scrollTop={scrollTop}
 					lastScrollTop={lastScrollTop}
-					mobileNavOpen={mobileNavOpen}
 					setMobileNavOpen={setMobileNavOpen}
 					entireAnimationCompleted={entireAnimationCompleted}
 					windowSize={windowSize}
@@ -266,7 +264,6 @@ export default function App() {
 									pageTransInProgress={pageTransInProgress}
 									setPageTransInProgress={setPageTransInProgress}
 									isInitialLoad={isInitialLoad}
-									setIsInitialLoad={setIsInitialLoad}
 									scrollTop={scrollTop}
 									lastScrollTop={lastScrollTop}
 									windowSize={windowSize}
@@ -279,10 +276,7 @@ export default function App() {
 								<About
 									pageTransInProgress={pageTransInProgress}
 									setPageTransInProgress={setPageTransInProgress}
-									isInitialLoad={isInitialLoad}
-									setIsInitialLoad={setIsInitialLoad}
 									scrollTop={scrollTop}
-									lastScrollTop={lastScrollTop}
 									windowSize={windowSize}
 									entireAnimationCompleted={entireAnimationCompleted}
 								/>

@@ -4,23 +4,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Wrapper, Status } from '@googlemaps/react-wrapper';
 
 export default function Contact() {
 	gsap.registerPlugin(ScrollToPlugin);
-
-	const mapRender = status => {
-		switch (status) {
-			case Status.LOADING:
-				return null;
-			case Status.FAILURE:
-				return null;
-			case Status.SUCCESS:
-				return <Map center={{ lat: 49.2801619, lng: -123.1195242 }} zoom={13} />;
-			default:
-				return null;
-		}
-	};
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -35,8 +21,11 @@ export default function Contact() {
 	const [message, setMessage] = useState('');
 	const [success, setSuccess] = useState(false);
 	const [failed, setFailed] = useState(false);
+	const [sending, setSending] = useState(false);
 
 	const devMode = false; // do not actually send email
+	const minCharCount = 100;
+	const maxCharCount = 1000;
 
 	const variants = {
 		initial: {
@@ -59,7 +48,11 @@ export default function Contact() {
 		let hasError = false;
 		const val = e.target.value.trim();
 
-		if (!val || (e.target.name === 'email' && !isValidEmailAddress(val))) {
+		if (
+			!val ||
+			(e.target.name === 'email' && !isValidEmailAddress(val)) ||
+			(e.target.name === 'message' && (message?.length < minCharCount || message?.length > maxCharCount))
+		) {
 			hasError = true;
 		}
 
@@ -73,51 +66,63 @@ export default function Contact() {
 	const sendEmail = e => {
 		e.preventDefault();
 
-		let hasError = false;
+		// only process send request if no send request is already currently in progress
+		if (!sending) {
+			let hasError = false;
 
-		form.current.classList.add('no-action');
+			[nameRef.current, emailRef.current, subjectRef.current, messageRef.current].forEach(field => {
+				const val = field.value.trim();
+				field.value = val;
+				if (
+					!val ||
+					(field.name === 'email' && !isValidEmailAddress(val)) ||
+					(field.name === 'message' &&
+						(message?.length < minCharCount || message?.length > maxCharCount))
+				) {
+					hasError = true;
+					field.classList.add('input-error');
 
-		[nameRef.current, emailRef.current, subjectRef.current, messageRef.current].forEach(field => {
-			const val = field.value.trim();
-			field.value = val;
-			if (!val || (field.name === 'email' && !isValidEmailAddress(val))) {
-				hasError = true;
-				field.classList.add('input-error');
+					const wiggle = gsap.timeline();
+					const totalDuration = 0.4;
+					const totalWiggles = 5;
+					const wiggleX = 2;
 
-				const wiggle = gsap.timeline();
-				const totalDuration = 0.4;
-				const totalWiggles = 5;
-				const wiggleX = 2;
-
-				for (let i = 0; i < totalWiggles; i++) {
-					wiggle.to(field, { duration: totalDuration / totalWiggles / 2, x: -wiggleX });
-					wiggle.to(field, { duration: totalDuration / totalWiggles / 2, x: wiggleX });
-				}
-				wiggle.set(field, { clearProps: 'all' });
-			}
-		});
-
-		if (!hasError) {
-			if (!devMode) {
-				emailjs.sendForm('service_qebiq6j', 'template_erhzsac', form.current, 'iayBg-ydeMU9ypk7L').then(
-					result => {
-						console.log(result.text);
-						setSuccess(true);
-						setFailed(false);
-						e.target.reset();
-					},
-					error => {
-						console.log(error.text);
-						setSuccess(false);
-						setFailed(true);
-						form.current.classList.remove('no-action');
+					for (let i = 0; i < totalWiggles; i++) {
+						wiggle.to(field, { duration: totalDuration / totalWiggles / 2, x: -wiggleX });
+						wiggle.to(field, { duration: totalDuration / totalWiggles / 2, x: wiggleX });
 					}
-				);
+					wiggle.set(field, { clearProps: 'all' });
+				}
+			});
+
+			if (!hasError) {
+				setSending(true);
+				if (!devMode) {
+					emailjs
+						.sendForm('service_qebiq6j', 'template_erhzsac', form.current, 'iayBg-ydeMU9ypk7L')
+						.then(
+							result => {
+								console.log(result.text);
+								setSuccess(true);
+								setFailed(false);
+								e.target.reset();
+							},
+							error => {
+								console.log(error.text);
+								setSuccess(false);
+								setFailed(true);
+								setSending(false);
+							}
+						);
+				}
 			}
-		} else {
-			form.current.classList.remove('no-action');
 		}
 	};
+
+	useEffect(() => {
+		// second layer of security measure, disable form when a send request is in progress
+		sending ? form.current.classList.add('no-action') : form.current.classList.remove('no-action');
+	}, [sending]);
 
 	useEffect(() => {
 		document.title = 'Contact · Ian Espanto';
@@ -160,8 +165,11 @@ export default function Contact() {
 									</a>
 								</div>
 								<div className="" ref={elm => (fadeInElms.current[2] = elm)}>
-									<a className="link-hover link-hover--light" href="/resume.pdf" download>
-										Download Resume
+									<a
+										className="link-hover link-hover--light"
+										href="/ian_espanto_resume.pdf"
+										download>
+										Download Résumé
 									</a>
 								</div>
 							</div>
@@ -235,9 +243,24 @@ export default function Contact() {
 												<label htmlFor="input-message" className="required">
 													Message
 												</label>
-												<span className="char-count show-portrait">
-													{message?.length > 0 && message.length}
-												</span>
+												<AnimatePresence>
+													{message?.length > 0 && (
+														<motion.span
+															initial={{ opacity: 0, x: 5 }}
+															animate={{ opacity: 1, x: 0 }}
+															exit={{ opacity: 0, x: 5 }}
+															transition={{ duration: 0.15 }}
+															className="char-count">
+															{message.length}
+															{message?.length < minCharCount && (
+																<span> / min. {minCharCount}</span>
+															)}
+															{message?.length > maxCharCount && (
+																<span> / max. {maxCharCount}</span>
+															)}
+														</motion.span>
+													)}
+												</AnimatePresence>
 											</div>
 										</div>
 									</div>
@@ -250,6 +273,8 @@ export default function Contact() {
 												value="submit">
 												<span data-hover="Send Message">Send Message</span>
 											</button>
+
+											{sending && <span className="sending-span">Sending...</span>}
 										</div>
 									</div>
 								</form>
@@ -276,37 +301,7 @@ export default function Contact() {
 						</div>
 					</div>
 				</section>
-				{process.env.NODE_ENV === 'production' && (
-					<div ref={elm => (fadeInElms.current[4] = elm)}>
-						<Wrapper apiKey={'AIzaSyA5cx_LMgHlh2WB1kyBMfZ2U5DwEvdl7Lk'} render={mapRender}></Wrapper>
-					</div>
-				)}
 			</main>
 		</>
 	);
-}
-
-function Map({ center, zoom }) {
-	const ref = useRef();
-
-	useEffect(() => {
-		new window.google.maps.Map(ref.current, {
-			mapId: 'bddd0e3be40d1004',
-			center,
-			zoom,
-			disableDefaultUI: true,
-			disableDoubleClickZoom: true,
-			scrollwheel: false,
-			draggable: false,
-			zoomControl: false,
-			mapTypeControl: false,
-			scaleControl: false,
-			streetViewControl: false,
-			panControl: false,
-			rotateControl: false,
-			fullscreenControl: false,
-		});
-	}, []);
-
-	return <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} ref={ref} className="map-canvas" />;
 }

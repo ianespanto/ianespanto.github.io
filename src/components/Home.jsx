@@ -12,7 +12,6 @@ export default function Home({
 	pageTransInProgress,
 	setPageTransInProgress,
 	isInitialLoad,
-	setIsInitialLoad,
 	scrollTop,
 	lastScrollTop,
 	windowSize,

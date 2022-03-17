@@ -381,6 +381,17 @@ main.about {
 		.btn {
 			margin-top: rem(10);
 		}
+
+		.sending-span {
+			display: block;
+			margin-top: rem(20);
+
+			@include bpmin(portrait) {
+				display: inline-block;
+				margin-left: rem(20);
+				margin-top: 0;
+			}
+		}
 	}
 	@include bpmin(medium) {
 		.contact-info {

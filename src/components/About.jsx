@@ -13,7 +13,6 @@ export default function About({
 	pageTransInProgress,
 	setPageTransInProgress,
 	scrollTop,
-	lastScrollTop,
 	windowSize,
 	entireAnimationCompleted,
 }) {

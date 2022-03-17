@@ -9,7 +9,6 @@ export default function Header({
 	setPageTransInProgress,
 	scrollTop,
 	lastScrollTop,
-	mobileNavOpen,
 	setMobileNavOpen,
 	entireAnimationCompleted,
 	windowSize,

@@ -6,7 +6,6 @@ import Footer from './Footer';
 import { gsap } from 'gsap';
 
 export default function MobileNav({
-	pageTransInProgress,
 	setPageTransInProgress,
 	mobileNavOpen,
 	setMobileNavOpen,

@@ -68,7 +68,7 @@ export const jobList = [
 		role: 'Interactive Web Developer',
 		time: 'July 2017 - July 2020',
 		description:
-			"Worked on a wide range of projects with clients from businesses and organizations such as UBC, Clearseas, Foundry BC, BC Nurses' Union, Crofton House School, MYM Nutraceuticals, Graham Boeckh Foundation and so on. Integrated various APIs to develop a custom internal team and project management tool that was extensively used by managers and accountants of the company.",
+			'Worked on a wide range of projects with clients from businesses and organizations such as UBC, Clear Seas, Foundry, BCNU, Crofton House, MYM, Graham Boeckh Foundation and so on. Integrated various APIs to independently design and develop a team, project and budget management internal tool which was extensively used by managers and accountants of the company.',
 		footnote: 'Vancouver based design agency',
 	},
 	{
