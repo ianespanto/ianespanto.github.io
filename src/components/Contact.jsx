@@ -144,6 +144,11 @@ export default function Contact() {
 										ianjespanto@gmail.com
 									</a>
 								</div>
+								<div className="">
+									<a className="link-hover link-hover--light" href="/resume.pdf" download>
+										Download Resume
+									</a>
+								</div>
 							</div>
 						</div>
 
