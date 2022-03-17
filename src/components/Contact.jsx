@@ -25,6 +25,7 @@ export default function Contact() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
+	const fadeInElms = useRef([]);
 	const form = useRef();
 	const nameRef = useRef();
 	const emailRef = useRef();
@@ -125,6 +126,17 @@ export default function Contact() {
 		if (location.pathname !== '/contact') {
 			navigate('/contact', { replace: true });
 		}
+
+		if (fadeInElms?.current?.length > 0) {
+			gsap.from(fadeInElms.current, {
+				delay: 0.4,
+				duration: 1,
+				ease: 'power4.inOut',
+				y: 50,
+				alpha: 0,
+				stagger: 0.1,
+			});
+		}
 	}, []);
 
 	return (
@@ -133,9 +145,12 @@ export default function Contact() {
 				<section>
 					<div className="inner-wrapper inner-wrapper--narrow">
 						<div className="hero-area column">
-							<h1 className="hero-heading">Need a hand? Drop me a line!</h1>
+							<h1 className="hero-heading" ref={elm => (fadeInElms.current[0] = elm)}>
+								<span>Need a hand? </span>
+								<span>Drop me a line!</span>
+							</h1>
 							<div className="contact-info responsive-row responsive-row--medium">
-								<div className="contact-email">
+								<div className="contact-email" ref={elm => (fadeInElms.current[1] = elm)}>
 									<a
 										className="link-hover link-hover--light"
 										href="mailto:ianjespanto@gmail.com"
@@ -144,7 +159,7 @@ export default function Contact() {
 										ianjespanto@gmail.com
 									</a>
 								</div>
-								<div className="">
+								<div className="" ref={elm => (fadeInElms.current[2] = elm)}>
 									<a className="link-hover link-hover--light" href="/resume.pdf" download>
 										Download Resume
 									</a>
@@ -152,7 +167,7 @@ export default function Contact() {
 							</div>
 						</div>
 
-						<div className="form-container">
+						<div className="form-container" ref={elm => (fadeInElms.current[3] = elm)}>
 							{success || (
 								<form onSubmit={sendEmail} noValidate ref={form}>
 									<div className="grid grid--gutters">
@@ -261,9 +276,11 @@ export default function Contact() {
 						</div>
 					</div>
 				</section>
-				<div>
-					<Wrapper apiKey={'AIzaSyA5cx_LMgHlh2WB1kyBMfZ2U5DwEvdl7Lk'} render={mapRender}></Wrapper>
-				</div>
+				{process.env.NODE_ENV === 'production' && (
+					<div ref={elm => (fadeInElms.current[4] = elm)}>
+						<Wrapper apiKey={'AIzaSyA5cx_LMgHlh2WB1kyBMfZ2U5DwEvdl7Lk'} render={mapRender}></Wrapper>
+					</div>
+				)}
 			</main>
 		</>
 	);

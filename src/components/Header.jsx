@@ -34,8 +34,6 @@ export default function Header({
 	}, [scrollTop, windowSize]);
 
 	useEffect(() => {
-		// console.log('pageTransInProgress', pageTransInProgress);
-
 		// page fade in/out animation
 		if (pageTransInProgress) {
 			if (!header.current.classList.contains('hide-header')) {

@@ -42,7 +42,7 @@ export default function About({
 					gsap.from(section, {
 						delay: 0.2,
 						duration: 1,
-						ease: 'power2.out',
+						ease: 'power3.out',
 						y: 50,
 						alpha: 0,
 						clearProps: 'all',
@@ -183,7 +183,7 @@ function Bio() {
 			);
 			bioTl.from(
 				bioCopy.current,
-				{ duration: 1, ease: 'power2.out', y: 50, alpha: 0, clearProps: 'all', stagger: 0.2 },
+				{ duration: 1, ease: 'power3.out', y: 50, alpha: 0, clearProps: 'all', stagger: 0.2 },
 				'l+=.8'
 			);
 		}

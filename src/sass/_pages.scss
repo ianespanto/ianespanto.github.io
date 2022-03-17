@@ -343,18 +343,11 @@ main.about {
 
 // CONTACT PAGE
 .contact {
-	&.en {
-		.hero-heading {
-			font-weight: 700;
-		}
-	}
 	.hero-heading {
+		font-weight: 700;
 		line-height: 1.4;
 		margin-bottom: rem(40);
-		font-size: rem(28);
-		@include bpmin(small) {
-			font-size: rem(35);
-		}
+		font-size: rem(35);
 		@include bpmin(medium) {
 			font-size: rem(42);
 		}
@@ -363,6 +356,11 @@ main.about {
 		}
 		@include bpmin(landscape) {
 			font-size: rem(56);
+		}
+		@include bpmax(medium) {
+			span {
+				display: block;
+			}
 		}
 	}
 	.contact-info {
