@@ -249,7 +249,7 @@ function Bio() {
 							developed multiple applications integrating data fetched from APIs.
 						</p>
 						<p ref={elm => (bioCopy.current[2] = elm)}>
-							Although I am a programmer by definition, I am also proficient in rastor graphics editing
+							Although I am a programmer by definition, I am also proficient in raster graphics editing
 							using Photoshop and have been heavily involved in the design process throughout my
 							career. I am a pianist and a{' '}
 							<a

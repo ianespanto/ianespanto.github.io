@@ -390,7 +390,17 @@ main.about {
 		}
 		.contact-email {
 			margin-bottom: 0;
-			margin-right: rem(90);
+			margin-right: rem(50);
+			position: relative;
+
+			&::after {
+				content: '/';
+				position: absolute;
+				@include noAction;
+				top: rem(7);
+				right: rem(-30);
+				color: $platinum;
+			}
 		}
 		.hero-area {
 			padding: 20vh 0;
