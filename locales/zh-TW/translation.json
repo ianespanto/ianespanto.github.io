@@ -1,0 +1,169 @@
+{
+	"frontend_web_engineer": "前端網絡工程師",
+	"frontend_engineer": "frontend engineer",
+	"menu": "菜單",
+	"close": "關閉",
+	"credits": "版權",
+	"design": "設計",
+	"code": "編碼",
+	"photos": "照片版權",
+	"menu_items": {
+		"work": "作品集",
+		"about": "關於我",
+		"contact": "聯絡"
+	},
+	"about_headings": {
+		"bio": "我的簡介",
+		"skills": "技術知識",
+		"experience": "工作經歷",
+		"education": "教育歷史"
+	},
+	"bio": {
+		"p1": "你好！我是 Ian，一名現位於加拿大不列顛哥倫比亞省的前端網絡工程師。非常專心仔細的我專門從事開發和維護網絡內容管理系統、現代的網站、以及使用最新的工具和技術，例如 React 之類的 JavaScript 框架動態地構建的網絡應用程序。",
+		"p2": {
+			"part1": "一直對編程、設計、與數學很感興趣的我在二〇二五年從加拿大名列前三位的 UBC 大學畢業，取得了",
+			"cpsc": "電腦科學",
+			"and": "以及",
+			"stats": "統計學",
+			"part2": "的科學系學士學位。然後我參加了 BCIT 的計算機學院來專門學習",
+			"frontend_dev": "前端網絡卡發",
+			"part3": "並以全班最卓越的成績完成學業。從那以後，我已為各行各業的客戶合作完成了很多不同的項目、編寫了數十個各種各樣的網站、並開發了多個集成從 API 獲取的數據的網絡應用程序。"
+		},
+		"p3": {
+			"part1": "儘管我本質上是一名程序師，我也精通使用 Photoshop 來進行光柵圖形的編輯，並且在我的整個職業生涯中都大量參與了項目的設計和美化過程。鋼琴和",
+			"composer": "作曲",
+			"part2": "是我在我的閒暇時間中的業餘愛好。"
+		}
+	},
+	"skill_list": {
+		"programming_languages": "程序設計語言",
+		"professional_skillset": "專業的技能",
+		"development_tools": "開發環境及工具",
+		"latest": "最新版",
+		"development": "軟件開發",
+		"animation": "動畫及特效",
+		"database": "數據庫管理"
+	},
+	"jobs": {
+		"signals": {
+			"company": "Signals Design",
+			"role": "網絡互動開發師",
+			"time": "一七年七月 至 二〇年七月",
+			"description": "與來自 UBC 大學、Clear Seas、Foundry、BC 省護士聯盟、Crofton House 學校、MYM 保健品公司、Graham Boeckh 基金會等的企業和組織的客戶合作完成了各種各樣的項目。集成不同的 API，自主設計並開發了一個用於團隊、項目、預算管理的內部使用的工具，該程序被公司經理、會計師廣泛使用。",
+			"footnote": "位於溫哥華的設計機構"
+		},
+		"shoes": {
+			"company": "Shoes.com",
+			"role": "前端開發師",
+			"time": "一五年十一月 至 一六年八月",
+			"description": "與設計師、項目經理、營銷策略師以及其他開發人員合作，在各種開發環境中為公司的多個網上商店創建新的用戶界面功能，並製作響應式網頁。應用了現代工作流程，包括通過 grunt 和 gulp 實現自動化、通過 Git 進行團隊合作和版本控制、以及通過 Maxymiser 進行 A/B 測試。",
+			"footnote": "位於溫哥華和西雅圖的網上商店"
+		}
+	},
+	"education": {
+		"ubc": {
+			"name": "不列顛哥倫比亞大學",
+			"short": "UBC 大學",
+			"degree": "電腦科學及統計學科學系學士學位",
+			"degree_short": "電腦科學及統計學科學系學士學位",
+			"grad": "二〇一五年五月於溫哥華"
+		},
+		"bcit": {
+			"name": "不列顛哥倫比亞理工學院",
+			"short": "BCIT 學院",
+			"degree": "前端開發師特別證書",
+			"degree_short": "前端開發師特別證書",
+			"grad": "二〇一五年十月於溫哥華"
+		}
+	},
+	"bio_closing": {
+		"part1": "作為一個非常注重細節的批判性思考者，我努力通過同時注重網絡開發的功能和美觀兩個方面來充分揮發每個項目的亮點。實現這種平衡的目標激發了我對製作高質量的、不僅視覺上充滿美感和新鮮感而且還具有創新性、互動性和用戶友好性的網站和網絡應用程序的願望。我對各種各樣的有意思的項目都很感興趣，所以如果您需要我幫忙，",
+		"contact_me": "請點一下這裡",
+		"part2": "來聯繫我。"
+	},
+	"projects": {
+		"flexstats": {
+			"title": "Flexstats",
+			"footnote": "React 應用程序",
+			"description": "從頭開始獨立由 React 構建的利用 API 來顯示一個以太坊礦池的動態數據的雙語言網絡應用程序"
+		},
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "Wordpress 微型網站",
+			"description": "為 Clear Seas 加拿大海運中心用 Wordpress 管理系統構建的六個雙語言微型網站之一"
+		},
+		"foundry": {
+			"title": "Foundry BC",
+			"footnote": "Wordpress 大型網站",
+			"description": "為一個非盈利組織製作的 BC 省青年用來尋找他們需要的服務和幫助的大型 Wordpress 網站"
+		},
+		"youth-service-finder": {
+			"title": "青年服務查找器",
+			"footnote": "地點地圖應用程序",
+			"description": "對從 API 獲取的數據進行分組並允許用戶來用搜索和過濾本地服務的 Foundry 應用程序"
+		},
+		"gbf": {
+			"title": "Graham Boeckh Foundation",
+			"footnote": "Wordpress 主題網站",
+			"description": "為一個加拿大私立基金會製作的具備一些自定義組件的雙語言 Wordpress 網站"
+		},
+		"bcnu": {
+			"title": "BCNU 年度報告",
+			"footnote": "Wordpress 宣傳冊網站",
+			"description": "為 BC 省護士聯盟的一七年年度報告由頭構建的 Wordpress 宣傳冊式網站"
+		},
+		"underwater-noise": {
+			"title": "Underwater Noise",
+			"footnote": "Wordpress 微型網站",
+			"description": "為 Clear Seas 加拿大海運中心用 Wordpress 管理系統構建的六個雙語言微型網站之一"
+		},
+		"asher": {
+			"title": "Asher Eyewear",
+			"footnote": "網上商店框架",
+			"description": "具備一些基本的懸停和滾動效果的五頁網上商店框架主題學校項目"
+		},
+		"la": {
+			"title": "Los Angeles",
+			"footnote": "學校項目",
+			"description": "展示一些簡單的滾動效果以及用戶互動的單頁響應式網頁學校項目"
+		},
+		"gooner": {
+			"title": "Gooner Blog",
+			"footnote": "新聞網站框架",
+			"description": "一個可以在移動設備上從豎列變成標籤式佈局的博客或新聞構架學校項目"
+		},
+		"blackjack": {
+			"title": "二十一點",
+			"footnote": "JavaScript 小遊戲",
+			"description": "一個用 jQuery 建造的應用 class 概念和動畫特效庫的小遊戲學校項目"
+		}
+	},
+	"project_tooltip": {
+		"open_application": "打開程序",
+		"visit_site": "參觀網站",
+		"view_project": "查看項目",
+		"play_game": "玩小遊戲"
+	},
+	"learn_more_about_ian": {
+		"part1": "如果您希望更多了解 ",
+		"ian": "Ian",
+		"part2": " 點一下即可"
+	},
+	"need_help": {
+		"part1": "項目需要幫助？",
+		"part2": "馬上聯繫我！"
+	},
+	"download_resume": "下載簡歷(英文)",
+	"form": {
+		"name": "姓名",
+		"email": "郵箱地址",
+		"subject": "信息標題",
+		"message": "信息內容",
+		"submit": "發送信息",
+		"min": "最少",
+		"max": "最多",
+		"sending": "正在發送中...",
+		"sent": "您的信息已被成功發送。我會盡快聯繫您！",
+		"failed": "不好意思，發送失敗了。請您稍後重試或者用上述的聯繫方式直接聯繫我。"
+	}
+}
