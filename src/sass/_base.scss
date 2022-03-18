@@ -42,16 +42,16 @@ body {
 	textarea {
 		font-family: $font-en;
 	}
+	.zh,
 	&.zh {
-		&,
 		button,
 		input,
 		textarea {
 			font-family: $font-zh;
 		}
 	}
+	.zh-TW,
 	&.zh-TW {
-		&,
 		button,
 		input,
 		textarea {
