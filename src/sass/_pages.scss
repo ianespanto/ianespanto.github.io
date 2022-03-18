@@ -75,7 +75,7 @@ main.about {
 		width: auto;
 		top: rem(140);
 		left: rem(80);
-		.en & {
+		&:lang(en) {
 			transform: rotate(-90deg) translateX(-100%);
 			transform-origin: 0% 0%;
 		}
