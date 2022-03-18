@@ -33,6 +33,14 @@ body {
 		}
 	}
 
+	.zh {
+		font-family: $font-zh;
+	}
+
+	.zh-TW {
+		font-family: $font-zh-tw;
+	}
+
 	&.no-scroll {
 		overflow: hidden;
 	}
@@ -41,22 +49,6 @@ body {
 	input,
 	textarea {
 		font-family: $font-en;
-	}
-	.zh,
-	&.zh {
-		button,
-		input,
-		textarea {
-			font-family: $font-zh;
-		}
-	}
-	.zh-TW,
-	&.zh-TW {
-		button,
-		input,
-		textarea {
-			font-family: $font-zh-tw;
-		}
 	}
 
 	&.no-action {
@@ -69,6 +61,24 @@ body {
 
 body * {
 	box-sizing: border-box;
+}
+
+body:lang(zh) {
+	&,
+	button,
+	input,
+	textarea {
+		font-family: $font-zh;
+	}
+}
+
+body:lang(zh-TW) {
+	&,
+	button,
+	input,
+	textarea {
+		font-family: $font-zh-tw;
+	}
 }
 
 #root {

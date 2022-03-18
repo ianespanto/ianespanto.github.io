@@ -215,15 +215,16 @@ export default function App() {
 		if (langList.find(l => l.id === lang)) {
 			i18n.changeLanguage(lang);
 			localStorage.setItem('lang', lang);
+			document.documentElement.lang = lang;
 
-			document.body.classList.add(lang);
-			langList.forEach(({ id }) => {
-				if (id !== lang) {
-					if (document.body.classList.contains(id)) {
-						document.body.classList.remove(id);
-					}
-				}
-			});
+			// document.body.classList.add(lang);
+			// langList.forEach(({ id }) => {
+			// 	if (id !== lang) {
+			// 		if (document.body.classList.contains(id)) {
+			// 			document.body.classList.remove(id);
+			// 		}
+			// 	}
+			// });
 		}
 	}, [lang]);
 

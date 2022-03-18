@@ -79,8 +79,8 @@ main.about {
 			transform: rotate(-90deg) translateX(-100%);
 			transform-origin: 0% 0%;
 		}
-		.zh &,
-		.zh-TW & {
+		&:lang(zh),
+		&:lang(zh-TW) {
 			@include verticalText;
 		}
 		span {
