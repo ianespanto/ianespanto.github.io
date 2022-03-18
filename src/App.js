@@ -57,7 +57,7 @@ export default function App() {
 			document.body.classList.add('no-action');
 			const tl = gsap.timeline({ delay: 0.2 });
 
-			if (location.pathname === '/' && playIntroTransition) {
+			if (location.pathname === '/' && (playIntroTransition || process.env.NODE_ENV === 'production')) {
 				// Intro animation on homepage
 				const count = { percentage: 0 };
 				const black = '#282828';
