@@ -11,11 +11,19 @@ import Footer from './components/Footer';
 import MobileNav from './components/MobileNav';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { viewport } from './components/utils/helpers';
+import { langList } from './components/utils/variables';
+import { useTranslation } from 'react-i18next';
 
 export default function App() {
 	gsap.registerPlugin(ScrollToPlugin);
+	const { t, i18n } = useTranslation();
 
-	const playIntroTransition = 1;
+	const playIntroTransition = 0;
+
+	// try getting user's preferred language from localStorage
+	const [lang, setLang] = useState(
+		localStorage.lang && langList.find(l => l.id === localStorage.lang) ? localStorage.lang : 'en'
+	);
 
 	const location = useLocation();
 	const mainWrapper = useRef(null);
@@ -30,6 +38,7 @@ export default function App() {
 	const transitionCharRef = useRef([]);
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 	const [creditTooltipOpen, setCreditTooltipOpen] = useState(false);
+	const [langTooltipOpen, setLangTooltipOpen] = useState(false);
 
 	const [isInitialLoad, setIsInitialLoad] = useState(true);
 	const [pageTransInProgress, setPageTransInProgress] = useState(true);
@@ -179,6 +188,7 @@ export default function App() {
 		}
 
 		setCreditTooltipOpen(false);
+		setLangTooltipOpen(false);
 	}, [pageTransInProgress]);
 
 	useEffect(() => {
@@ -197,7 +207,25 @@ export default function App() {
 			mainWrapper.current.classList.remove('no-action');
 		}
 		setCreditTooltipOpen(false);
+		setLangTooltipOpen(false);
 	}, [mobileNavOpen]);
+
+	// when language is changed, update it in localStorage
+	useEffect(() => {
+		if (langList.find(l => l.id === lang)) {
+			i18n.changeLanguage(lang);
+			localStorage.setItem('lang', lang);
+
+			document.body.classList.add(lang);
+			langList.forEach(({ id }) => {
+				if (id !== lang) {
+					if (document.body.classList.contains(id)) {
+						document.body.classList.remove(id);
+					}
+				}
+			});
+		}
+	}, [lang]);
 
 	useEffect(() => {
 		const resizeHandler = () => {
@@ -218,6 +246,9 @@ export default function App() {
 		const clickHandler = e => {
 			if (!e.target.classList.contains('credits-trigger')) {
 				setCreditTooltipOpen(false);
+			}
+			if (!e.target.classList.contains('lang-trigger')) {
+				setLangTooltipOpen(false);
 			}
 		};
 
@@ -244,6 +275,10 @@ export default function App() {
 				creditTooltipOpen={creditTooltipOpen}
 				setCreditTooltipOpen={setCreditTooltipOpen}
 				windowSize={windowSize}
+				langTooltipOpen={langTooltipOpen}
+				setLangTooltipOpen={setLangTooltipOpen}
+				lang={lang}
+				setLang={setLang}
 			/>
 			<div className="wrapper" ref={mainWrapper}>
 				<Header
@@ -290,6 +325,10 @@ export default function App() {
 							isMobileNav={false}
 							creditTooltipOpen={creditTooltipOpen}
 							setCreditTooltipOpen={setCreditTooltipOpen}
+							langTooltipOpen={langTooltipOpen}
+							setLangTooltipOpen={setLangTooltipOpen}
+							lang={lang}
+							setLang={setLang}
 						/>
 					</footer>
 				</div>
@@ -308,7 +347,7 @@ export default function App() {
 								<span className="loading-name-overlay" ref={loadingNameOverlay}></span>
 							</span>
 							<span className="loading-title" ref={loadingTitle}>
-								frontend engineer
+								{t('frontend_engineer')}
 							</span>
 						</div>
 						<div>

@@ -2,13 +2,12 @@
 
 $global-width: rem(1440);
 
-
 // Fonts
 
-$font-en: "grotesk", Helvetica, sans-serif;
-$font-ja: "grotesk", "Mplus 1p", Helvetica, sans-serif;
-// $font-cn: "grotesk", Helvetica, sans-serif;
-
+$font-en: 'grotesk', Helvetica, sans-serif;
+$font-ja: 'grotesk', 'Mplus 1p', Helvetica, sans-serif;
+$font-zh: 'grotesk', 'Noto Sans SC', sans-serif;
+$font-zh-tw: 'grotesk', 'Noto Sans TC', sans-serif;
 
 // UI Colors
 
@@ -20,13 +19,13 @@ $white: #fff;
 $black: #282828;
 $deepblack: #111;
 
-$red: #EF6F6C;
+$red: #ef6f6c;
 $violet: #340068;
-$snow: #FFFCF9;
-$turquoise: #B1EDE8;
-$aqua: #93C4C0;
-$deepred: #6D435A;
-$platinum: #EFEDEA;
+$snow: #fffcf9;
+$turquoise: #b1ede8;
+$aqua: #93c4c0;
+$deepred: #6d435a;
+$platinum: #efedea;
 
 // Icons
 $peach: #f9e3ae;
@@ -58,9 +57,9 @@ $breakpoints: (
 
 // Animation & Transition
 
-$bounce: cubic-bezier(0.680, -0.550, 0.265, 1.550);
-$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
-$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
-$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 $speed: 0.3s;
 $default-transition-duration: $speed;

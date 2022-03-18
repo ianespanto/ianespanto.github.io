@@ -3,6 +3,7 @@ import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { menuItems } from './utils/variables';
 import { viewport, delayRedirect } from './utils/helpers';
 import { gsap } from 'gsap';
+import { useTranslation } from 'react-i18next';
 
 export default function Header({
 	pageTransInProgress,
@@ -13,6 +14,7 @@ export default function Header({
 	entireAnimationCompleted,
 	windowSize,
 }) {
+	const { t } = useTranslation();
 	const header = useRef(null);
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -20,7 +22,7 @@ export default function Header({
 	useEffect(() => {
 		// Show and hide header
 		if (header.current && entireAnimationCompleted) {
-			if (scrollTop > lastScrollTop.current) {
+			if (scrollTop > lastScrollTop.current && scrollTop + windowSize.h < document.body.clientHeight) {
 				if (scrollTop > header.current.offsetHeight) {
 					header.current.classList.add('hide-header');
 				} else {
@@ -66,14 +68,14 @@ export default function Header({
 											'link-hover link-hover--long' + (isActive ? ' current' : '')
 										}
 										onClick={e => delayRedirect(e, link, navigate, setPageTransInProgress)}>
-										{id}
+										{t(`menu_items.${id}`)}
 									</NavLink>
 								</li>
 							))}
 						</ul>
 					</nav>
 					<div className="mn-trigger align-center hide-medium" onClick={() => setMobileNavOpen(true)}>
-						<span className="mn-menu">Menu</span>
+						<span className="mn-menu">{t('menu')}</span>
 					</div>
 				</div>
 			</header>

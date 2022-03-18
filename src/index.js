@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
 // import { BrowserRouter as Router } from 'react-router-dom';
 import './sass/style.scss';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
+import './i18n';
 
 if (process.env.NODE_ENV === 'production') {
   // console fun
@@ -28,9 +29,11 @@ if (process.env.NODE_ENV === 'production') {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <Suspense fallback="">
+      <Router>
+        <App />
+      </Router>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );

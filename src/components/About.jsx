@@ -5,9 +5,10 @@ import bioImgDesktop from '../assets/img/bio/d.jpg';
 import bioImgMobile from '../assets/img/bio/m.jpg';
 import { gsap } from 'gsap';
 import Flickity from 'flickity';
-import { pageTransitionVariants, skillLists, jobList, schoolList } from './utils/variables';
+import { pageTransitionVariants, jobList, schoolList } from './utils/variables';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { delayRedirect, getPosition } from './utils/helpers';
+import { useTranslation } from 'react-i18next';
 
 export default function About({
 	pageTransInProgress,
@@ -17,6 +18,7 @@ export default function About({
 	entireAnimationCompleted,
 }) {
 	gsap.registerPlugin(ScrollToPlugin);
+	const { t } = useTranslation();
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -70,7 +72,7 @@ export default function About({
 				<div className="about-section jello" ref={elm => (sections.current[0] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-heading">
-							<span>Technical Expertise</span>
+							<span>{t('about_headings.skills')}</span>
 						</div>
 						<SkillList isDesktopVers={true} />
 						<SkillList isDesktopVers={false} />
@@ -81,16 +83,18 @@ export default function About({
 				<div className="about-section jello" ref={elm => (sections.current[1] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-heading">
-							<span>Work Experience</span>
+							<span>{t('about_headings.experience')}</span>
 						</div>
 						<div className="responsive-row responsive-row--landscape about-content jl">
-							{jobList.map(({ company, role, time, description, footnote }, i) => (
+							{jobList.map(({ id }, i) => (
 								<div key={`job_${i}`} className="jl__i jello-child">
-									<p className="job-company heading">{company}</p>
-									<p className="job-info job-role">{role}</p>
-									<p className="job-info job-time">{time}</p>
-									<p>{description}</p>
-									{footnote && <p className="footnote">* {footnote}</p>}
+									<p className="job-company heading">{t(`jobs.${id}.company`)}</p>
+									<p className="job-info job-role">{t(`jobs.${id}.role`)}</p>
+									<p className="job-info job-time">{t(`jobs.${id}.time`)}</p>
+									<p>{t(`jobs.${id}.description`)}</p>
+									{t(`jobs.${id}.footnote`) && (
+										<p className="footnote">* {t(`jobs.${id}.footnote`)}</p>
+									)}
 								</div>
 							))}
 						</div>
@@ -101,23 +105,27 @@ export default function About({
 				<div className="about-section jello" ref={elm => (sections.current[2] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-heading">
-							<span>Education</span>
+							<span>{t('about_headings.education')}</span>
 						</div>
 						<div className="about-content">
 							<div className="el">
-								{schoolList.map(({ name, short, degree, degree_short, grad }, i) => (
+								{schoolList.map(({ id }, i) => (
 									<div key={`school_${i}`} className="el__i jello-child">
 										<div>
 											<p className="heading school-name">
-												<span className="show-medium">{name}</span>
-												<span className="hide-medium">{short}</span>
+												<span className="show-medium">{t(`education.${id}.name`)}</span>
+												<span className="hide-medium">{t(`education.${id}.short`)}</span>
 											</p>
 											<p>
-												<span className="show-small">{degree}</span>
-												<span className="hide-small">{degree_short ? degree_short : degree}</span>
+												<span className="show-small">{t(`education.${id}.degree`)}</span>
+												<span className="hide-small">
+													{t(`education.${id}.degree_short`)
+														? t(`education.${id}.degree_short`)
+														: t(`education.${id}.degree`)}
+												</span>
 											</p>
 											<p>
-												<span>{grad}</span>
+												<span>{t(`education.${id}.grad`)}</span>
 											</p>
 										</div>
 									</div>
@@ -132,19 +140,14 @@ export default function About({
 					<div className="inner-wrapper">
 						<div className="about-content">
 							<p className="jello-child">
-								As a critical thinker with sharp attention for detail, I strive to make the most out
-								of a project by focusing on both the functional and aesthetic aspects of web
-								development. My aim to achieve this balance fuels my desire to produce quality
-								websites and web applications that are not only visually pleasing and fresh, but also
-								innovative, interactive, and user-friendly. I'm always on the lookout for interesting
-								projects with awesome people. Need a hand?{' '}
+								{t('bio_closing.part1')}
 								<Link
 									className="link-hover transition-link"
 									to="/contact"
 									onClick={e => delayRedirect(e, '/contact', navigate, setPageTransInProgress)}>
-									Drop me a line
+									{t('bio_closing.contact_me')}
 								</Link>
-								.
+								{t('bio_closing.part2')}
 							</p>
 						</div>
 					</div>
@@ -155,6 +158,7 @@ export default function About({
 }
 
 function Bio() {
+	const { t } = useTranslation();
 	const bioSection = useRef(null);
 	const bioImgWrap = useRef(null);
 	const bioImgOverlay = useRef(null);
@@ -192,7 +196,7 @@ function Bio() {
 		<div className="about-section" ref={bioSection}>
 			<div className="inner-wrapper">
 				<div className="about-heading">
-					<span>Me in a Nutshell</span>
+					<span>{t('about_headings.bio')}</span>
 				</div>
 				<div className="responsive-row responsive-row--landscape about-content align-center">
 					<div className="bio-img" ref={bioImgWrap}>
@@ -215,50 +219,40 @@ function Bio() {
 						<div className="bio-img__overlay" ref={bioImgOverlay}></div>
 					</div>
 					<div className="bio-t">
-						<p ref={elm => (bioCopy.current[0] = elm)}>
-							Hello world! I'm Ian, a meticulous frontend web engineer based in British Columbia
-							specializing in the development and maintenance of custom content management systems,
-							modern websites and web applications dynamically built with JavaScript frameworks such as
-							React using the latest tools and technologies.
-						</p>
+						<p ref={elm => (bioCopy.current[0] = elm)}>{t('bio.p1')}</p>
 						<p ref={elm => (bioCopy.current[1] = elm)}>
-							Having always had a strong interest in programming, design and numbers, I graduated from
-							UBC, one of the Top 3 universities in Canada with a Bachelor of Science in{' '}
+							{t('bio.p2.part1')}
 							<a className="link-hover" href="https://www.cs.ubc.ca/" target="_blank" rel="noreferrer">
-								computer science
-							</a>{' '}
-							and{' '}
+								{t('bio.p2.cpsc')}
+							</a>
+							{t('bio.p2.and')}
 							<a
 								className="link-hover"
 								href="https://www.stat.ubc.ca/"
 								target="_blank"
 								rel="noreferrer">
-								statistics
-							</a>{' '}
-							in 2015, after which I attended BCIT's School of Computing to study{' '}
+								{t('bio.p2.stats')}
+							</a>
+							{t('bio.p2.part2')}
 							<a
 								className="link-hover"
 								href="https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
 								target="_blank"
 								rel="noreferrer">
-								frontend development
-							</a>{' '}
-							and finished the program top of the class. Since then, I have worked on a breadth of
-							projects with a wide range of clients, coded dozens of websites in various formats, and
-							developed multiple applications integrating data fetched from APIs.
+								{t('bio.p2.frontend_dev')}
+							</a>
+							{t('bio.p2.part3')}
 						</p>
 						<p ref={elm => (bioCopy.current[2] = elm)}>
-							Although I am a programmer by definition, I am also proficient in raster graphics editing
-							using Photoshop and have been heavily involved in the design process throughout my
-							career. I am a pianist and a{' '}
+							{t('bio.p3.part1')}
 							<a
 								className="link-hover"
 								href="https://soundcloud.com/ianespanto"
 								target="_blank"
 								rel="noreferrer">
-								hobbyist composer
-							</a>{' '}
-							in my spare time.
+								{t('bio.p3.composer')}
+							</a>
+							{t('bio.p3.part2')}
 						</p>
 					</div>
 				</div>
@@ -268,7 +262,35 @@ function Bio() {
 }
 
 function SkillList({ isDesktopVers }) {
+	const { t } = useTranslation();
 	const skillListRef = useRef(null);
+
+	const skillLists = [
+		{
+			title: 'programming_languages',
+			icon: 'bag',
+			icon_paths: 19,
+			list: ['JavaScript / ES6', 'React JSX', 'HTML5', 'CSS / SCSS', 'PHP'],
+		},
+		{
+			title: 'professional_skillset',
+			icon: 'bulb',
+			icon_paths: 15,
+			list: [
+				`React.js (${t('skill_list.latest')})`,
+				'CMS / Wordpress',
+				`SPA ${t('skill_list.development')}`,
+				`GSAP ${t('skill_list.animation')}`,
+				`SQL ${t('skill_list.database')}`,
+			],
+		},
+		{
+			title: 'development_tools',
+			icon: 'gear',
+			icon_paths: 17,
+			list: ['Adobe Photoshop', 'Sublime Text', 'Git', 'Node.js / NPM', 'Gulp.js'],
+		},
+	];
 
 	const className =
 		'about-content sl ' +
@@ -299,7 +321,7 @@ function SkillList({ isDesktopVers }) {
 							<span className={`mono-icon i-${icon}`}></span>
 							<span className={`color-icon i-${icon}-c`}>{colorIcon}</span>
 						</div>
-						<p className="heading skill-heading">{title}</p>
+						<p className="heading skill-heading">{t(`skill_list.${title}`)}</p>
 						<ul className="responsive-text">
 							{list.map((listItem, listItemIndex) => (
 								<li key={`skillListItem_${i}_${listItemIndex}`}>

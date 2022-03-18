@@ -79,7 +79,8 @@ main.about {
 			transform: rotate(-90deg) translateX(-100%);
 			transform-origin: 0% 0%;
 		}
-		.ja & {
+		.zh &,
+		.zh-TW & {
 			@include verticalText;
 		}
 		span {
@@ -120,6 +121,7 @@ main.about {
 
 	&__overlay {
 		@extend .pl__o;
+		background: $sand;
 	}
 
 	@include bpmax(landscape) {
@@ -375,6 +377,9 @@ main.about {
 	}
 	.hero-area {
 		padding: rem(120) 0;
+		background: $sand;
+		margin-bottom: rem(80);
+		border-bottom: rem(1) solid $platinum;
 	}
 	.form-container {
 		margin-bottom: rem(150);

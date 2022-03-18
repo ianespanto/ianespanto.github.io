@@ -7,6 +7,7 @@ import Header from './Header';
 import { pageTransitionVariants } from './utils/variables';
 import { projects } from './utils/projects';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useTranslation } from 'react-i18next';
 
 export default function Home({
 	pageTransInProgress,
@@ -16,6 +17,7 @@ export default function Home({
 	lastScrollTop,
 	windowSize,
 }) {
+	const { t } = useTranslation();
 	gsap.registerPlugin(ScrollToPlugin);
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -105,7 +107,7 @@ export default function Home({
 
 	return (
 		<>
-			<main>
+			<main className="home">
 				<div className="home-intro">
 					<div className="inner-wrapper">
 						<div className="row">
@@ -122,7 +124,7 @@ export default function Home({
 										</span>
 									))}
 								</h1>
-								<p ref={subheading}>Frontend Web Engineer</p>
+								<p ref={subheading}>{t('frontend_web_engineer')}</p>
 							</div>
 						</div>
 						<div className="scroll-down" ref={scrollDownWrap}>
@@ -184,6 +186,7 @@ function Project({
 	setPageTransInProgress,
 	navigate,
 }) {
+	const { t } = useTranslation();
 	const [animated, setAnimated] = useState(false);
 	const pItem = useRef(null);
 	const pImg = useRef(null);
@@ -198,7 +201,8 @@ function Project({
 	let imgWidth = 600;
 	let imgHeight = 900;
 
-	const isAbout = project.id === 'about';
+	const id = project.id;
+	const isAbout = id === 'about';
 
 	if ([1, 2].includes(projectRemainer)) {
 		imgWidth = 750;
@@ -241,7 +245,7 @@ function Project({
 				'l+=.9'
 			);
 
-			if (project.id !== 'about') {
+			if (id !== 'about') {
 				tl.from(
 					pCopy.current,
 					{ duration: 1, ease: 'power4.inOut', alpha: 0, clearProps: 'all' },
@@ -320,7 +324,7 @@ function Project({
 	return (
 		<>
 			<div className="pl__i jello row align-center" ref={pItem}>
-				{project.id === 'about' || (
+				{id === 'about' || (
 					<div className="pl__inner">
 						<a
 							href={project.link}
@@ -342,14 +346,14 @@ function Project({
 							<span className="pl__o" style={theme} ref={elm => (pOverlays.current[0] = elm)}></span>
 							<div className="pl__tt no-action" ref={pTooltip}>
 								<div className="pl__tw">
-									<span>{project.tooltip}</span>
+									<span>{t(`project_tooltip.${project.tooltip}`)}</span>
 								</div>
 							</div>
 						</a>
 						<div className="pl__footer threed" ref={pFooter}>
 							<p className="pl__t heading">
 								<span className="pl__copy" ref={elm => (pCopy.current[0] = elm)}>
-									{project.title}
+									{t(`projects.${id}.title`)}
 								</span>
 								<span className="pl__u" style={theme}></span>
 								<span
@@ -360,7 +364,7 @@ function Project({
 							<div className="pl__in responsive-text">
 								<span className="pl__d">
 									<span className="pl__copy" ref={elm => (pCopy.current[1] = elm)}>
-										{project.description}
+										{t(`projects.${id}.description`)}
 									</span>
 									<span
 										className="pl__o"
@@ -369,7 +373,7 @@ function Project({
 								</span>
 								<span className="pl__fn show-landscape">
 									<span className="pl__copy" ref={elm => (pCopy.current[2] = elm)}>
-										{project.footnote}
+										{t(`projects.${id}.footnote`)}
 									</span>
 									<span
 										className="pl__o"
@@ -380,7 +384,7 @@ function Project({
 						</div>
 					</div>
 				)}
-				{project.id === 'about' && (
+				{id === 'about' && (
 					<NavLink
 						to="/about"
 						className="pl__extra transition-link pl__img no-action threed"
@@ -393,7 +397,9 @@ function Project({
 						<div className="extra-container pl__tl no-action" ref={pImg}>
 							<div className="extra-link">
 								<span>
-									Everything you need to know about <strong>Ian</strong>
+									{t('learn_more_about_ian.part1')}
+									<strong>{t('learn_more_about_ian.ian')}</strong>
+									{t('learn_more_about_ian.part2')}
 								</span>
 							</div>
 							<div className="extra-graphics">

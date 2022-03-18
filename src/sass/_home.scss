@@ -1,6 +1,5 @@
 main {
 	transition: transform 1s $easeInOutQuart, opacity 1s $easeInOutQuart;
-	background: $white;
 	min-height: 100vh;
 	position: relative;
 	padding-top: rem(50);

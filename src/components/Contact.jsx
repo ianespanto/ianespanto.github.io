@@ -4,9 +4,11 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
 	gsap.registerPlugin(ScrollToPlugin);
+	const { t } = useTranslation();
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -148,11 +150,11 @@ export default function Contact() {
 		<>
 			<main className="contact">
 				<section>
-					<div className="inner-wrapper inner-wrapper--narrow">
-						<div className="hero-area column">
+					<div className="hero-area">
+						<div className="inner-wrapper inner-wrapper--narrow">
 							<h1 className="hero-heading" ref={elm => (fadeInElms.current[0] = elm)}>
-								<span>Need a hand? </span>
-								<span>Drop me a line!</span>
+								<span>{t('need_help.part1')}</span>
+								<span>{t('need_help.part2')}</span>
 							</h1>
 							<div className="contact-info responsive-row responsive-row--medium">
 								<div className="contact-email" ref={elm => (fadeInElms.current[1] = elm)}>
@@ -169,12 +171,14 @@ export default function Contact() {
 										className="link-hover link-hover--light"
 										href="/ian_espanto_resume.pdf"
 										download>
-										Download Résumé
+										{t('download_resume')}
 									</a>
 								</div>
 							</div>
 						</div>
+					</div>
 
+					<div className="inner-wrapper inner-wrapper--narrow">
 						<div className="form-container" ref={elm => (fadeInElms.current[3] = elm)}>
 							{success || (
 								<form onSubmit={sendEmail} noValidate ref={form}>
@@ -185,13 +189,13 @@ export default function Contact() {
 													type="text"
 													name="name"
 													id="input-name"
-													placeholder="Name"
+													placeholder={t('form.name')}
 													autoComplete="off"
 													ref={nameRef}
 													onBlur={validateField}
 												/>
 												<label htmlFor="input-name" className="required">
-													Name
+													{t('form.name')}
 												</label>
 											</div>
 										</div>
@@ -201,13 +205,13 @@ export default function Contact() {
 													type="email"
 													name="email"
 													id="input-email"
-													placeholder="Email"
+													placeholder={t('form.email')}
 													autoComplete="off"
 													ref={emailRef}
 													onBlur={validateField}
 												/>
 												<label htmlFor="input-email" className="required">
-													Email
+													{t('form.email')}
 												</label>
 											</div>
 										</div>
@@ -219,13 +223,13 @@ export default function Contact() {
 													type="text"
 													name="subject"
 													id="input-subject"
-													placeholder="Subject"
+													placeholder={t('form.subject')}
 													autoComplete="off"
 													ref={subjectRef}
 													onBlur={validateField}
 												/>
 												<label htmlFor="input-subject" className="required">
-													Subject
+													{t('form.subject')}
 												</label>
 											</div>
 										</div>
@@ -236,12 +240,12 @@ export default function Contact() {
 												<textarea
 													name="message"
 													id="input-message"
-													placeholder="Message"
+													placeholder={t('form.message')}
 													ref={messageRef}
 													onChange={e => setMessage(e.target.value)}
 													onBlur={validateField}></textarea>
 												<label htmlFor="input-message" className="required">
-													Message
+													{t('form.message')}
 												</label>
 												<AnimatePresence>
 													{message?.length > 0 && (
@@ -253,10 +257,16 @@ export default function Contact() {
 															className="char-count">
 															{message.length}
 															{message?.length < minCharCount && (
-																<span> / min. {minCharCount}</span>
+																<span>
+																	{' '}
+																	/ {t('form.min')} {minCharCount}
+																</span>
 															)}
 															{message?.length > maxCharCount && (
-																<span> / max. {maxCharCount}</span>
+																<span>
+																	{' '}
+																	/ {t('form.max')} {maxCharCount}
+																</span>
 															)}
 														</motion.span>
 													)}
@@ -271,10 +281,10 @@ export default function Contact() {
 												type="submit"
 												name="action"
 												value="submit">
-												<span data-hover="Send Message">Send Message</span>
+												<span data-hover={t('form.submit')}>{t('form.submit')}</span>
 											</button>
 
-											{sending && <span className="sending-span">Sending...</span>}
+											{sending && <span className="sending-span">{t('form.sending')}</span>}
 										</div>
 									</div>
 								</form>
@@ -285,7 +295,7 @@ export default function Contact() {
 									animate={'animate'}
 									variants={variants}
 									className="space-top">
-									You message has been sent. I will be in touch!
+									{t('form.sent')}
 								</motion.p>
 							)}
 							{failed && (
@@ -294,8 +304,7 @@ export default function Contact() {
 									animate={'animate'}
 									variants={variants}
 									className="space-top">
-									Oops... Something went wrong. Please try again later or use the contact information
-									above.
+									{t('form.failed')}
 								</motion.p>
 							)}
 						</div>

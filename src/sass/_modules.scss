@@ -3,6 +3,9 @@
 	&--light {
 		color: $silver;
 	}
+	&--white {
+		color: $white;
+	}
 	&--long {
 		@include bpmin(landscape) {
 			&::after {

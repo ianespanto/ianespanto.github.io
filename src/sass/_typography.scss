@@ -72,8 +72,7 @@ a {
 // Fonts
 // -------------------------
 
-$fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semibold'
-	'hkgrotesk-bold';
+$fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semibold' 'hkgrotesk-bold';
 
 @each $font-face in $fonts {
 	@font-face {
@@ -91,8 +90,7 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 			font-weight: 700;
 		}
 		src: url('../assets/fonts/#{$font-face}/#{$font-face}.eot');
-		src: url('../assets/fonts/#{$font-face}/#{$font-face}.eot?#iefix')
-				format('embedded-opentype'),
+		src: url('../assets/fonts/#{$font-face}/#{$font-face}.eot?#iefix') format('embedded-opentype'),
 			url('../assets/fonts/#{$font-face}/#{$font-face}.woff2') format('woff2'),
 			url('../assets/fonts/#{$font-face}/#{$font-face}.woff') format('woff'),
 			url('../assets/fonts/#{$font-face}/#{$font-face}.ttf') format('truetype'),
@@ -100,17 +98,16 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 	}
 }
 
-@font-face {
-	font-family: 'Mplus 1p';
-	font-style: normal;
-	font-weight: 500;
-	src: url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.eot);
-	src: url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.eot?#iefix)
-			format('embedded-opentype'),
-		url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.woff2) format('woff2'),
-		url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.woff) format('woff'),
-		url(//fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.ttf) format('truetype');
-}
+// @font-face {
+// 	font-family: 'Mplus 1p';
+// 	font-style: normal;
+// 	font-weight: 500;
+// 	src: url(https://fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.eot);
+// 	src: url(https://fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.eot?#iefix) format('embedded-opentype'),
+// 		url(https://fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.woff2) format('woff2'),
+// 		url(https://fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.woff) format('woff'),
+// 		url(https://fonts.gstatic.com/ea/mplus1p/v1/Mplus1p-Medium.ttf) format('truetype');
+// }
 
 // @font-face {
 // 	font-family: 'Mplus 1p';

@@ -4,7 +4,7 @@ header {
 	width: 100%;
 	z-index: 50;
 	background: rgba($white, 0.95);
-	// backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
 	padding: 0 rem(25);
 	top: 0;
 	left: 0;
@@ -85,6 +85,7 @@ nav,
 	width: 100%;
 	// background: $white;
 	@include noSelect;
+
 	.footer-nav {
 		letter-spacing: rem(0.5);
 		font-size: rem(12);
@@ -92,10 +93,12 @@ nav,
 		color: $silver;
 		line-height: 2;
 		padding: rem(30) 0;
+
 		ul li {
 			display: inline;
 			margin-right: rem(19);
 			position: relative;
+
 			&::before {
 				content: '';
 				position: absolute;
@@ -105,6 +108,7 @@ nav,
 				width: rem(1);
 				background: $iron;
 			}
+
 			&:last-of-type {
 				margin-right: 0;
 				&::before {
@@ -112,62 +116,32 @@ nav,
 				}
 			}
 		}
-		a {
+
+		a,
+		.tooltipTrigger {
 			display: inline-block;
 			color: $silver;
 			cursor: pointer;
+			transition: color $speed;
+
 			@include bpmin(landscape) {
-				transition: color $speed;
 				&:hover {
 					color: $mineshaft;
 				}
 			}
 		}
 	}
-	.credits {
-		position: relative;
-		@include noSelect;
-		input[type='checkbox'] {
-			display: none;
-			&:checked + label {
-				.tooltip {
-					opacity: 1;
-					pointer-events: auto;
-				}
-			}
-		}
-		label {
-			cursor: pointer;
-			margin-right: rem(-3);
-			@include bpmin(landscape) {
-				> span:first-child {
-					transition: color $speed;
-				}
-				&:hover {
-					> span:first-child {
-						color: $mineshaft;
-					}
-				}
-			}
-		}
-	}
 
-	#ft-cb:checked + label {
-		color: $mineshaft;
-		.tooltip {
-			transform: scale(1);
-		}
-	}
-	#mn-cb:checked + label {
-		.tooltip {
-			transform: translateX(-50%) scale(1);
+	.tooltipTrigger {
+		&.active {
+			color: $mineshaft;
 		}
 	}
 
 	.tooltip {
 		position: absolute;
 		color: $silver;
-		padding: rem(25) rem(30);
+		padding: rem(25) rem(10);
 		min-width: rem(190);
 		bottom: rem(34);
 		box-shadow: rem(2) rem(2) rem(30) $platinum, 0 0 rem(10) $platinum;
@@ -177,14 +151,23 @@ nav,
 		transform-origin: 50% rem(180);
 		left: 50%;
 		border-radius: rem(6);
+		@include noSelect;
 		// @include noAction;
 
-		> div > span {
-			display: block;
-			text-align: center;
-			line-height: 1.2;
-			margin-bottom: rem(7);
+		&--lang {
+			min-width: rem(130);
+			padding: rem(15) rem(10);
 		}
+
+		&--credits {
+			> div > span {
+				display: block;
+				text-align: center;
+				line-height: 1.2;
+				margin-bottom: rem(7);
+			}
+		}
+
 		.copyright {
 			font-size: rem(9);
 			color: lighten($silver, 8%);
@@ -213,6 +196,24 @@ nav,
 			border-left: rem(14) solid transparent;
 			border-right: rem(14) solid transparent;
 			border-top: rem(14) solid $white;
+		}
+	}
+
+	.langOption {
+		padding: rem(4) 0;
+		cursor: pointer;
+		transition: color $speed;
+
+		&.current {
+			background: $sand;
+			color: $mineshaft;
+			@include noAction;
+		}
+
+		@include bpmin(landscape) {
+			&:hover {
+				color: $mineshaft;
+			}
 		}
 	}
 }
