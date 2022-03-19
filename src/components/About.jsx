@@ -24,21 +24,23 @@ export default function About({
 	const location = useLocation();
 
 	const sections = useRef([]);
+	const [inViewSections, setInViewSections] = useState(0);
 
 	useEffect(() => {
 		if (sections?.current?.length > 0) {
 			sections.current.forEach((section, i) => {
 				const height = section.offsetHeight;
-				const alpha = Math.min(height / 2, windowSize > 1024 ? 400 : 150);
+				const alpha = Math.min(height / 2, windowSize > 1024 ? 600 : 150);
 				const heightInView = windowSize.h + scrollTop - getPosition(section).y;
 
 				if (
 					heightInView > alpha &&
-					!section.classList.contains('in-view') &&
+					inViewSections <= i &&
 					!pageTransInProgress &&
 					entireAnimationCompleted
 				) {
 					section.classList.add('in-view');
+					setInViewSections(old => (old += 1));
 
 					gsap.from(section, {
 						delay: 0.2,
@@ -91,7 +93,7 @@ export default function About({
 									<p className="job-company heading">{t(`jobs.${id}.company`)}</p>
 									<p className="job-info job-role">{t(`jobs.${id}.role`)}</p>
 									<p className="job-info job-time">{t(`jobs.${id}.time`)}</p>
-									<p>{t(`jobs.${id}.description`)}</p>
+									<p className="job-description">{t(`jobs.${id}.description`)}</p>
 									{t(`jobs.${id}.footnote`) && (
 										<p className="footnote">* {t(`jobs.${id}.footnote`)}</p>
 									)}
@@ -186,14 +188,14 @@ function Bio() {
 			);
 			bioTl.from(
 				bioCopy.current,
-				{ duration: 1, ease: 'power3.out', y: 50, alpha: 0, clearProps: 'all', stagger: 0.2 },
+				{ duration: 1, ease: 'power3.out', y: 100, alpha: 0, clearProps: 'all', stagger: 0.11 },
 				'l+=.8'
 			);
 		}
 	}, []);
 
 	return (
-		<div className="about-section" ref={bioSection}>
+		<div className="about-section in-view" ref={bioSection}>
 			<div className="inner-wrapper">
 				<div className="about-heading">
 					<span>{t('about_headings.bio')}</span>
@@ -288,7 +290,7 @@ function SkillList({ isDesktopVers }) {
 			title: 'development_tools',
 			icon: 'gear',
 			icon_paths: 17,
-			list: ['Adobe Photoshop', 'Sublime Text', 'Git', 'Node.js / NPM', 'Gulp.js'],
+			list: ['Adobe Photoshop', 'Sublime Text', 'Git', 'NPM', 'Gulp.js'],
 		},
 	];
 

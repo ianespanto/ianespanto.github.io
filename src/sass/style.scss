@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700&family=Noto+Sans+TC:wght@500;700&display=swap');
-// Compass imports
-// @import "compass";
+
 @import 'vendors/flickity';
 @import 'reset';
 
@@ -8,11 +7,11 @@
 @import 'utilities';
 @import 'variables';
 @import 'mixins';
+@import 'typography';
 @import 'layout';
 @import 'base';
 @import 'buttons';
 @import 'modules';
-@import 'typography';
 
 // Pages and snippets
 @import 'header';

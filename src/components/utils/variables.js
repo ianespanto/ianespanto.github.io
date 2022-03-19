@@ -1,5 +1,3 @@
-import i18n from '../../i18n';
-
 export const ease = {
 	power4: {
 		in: [0.64, 0, 0.78, 0],

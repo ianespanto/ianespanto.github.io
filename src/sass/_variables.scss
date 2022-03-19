@@ -5,14 +5,18 @@ $global-width: rem(1440);
 // Fonts
 
 $font-en: 'grotesk', Helvetica, sans-serif;
-$font-ja: 'grotesk', 'Mplus 1p', Helvetica, sans-serif;
+// $font-ja: 'grotesk', 'Mplus 1p', Helvetica, sans-serif;
 $font-zh: 'grotesk', 'Noto Sans SC', sans-serif;
 $font-zh-tw: 'grotesk', 'Noto Sans TC', sans-serif;
 
+// $font-serif-en: 'Noto Serif', Helvetica, serif;
+// $font-serif-zh: 'Noto Serif', Noto Sans SC, serif;
+// $font-serif-zh-tw: 'Noto Serif', Noto Sans TC, serif;
+
 // UI Colors
 
-$mineshaft: #878787;
-$silver: #bfbfbf;
+$mineshaft: #6c6c6c;
+$silver: #ababab;
 $iron: #e6e7e8;
 $sand: #f8f8f8;
 $white: #fff;
@@ -61,5 +65,9 @@ $bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 $easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
 $easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$power3Out: cubic-bezier(0.26, 1, 0.48, 1);
+$power4In: cubic-bezier(0.64, 0, 0.78, 0);
+$power4Out: cubic-bezier(0.22, 1, 0.36, 1);
+$power4InOut: cubic-bezier(0.84, 0, 0.16, 1);
 $speed: 0.3s;
 $default-transition-duration: $speed;

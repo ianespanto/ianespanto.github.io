@@ -48,7 +48,13 @@ main.about {
 	left: 0;
 	width: 100%;
 	color: lighten($silver, 7%);
-	.en & {
+	opacity: 0;
+
+	.in-view & {
+		opacity: 1;
+	}
+
+	&:lang(en) {
 		text-transform: uppercase;
 		font-weight: 700;
 	}
@@ -75,6 +81,7 @@ main.about {
 		width: auto;
 		top: rem(140);
 		left: rem(80);
+		transition: opacity 1s 0.5s;
 		&:lang(en) {
 			transform: rotate(-90deg) translateX(-100%);
 			transform-origin: 0% 0%;
@@ -328,7 +335,7 @@ main.about {
 
 // profile
 .profile-section {
-	@include bpmin(medium) {
+	@include bpmin(portrait) {
 		.about-content {
 			text-align: center;
 		}
@@ -379,7 +386,7 @@ main.about {
 		padding: rem(120) 0;
 		background: $sand;
 		margin-bottom: rem(80);
-		border-bottom: rem(1) solid $platinum;
+		// border-bottom: rem(1) solid $platinum;
 	}
 	.form-container {
 		margin-bottom: rem(150);
