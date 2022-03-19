@@ -1,6 +1,6 @@
 {
-	"frontend_web_engineer": "Frontend Web Engineer",
-	"frontend_engineer": "frontend engineer",
+	"frontend_web_engineer": "Front-end Web Engineer",
+	"frontend_engineer": "front-end engineer",
 	"menu": "Menu",
 	"close": "Close",
 	"credits": "Copyright",
@@ -19,14 +19,14 @@
 		"education": "Education"
 	},
 	"bio": {
-		"p1": "Hello world! I'm Ian, a meticulous frontend web engineer based in British Columbia specializing in the development and maintenance of custom content management systems, modern websites and web applications dynamically built with JavaScript frameworks such as React using the latest tools and technologies.",
+		"p1": "Hello world! I'm Ian, a meticulous front-end web engineer based in British Columbia specializing in the development and maintenance of custom content management systems, modern websites and web applications dynamically built with JavaScript frameworks such as React using the latest tools and technologies.",
 		"p2": {
 			"part1": "Having always had a strong interest in programming, design and mathematics, I graduated from UBC, one of the Top 3 universities in Canada with a Bachelor of Science in ",
 			"cpsc": "computer science",
 			"and": " and ",
 			"stats": "statistics",
 			"part2": " in 2015, after which I attended BCIT's School of Computing to study ",
-			"frontend_dev": "frontend development",
+			"frontend_dev": "front-end development",
 			"part3": " and finished the program top of the class. Since then, I have worked on a breadth of projects with a wide range of clients, coded dozens of websites in various formats, and developed multiple applications integrating data fetched from APIs."
 		},
 		"p3": {
