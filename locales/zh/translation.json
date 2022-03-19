@@ -3,9 +3,10 @@
 	"frontend_engineer": "front-end engineer",
 	"menu": "菜单",
 	"close": "关闭",
-	"credits": "版权",
+	"credits": "版权信息",
 	"design": "设计",
 	"code": "编码",
+	"translation": "翻译",
 	"photos": "照片版权",
 	"menu_items": {
 		"work": "作品集",

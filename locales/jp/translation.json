@@ -1,23 +1,23 @@
 {
-	"frontend_web_engineer": "Front-end Web Engineer",
+	"frontend_web_engineer": "フロントエンドエンジニア",
 	"frontend_engineer": "front-end engineer",
-	"menu": "Menu",
-	"close": "Close",
+	"menu": "メニュー",
+	"close": "閉じる",
 	"credits": "Copyright",
 	"design": "Design",
 	"code": "Code",
 	"translation": "Translation",
 	"photos": "Photos",
 	"menu_items": {
-		"work": "Work",
-		"about": "About",
-		"contact": "Contact"
+		"work": "実績",
+		"about": "紹介",
+		"contact": "連絡先"
 	},
 	"about_headings": {
-		"bio": "Me in a Nutshell",
-		"skills": "Technical Expertise",
-		"experience": "Work Experience",
-		"education": "Education"
+		"bio": "イアンの略歴",
+		"skills": "イアンの専門分野",
+		"experience": "イアンの職歴",
+		"education": "イアンの学歴"
 	},
 	"bio": {
 		"p1": "Hello world! I'm Ian, a meticulous front-end web engineer based in British Columbia specializing in the development and maintenance of custom content management systems, modern websites and web applications dynamically built with JavaScript frameworks such as React using the latest tools and technologies.",
@@ -49,38 +49,38 @@
 		"signals": {
 			"company": "Signals Design",
 			"role": "Interactive Web Developer",
-			"time": "July 2017 - July 2020",
-			"description": "Worked on a wide range of projects with clients from businesses and organizations such as UBC, Clear Seas, Foundry, BCNU, Crofton House, MYM, Graham Boeckh Foundation and so on. Integrated various APIs to independently design and develop a team, project and budget management internal tool which was extensively used by managers and accountants of the company.",
-			"footnote": "Vancouver based design agency"
+			"time": "2017年7月〜2020年7月",
+			"description": "UBC、Clear Seas、Foundry、BCNU、Crofton House、MYM、Graham Boeckh Foundation などの企業や組織のクライアントと幅広いプロジェクトに携わっていました。さまざまな API を統合して、会社のマネージャーや会計士によって広く使用されているチーム、プロジェクト、および予算管理の内部ツールを独自に設計および開発しました。",
+			"footnote": "バンクーバーを拠点としたデザインエージェンシー"
 		},
 		"shoes": {
-			"company": "Shoes.com",
-			"role": "Front-end Developer",
-			"time": "November 2015 - August 2016",
-			"description": "Collaborated with designers, project managers, marketing strategists, and other developers to create new UI functionalities and produce responsive webpages for company's e-commerce sites in various development environments. Subscribed to modern workflows including automation via grunt and gulp, version control via Git, and A/B testing via Maxymiser.",
-			"footnote": "Vancouver & Seattle based e-commerce company"
+			"company": "SHOES.com",
+			"role": "フロントエンド開発者",
+			"time": "2015年11月〜2016年8月",
+			"description": "デザイナー、プロジェクトマネージャ、マーケティングストラテジスト、および他の開発者と協力して、さまざまな開発環境で企業の EC サイト用のレスポンシブな UI を作成しました。 Grunt や Gulp による自動化、Git によるバージョン管理、Maxymiser による A/B テストなど、最新のワークフローを使用しました。",
+			"footnote": "バンクーバーとシアトルを拠点とした会社"
 		}
 	},
 	"education": {
 		"ubc": {
-			"name": "University of British Columbia",
-			"short": "UBC",
-			"degree": "Bachelor of Science, Computer Science and Statistics",
+			"name": "ブリティッシュコロンビア大学",
+			"short": "UBC大学",
+			"degree": "理学部 情報技術学科／統計学科卒",
 			"degree_short": "BSc. Computer Science and Statistics",
-			"grad": "Vancouver BC, May 2015"
+			"grad": "2015年5月・バンクーバー"
 		},
 		"bcit": {
-			"name": "British Columbia Institute of Technology",
-			"short": "BCIT",
-			"degree": "Certificate, Front-end Developer with Distinction",
+			"name": "ブリティッシュコロンビア工科大学",
+			"short": "BCIT大学",
+			"degree": "認定 優良テクニカルウェブデザイナー",
 			"degree_short": "Front-end Developer w/ Distinction",
-			"grad": "Vancouver BC, October 2015"
+			"grad": "2015年10月・バンクーバー"
 		}
 	},
 	"bio_closing": {
-		"part1": "As a critical thinker with sharp attention for detail, I strive to make the most out of a project by focusing on both the functional and aesthetic aspects of web development. My aim to achieve this balance fuels my desire to produce quality websites and web applications that are not only visually pleasing and fresh, but also innovative, interactive, and user-friendly. I'm always on the lookout for interesting projects with awesome people. Need a hand? ",
-		"contact_me": "Drop me a line",
-		"part2": "."
+		"part1": "ウェブデザインに関して、機能と美学的な視点から、細部にまでこだわっているのでプロジェクトを最大限活用しています。機能と美学のバランスを刺激して、視覚的に見易く、新規性や革新性ばかりではなく、使いやすい高品質なウェブサイトを制作することを目標にしています。面白いプロジェクトを探していますので、ご興味があれば、是非お気軽に",
+		"contact_me": "ご連絡",
+		"part2": "ください。"
 	},
 	"projects": {
 		"flexstats": {
@@ -151,20 +151,20 @@
 		"part2": ""
 	},
 	"need_help": {
-		"part1": "Need a hand? ",
-		"part2": "Drop me a line!"
+		"part1": "お気軽にお問い",
+		"part2": "合わせください"
 	},
-	"download_resume": "Download Résumé",
+	"download_resume": "履歴書をダウンロード",
 	"form": {
-		"name": "Name",
-		"email": "Email",
-		"subject": "Subject",
-		"message": "Message",
-		"submit": "Send Message",
+		"name": "お名前",
+		"email": "メールアドレス",
+		"subject": "件名",
+		"message": "お問い合わせ内容",
+		"submit": "送信する",
 		"min": "min.",
 		"max": "max.",
 		"sending": "Sending...",
-		"sent": "Your message has been sent. I will be in touch!",
+		"sent": "メッセージをいただき、ありがとうございます。後ほど、こちらからご連絡致します。",
 		"failed": "Oops... Something went wrong. Please try again later or use the contact information above."
 	}
 }
