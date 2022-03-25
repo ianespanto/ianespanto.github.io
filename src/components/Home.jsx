@@ -3,8 +3,6 @@ import { gsap } from 'gsap';
 // import { AnimatePresence, motion } from 'framer-motion';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { viewport, getPosition, delayRedirect } from './utils/helpers';
-import Header from './Header';
-import { pageTransitionVariants } from './utils/variables';
 import { projects } from './utils/projects';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { useTranslation } from 'react-i18next';
@@ -24,11 +22,10 @@ export default function Home({
 	const charRef = useRef([]);
 	const subheading = useRef(null);
 	const giantName = useRef(null);
-	const scrollDownIcon = useRef(null);
 	const scrollDownWrap = useRef(null);
 	const homeHeadingWrapper = useRef(null);
-
 	const projectsRevealed = useRef(0);
+	const [showDownArrow, setShowDownArrow] = useState(true);
 
 	useEffect(() => {
 		if (!pageTransInProgress && homeHeadingWrapper.current) {
@@ -57,10 +54,10 @@ export default function Home({
 	}, [pageTransInProgress]);
 
 	useEffect(() => {
-		if (scrollDownWrap.current && scrollDownIcon.current) {
+		if (scrollDownWrap.current) {
 			if (projectsRevealed.current === 0) {
 				// Down arrow animation
-				gsap.from(scrollDownIcon.current, {
+				gsap.from(scrollDownWrap.current, {
 					duration: 0.6,
 					ease: 'elastic.out(1, 0.6)',
 					delay: 2.5,
@@ -77,9 +74,7 @@ export default function Home({
 					alpha: 0,
 					onComplete: () => {
 						// remove arrow on complete
-						if (scrollDownWrap.current) {
-							scrollDownWrap.current.innerHTML = '';
-						}
+						setShowDownArrow(false);
 					},
 				});
 			}
@@ -128,9 +123,11 @@ export default function Home({
 								<p ref={subheading}>{t('frontend_web_engineer')}</p>
 							</div>
 						</div>
-						<div className="scroll-down" ref={scrollDownWrap}>
-							<span ref={scrollDownIcon}></span>
-						</div>
+						{showDownArrow && (
+							<div className="scroll-down" ref={scrollDownWrap}>
+								<span></span>
+							</div>
+						)}
 					</div>
 				</div>
 				<Projects
@@ -225,7 +222,7 @@ function Project({
 
 			let delay = windowSize.w > 860 ? (i % 2 === 0 ? 0.2 : 0.4) : 0.2;
 			const translateX = i % 2 === 0 ? -30 : 30;
-			const scaleX = i % 4 === 0 || i % 4 === 3 ? 0.032 : 0.026;
+			// const scaleX = i % 4 === 0 || i % 4 === 3 ? 0.032 : 0.026;
 			const tl = gsap.timeline({
 				delay: delay,
 			});

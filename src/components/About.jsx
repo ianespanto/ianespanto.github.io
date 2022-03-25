@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import Header from './Header';
 import bioImgDesktop from '../assets/img/bio/d.jpg';
 import bioImgMobile from '../assets/img/bio/m.jpg';
 import { gsap } from 'gsap';
 import Flickity from 'flickity';
-import { pageTransitionVariants, jobList, schoolList } from './utils/variables';
+import { jobList, schoolList } from './utils/variables';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { delayRedirect, getPosition } from './utils/helpers';
 import { useTranslation } from 'react-i18next';
@@ -301,7 +300,7 @@ function SkillList({ isDesktopVers }) {
 
 	useEffect(() => {
 		if (skillListRef.current && !isDesktopVers) {
-			const flkty = new Flickity(skillListRef.current, { cellAlign: 'center', prevNextButtons: false });
+			new Flickity(skillListRef.current, { cellAlign: 'center', prevNextButtons: false });
 		}
 	}, [skillListRef]);
 

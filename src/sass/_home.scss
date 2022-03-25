@@ -46,7 +46,8 @@ main {
 }
 
 .scroll-down {
-	@include horizontalCenter;
+	position: absolute;
+	left: 50%;
 	@include noAction;
 
 	span {
