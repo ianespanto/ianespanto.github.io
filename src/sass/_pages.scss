@@ -87,7 +87,8 @@ main.about {
 			transform-origin: 0% 0%;
 		}
 		&:lang(zh),
-		&:lang(zh-TW) {
+		&:lang(zh-TW),
+		&:lang(jp) {
 			@include verticalText;
 		}
 		span {
@@ -384,9 +385,8 @@ main.about {
 	}
 	.hero-area {
 		padding: rem(120) 0;
-		background: $sand;
 		margin-bottom: rem(80);
-		// border-bottom: rem(1) solid $platinum;
+		border-bottom: rem(1) solid $sand;
 	}
 	.form-container {
 		margin-bottom: rem(150);

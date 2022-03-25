@@ -178,6 +178,7 @@ function Bio() {
 				duration: 1,
 				ease: 'power4.inOut',
 				x: -15,
+				scale: 1.05,
 				alpha: 0,
 				clearProps: 'all',
 			});

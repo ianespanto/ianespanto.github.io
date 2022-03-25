@@ -41,6 +41,10 @@ body {
 		font-family: $font-zh-tw;
 	}
 
+	.jp {
+		font-family: $font-jp;
+	}
+
 	&.no-scroll {
 		overflow: hidden;
 	}
@@ -78,6 +82,15 @@ body:lang(zh-TW) {
 	input,
 	textarea {
 		font-family: $font-zh-tw;
+	}
+}
+
+body:lang(jp) {
+	&,
+	button,
+	input,
+	textarea {
+		font-family: $font-jp;
 	}
 }
 

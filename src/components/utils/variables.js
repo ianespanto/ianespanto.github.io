@@ -28,6 +28,7 @@ export const pageTransitionVariants = {
 
 export const langList = [
 	{ id: 'en', name: 'English' },
+	// { id: 'jp', name: '日本語' },
 	{ id: 'zh', name: '简体中文' },
 	{ id: 'zh-TW', name: '繁體中文' },
 ];
@@ -68,11 +69,11 @@ export const schoolList = [
 export const creditList = [
 	{
 		role: 'design',
-		name: 'Ian Espanto',
+		name: 'Yours Truly',
 	},
 	{
 		role: 'code',
-		name: 'Ian Espanto',
+		name: 'Yours Truly',
 	},
 	{
 		role: 'photos',

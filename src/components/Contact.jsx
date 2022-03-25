@@ -150,8 +150,8 @@ export default function Contact() {
 		<>
 			<main className="contact">
 				<section>
-					<div className="hero-area">
-						<div className="inner-wrapper inner-wrapper--narrow">
+					<div className="inner-wrapper inner-wrapper--narrow">
+						<div className="hero-area">
 							<h1 className="hero-heading" ref={elm => (fadeInElms.current[0] = elm)}>
 								<span>{t('need_help.part1')}</span>
 								<span>{t('need_help.part2')}</span>
@@ -167,18 +167,12 @@ export default function Contact() {
 									</a>
 								</div>
 								<div className="" ref={elm => (fadeInElms.current[2] = elm)}>
-									<a
-										className="link-hover link-hover--light"
-										href="/ian_espanto_resume.pdf"
-										download>
+									<a className="link-hover link-hover--light" href="/resume.pdf" download>
 										{t('download_resume')}
 									</a>
 								</div>
 							</div>
 						</div>
-					</div>
-
-					<div className="inner-wrapper inner-wrapper--narrow">
 						<div className="form-container" ref={elm => (fadeInElms.current[3] = elm)}>
 							{success || (
 								<form onSubmit={sendEmail} noValidate ref={form}>

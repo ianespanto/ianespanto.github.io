@@ -56,14 +56,14 @@ export default function App() {
 		if (isInitialLoad) {
 			document.body.classList.add('no-action');
 			const tl = gsap.timeline({ delay: 0.2 });
+			const black = '#282828';
+			const white = '#fff';
 
 			if (location.pathname === '/' && (playIntroTransition || process.env.NODE_ENV === 'production')) {
 				// Intro animation on homepage
 				const count = { percentage: 0 };
-				const black = '#282828';
-				const white = '#fff';
 
-				tl.set(loadingTitle.current, { x: '-50%' });
+				tl.set(loadingTitle.current, { x: '-50%', color: white });
 				tl.set(loading.current, { color: black });
 				tl.set(loadingNameOverlay.current, { backgroundColor: black });
 				tl.to(transitionBox.current, { duration: 0.5, ease: 'power4.inOut', backgroundColor: white });
@@ -128,7 +128,8 @@ export default function App() {
 				tl.add(() => {
 					setPageTransInProgress(false);
 				});
-				tl.to(transitionBox.current, { duration: 1.5, y: '-100%', ease: 'power4.inOut' });
+				tl.to(transitionBox.current, { duration: 0.2, backgroundColor: black });
+				tl.to(transitionBox.current, { duration: 1.5, y: '-100%', ease: 'power4.inOut' }, '-=.2');
 			}
 
 			tl.eventCallback('onComplete', () => {
@@ -154,21 +155,21 @@ export default function App() {
 			tl.from(
 				transitionCharRef.current,
 				{
-					duration: 2,
-					ease: 'elastic.inOut(1.2, 0.4)',
-					y: gsap.utils.wrap([-60, 60]),
+					duration: 0.6,
+					ease: 'power4.inOut',
+					y: gsap.utils.wrap([-30, 30]),
 					alpha: 0,
-					stagger: 0.03,
+					stagger: 0.04,
 				},
-				'l+=.2'
+				'l+=.8'
 			);
 			tl.add(() => {
 				setPageTransInProgress(false);
 				gsap.set(window, { scrollTo: 0 });
 			}, 'l+=1.5');
 			tl.to(transitionBox.current, { duration: 1.5, y: '-100%', ease: 'power4.inOut' }, 'l+=1.5');
-			tl.to(transitionText.current, { duration: 1.4, y: '-100%', ease: 'power4.inOut' }, 'l+=1.6');
-			tl.to(transitionText.current, { duration: 1.4, alpha: 0, ease: 'power4.inOut' }, 'l+=1.6');
+			tl.to(transitionText.current, { duration: 1.3, y: '-100%', ease: 'power4.inOut' }, 'l+=1.7');
+			tl.to(transitionText.current, { duration: 1, alpha: 0, ease: 'power4.inOut' }, 'l+=1.7');
 
 			tl.eventCallback('onComplete', () => {
 				document.body.classList.remove('no-action');

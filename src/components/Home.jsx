@@ -63,7 +63,7 @@ export default function Home({
 				gsap.from(scrollDownIcon.current, {
 					duration: 0.6,
 					ease: 'elastic.out(1, 0.6)',
-					delay: 1.5,
+					delay: 2.5,
 					y: -25,
 					alpha: 0,
 					repeatDelay: 0.4,
@@ -72,7 +72,8 @@ export default function Home({
 				});
 			} else {
 				// fade out down arrow when at least one project has been revealed
-				gsap.to(scrollDownWrap.current, 0.3, {
+				gsap.to(scrollDownWrap.current, {
+					duration: 0.5,
 					alpha: 0,
 					onComplete: () => {
 						// remove arrow on complete
@@ -236,7 +237,7 @@ function Project({
 			tl.to(pOverlays.current, { duration: 0.3, alpha: 1 }, 'l+=.6');
 			tl.from(
 				pImg.current,
-				{ duration: 1, ease: 'power4.inOut', x: -15, alpha: 0, clearProps: 'all' },
+				{ duration: 1, ease: 'power4.inOut', x: -15, scale: 1.05, alpha: 0, clearProps: 'all' },
 				'l+=.9'
 			);
 			tl.to(
