@@ -16,8 +16,8 @@
 	"about_headings": {
 		"bio": "我的簡介",
 		"skills": "技術知識",
-		"experience": "工作經歷",
-		"education": "教育歷史"
+		"experience": "就職經歷",
+		"education": "教育背景"
 	},
 	"bio": {
 		"p1": "你好！我是 Ian，一名現位於加拿大不列顛哥倫比亞省的前端網絡工程師。非常專心仔細的我專門從事開發和維護網絡內容管理系統、現代的網站、以及使用最新的工具和技術，例如 React 之類的 JavaScript 框架動態地構建的網絡應用程序。",
