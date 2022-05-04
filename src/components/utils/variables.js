@@ -69,11 +69,11 @@ export const schoolList = [
 export const creditList = [
 	{
 		role: 'design',
-		name: 'Yours Truly',
+		name: 'Ian Espanto',
 	},
 	{
 		role: 'code',
-		name: 'Yours Truly',
+		name: 'Ian Espanto',
 	},
 	{
 		role: 'photos',

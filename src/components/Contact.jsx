@@ -149,161 +149,159 @@ export default function Contact() {
 	return (
 		<>
 			<main className="contact">
-				<section>
-					<div className="inner-wrapper inner-wrapper--narrow">
-						<div className="hero-area">
-							<h1 className="hero-heading" ref={elm => (fadeInElms.current[0] = elm)}>
-								<span>{t('need_help.part1')}</span>
-								<span>{t('need_help.part2')}</span>
-							</h1>
-							<div className="contact-info responsive-row responsive-row--medium">
-								<div className="contact-email" ref={elm => (fadeInElms.current[1] = elm)}>
-									<a
-										className="link-hover link-hover--light"
-										href="mailto:ianjespanto@gmail.com"
-										target="_blank"
-										rel="noreferrer">
-										ianjespanto@gmail.com
-									</a>
-								</div>
-								<div className="" ref={elm => (fadeInElms.current[2] = elm)}>
-									<a className="link-hover link-hover--light" href="/resume.pdf" download>
-										{t('download_resume')}
-									</a>
-								</div>
+				<div className="inner-wrapper inner-wrapper--narrow">
+					<div className="hero-area">
+						<h1 className="hero-heading" ref={elm => (fadeInElms.current[0] = elm)}>
+							<span>{t('need_help.part1')}</span>
+							<span>{t('need_help.part2')}</span>
+						</h1>
+						<div className="contact-info responsive-row responsive-row--medium">
+							<div className="contact-email" ref={elm => (fadeInElms.current[1] = elm)}>
+								<a
+									className="link-hover link-hover--light"
+									href="mailto:ianjespanto@gmail.com"
+									target="_blank"
+									rel="noreferrer">
+									ianjespanto@gmail.com
+								</a>
+							</div>
+							<div className="" ref={elm => (fadeInElms.current[2] = elm)}>
+								<a className="link-hover link-hover--light" href="/resume.pdf" download>
+									{t('download_resume')}
+								</a>
 							</div>
 						</div>
-						<div className="form-container" ref={elm => (fadeInElms.current[3] = elm)}>
-							{success || (
-								<form onSubmit={sendEmail} noValidate ref={form}>
-									<div className="grid grid--gutters">
-										<div className="grid__item">
-											<div className="fg">
-												<input
-													type="text"
-													name="name"
-													id="input-name"
-													placeholder={t('form.name')}
-													autoComplete="off"
-													ref={nameRef}
-													onBlur={validateField}
-												/>
-												<label htmlFor="input-name" className="required">
-													{t('form.name')}
-												</label>
-											</div>
-										</div>
-										<div className="grid__item">
-											<div className="fg">
-												<input
-													type="email"
-													name="email"
-													id="input-email"
-													placeholder={t('form.email')}
-													autoComplete="off"
-													ref={emailRef}
-													onBlur={validateField}
-												/>
-												<label htmlFor="input-email" className="required">
-													{t('form.email')}
-												</label>
-											</div>
-										</div>
-									</div>
-									<div className="grid grid--gutters">
-										<div className="grid__item">
-											<div className="fg">
-												<input
-													type="text"
-													name="subject"
-													id="input-subject"
-													placeholder={t('form.subject')}
-													autoComplete="off"
-													ref={subjectRef}
-													onBlur={validateField}
-												/>
-												<label htmlFor="input-subject" className="required">
-													{t('form.subject')}
-												</label>
-											</div>
-										</div>
-									</div>
-									<div className="grid grid--gutters">
-										<div className="grid__item">
-											<div className="fg">
-												<textarea
-													name="message"
-													id="input-message"
-													placeholder={t('form.message')}
-													ref={messageRef}
-													onChange={e => setMessage(e.target.value)}
-													onBlur={validateField}></textarea>
-												<label htmlFor="input-message" className="required">
-													{t('form.message')}
-												</label>
-												<AnimatePresence>
-													{message?.length > 0 && (
-														<motion.span
-															initial={{ opacity: 0, x: 5 }}
-															animate={{ opacity: 1, x: 0 }}
-															exit={{ opacity: 0, x: 5 }}
-															transition={{ duration: 0.15 }}
-															className="char-count">
-															{message.length}
-															{message?.length < minCharCount && (
-																<span>
-																	{' '}
-																	/ {t('form.min')} {minCharCount}
-																</span>
-															)}
-															{message?.length > maxCharCount && (
-																<span>
-																	{' '}
-																	/ {t('form.max')} {maxCharCount}
-																</span>
-															)}
-														</motion.span>
-													)}
-												</AnimatePresence>
-											</div>
-										</div>
-									</div>
-									<div className="grid grid--gutters">
-										<div className="grid__item button-container">
-											<button
-												className="btn btn--primary btn--full"
-												type="submit"
-												name="action"
-												value="submit">
-												<span data-hover={t('form.submit')}>{t('form.submit')}</span>
-											</button>
-
-											{sending && <span className="sending-span">{t('form.sending')}</span>}
-										</div>
-									</div>
-								</form>
-							)}
-							{success && (
-								<motion.p
-									initial={'initial'}
-									animate={'animate'}
-									variants={variants}
-									className="space-top">
-									{t('form.sent')}
-								</motion.p>
-							)}
-							{failed && (
-								<motion.p
-									initial={'initial'}
-									animate={'animate'}
-									variants={variants}
-									className="space-top">
-									{t('form.failed')}
-								</motion.p>
-							)}
-						</div>
 					</div>
-				</section>
+					<div className="form-container" ref={elm => (fadeInElms.current[3] = elm)}>
+						{success || (
+							<form onSubmit={sendEmail} noValidate ref={form}>
+								<div className="grid grid--gutters">
+									<div className="grid__item">
+										<div className="fg">
+											<input
+												type="text"
+												name="name"
+												id="input-name"
+												placeholder={t('form.name')}
+												autoComplete="off"
+												ref={nameRef}
+												onBlur={validateField}
+											/>
+											<label htmlFor="input-name" className="required">
+												{t('form.name')}
+											</label>
+										</div>
+									</div>
+									<div className="grid__item">
+										<div className="fg">
+											<input
+												type="email"
+												name="email"
+												id="input-email"
+												placeholder={t('form.email')}
+												autoComplete="off"
+												ref={emailRef}
+												onBlur={validateField}
+											/>
+											<label htmlFor="input-email" className="required">
+												{t('form.email')}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="grid grid--gutters">
+									<div className="grid__item">
+										<div className="fg">
+											<input
+												type="text"
+												name="subject"
+												id="input-subject"
+												placeholder={t('form.subject')}
+												autoComplete="off"
+												ref={subjectRef}
+												onBlur={validateField}
+											/>
+											<label htmlFor="input-subject" className="required">
+												{t('form.subject')}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="grid grid--gutters">
+									<div className="grid__item">
+										<div className="fg">
+											<textarea
+												name="message"
+												id="input-message"
+												placeholder={t('form.message')}
+												ref={messageRef}
+												onChange={e => setMessage(e.target.value)}
+												onBlur={validateField}></textarea>
+											<label htmlFor="input-message" className="required">
+												{t('form.message')}
+											</label>
+											<AnimatePresence>
+												{message?.length > 0 && (
+													<motion.span
+														initial={{ opacity: 0, x: 5 }}
+														animate={{ opacity: 1, x: 0 }}
+														exit={{ opacity: 0, x: 5 }}
+														transition={{ duration: 0.15 }}
+														className="char-count">
+														{message.length}
+														{message?.length < minCharCount && (
+															<span>
+																{' '}
+																/ {t('form.min')} {minCharCount}
+															</span>
+														)}
+														{message?.length > maxCharCount && (
+															<span>
+																{' '}
+																/ {t('form.max')} {maxCharCount}
+															</span>
+														)}
+													</motion.span>
+												)}
+											</AnimatePresence>
+										</div>
+									</div>
+								</div>
+								<div className="grid grid--gutters">
+									<div className="grid__item button-container">
+										<button
+											className="btn btn--primary btn--full"
+											type="submit"
+											name="action"
+											value="submit">
+											<span data-hover={t('form.submit')}>{t('form.submit')}</span>
+										</button>
+
+										{sending && <span className="sending-span">{t('form.sending')}</span>}
+									</div>
+								</div>
+							</form>
+						)}
+						{success && (
+							<motion.p
+								initial={'initial'}
+								animate={'animate'}
+								variants={variants}
+								className="space-top">
+								{t('form.sent')}
+							</motion.p>
+						)}
+						{failed && (
+							<motion.p
+								initial={'initial'}
+								animate={'animate'}
+								variants={variants}
+								className="space-top">
+								{t('form.failed')}
+							</motion.p>
+						)}
+					</div>
+				</div>
 			</main>
 		</>
 	);
