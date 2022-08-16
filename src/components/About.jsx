@@ -290,7 +290,7 @@ function SkillList({ isDesktopVers }) {
 			title: 'development_tools',
 			icon: 'gear',
 			icon_paths: 17,
-			list: ['Adobe Photoshop', 'Sublime Text', 'Git', 'NPM', 'Gulp.js'],
+			list: ['Adobe Photoshop', 'Visual Studio Code', 'Git', 'NPM', 'Gulp.js'],
 		},
 	];
 
