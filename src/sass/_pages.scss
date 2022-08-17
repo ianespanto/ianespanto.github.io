@@ -54,7 +54,8 @@ main.about {
 		opacity: 1;
 	}
 
-	&:lang(en) {
+	&:lang(en),
+	&:lang(es) {
 		text-transform: uppercase;
 		font-weight: 700;
 	}
@@ -82,7 +83,8 @@ main.about {
 		top: rem(140);
 		left: rem(80);
 		transition: opacity 1s 0.5s;
-		&:lang(en) {
+		&:lang(en),
+		&:lang(es) {
 			transform: rotate(-90deg) translateX(-100%);
 			transform-origin: 0% 0%;
 		}

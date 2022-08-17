@@ -28,7 +28,8 @@ export const pageTransitionVariants = {
 
 export const langList = [
 	{ id: 'en', name: 'English' },
-	// { id: 'jp', name: '日本語' },
+	// { id: 'es', name: 'Español' },
+	{ id: 'jp', name: '日本語' },
 	{ id: 'zh', name: '简体中文' },
 	{ id: 'zh-TW', name: '繁體中文' },
 ];
