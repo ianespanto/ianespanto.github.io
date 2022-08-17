@@ -3,47 +3,47 @@
 	"frontend_engineer": "front-end engineer",
 	"menu": "メニュー",
 	"close": "閉じる",
-	"credits": "Copyright",
-	"design": "Design",
-	"code": "Code",
-	"translation": "Translation",
-	"photos": "Photos",
+	"credits": "コピーライト",
+	"design": "デザイン",
+	"code": "コード",
+	"translation": "翻訳",
+	"photos": "写真",
 	"menu_items": {
 		"work": "実績",
 		"about": "紹介",
 		"contact": "連絡先"
 	},
 	"about_headings": {
-		"bio": "イアンの略歴",
-		"skills": "イアンの専門分野",
-		"experience": "イアンの職歴",
-		"education": "イアンの学歴"
+		"bio": "バイオグラフィー",
+		"skills": "専門分野",
+		"experience": "実務経験",
+		"education": "学歴"
 	},
 	"bio": {
-		"p1": "Hello world! I'm Ian, a meticulous front-end web engineer based in British Columbia specializing in the development and maintenance of custom content management systems, modern websites and web applications dynamically built with JavaScript frameworks such as React using the latest tools and technologies.",
+		"p1": "こんにちは！私はイアンです。ブリティッシュコロンビア州を拠点とする細心の注意を払ったフロントエンドエンジニアです。カスタムコンテンツ管理システム、および最新のツールと技術を使用して React などの JavaScript フレームワークで動的に構築される現代のサイトとアプリの開発と維持を専門としています。",
 		"p2": {
-			"part1": "Having always had a strong interest in programming, design and mathematics, I graduated from UBC, one of the Top 3 universities in Canada with a Bachelor of Science in ",
-			"cpsc": "computer science",
-			"and": " and ",
-			"stats": "statistics",
-			"part2": " in 2015, after which I attended BCIT's School of Computing to study ",
-			"frontend_dev": "front-end development",
-			"part3": " and finished the program top of the class. Since then, I have worked on a breadth of projects with a wide range of clients, coded dozens of websites in various formats, and developed multiple applications integrating data fetched from APIs."
+			"part1": "プログラミング、デザイン、数学に常に強い興味を持っていた私は、カナダのトップ 3 の UBC 大学を 2015 年に卒業し、",
+			"cpsc": "情報技術",
+			"and": "と",
+			"stats": "統計学",
+			"part2": "の二つの学位を取得しました。 その後、BCIT のコンピューティングスクールに通い、",
+			"frontend_dev": "フロントエンド開発",
+			"part3": "を学び、クラスのトップでプログラムを修了しました。それ以来、私は幅広いクライアントといろいろなプロジェクトに取り組み、さまざまな形式で数十のサイトをコーディングし、API から取得したデータを統合した多くのアプリを開発してきました。"
 		},
 		"p3": {
-			"part1": "Although I am a programmer by definition, I am also proficient in raster graphics editing using Photoshop and have been heavily involved in the design process throughout my career. I am a pianist and a ",
-			"composer": "hobbyist composer",
-			"part2": " in my spare time."
+			"part1": "プログラマーですが、Photoshop を使用したラスター画像加工編集にも精通しており、キャリアを通じてユーザーエクスペリエンスの設計プロセスに深く携わってきました。仕事の余暇は、ずっと興味を持っているピアノや",
+			"composer": "音楽の制作",
+			"part2": "もしています。"
 		}
 	},
 	"skill_list": {
-		"programming_languages": "Programming Languages",
-		"professional_skillset": "Professional Skillset",
-		"development_tools": "Development Tools",
-		"latest": "latest",
-		"development": "Development",
-		"animation": "Animation",
-		"database": "Database"
+		"programming_languages": "プログラミング言語",
+		"professional_skillset": "スキルセット",
+		"development_tools": "開発ツール",
+		"latest": "最新",
+		"development": "開発",
+		"animation": "アニメーション",
+		"database": "データベース"
 	},
 	"jobs": {
 		"signals": {
@@ -66,105 +66,105 @@
 			"name": "ブリティッシュコロンビア大学",
 			"short": "UBC大学",
 			"degree": "理学部 情報技術学科／統計学科卒",
-			"degree_short": "BSc. Computer Science and Statistics",
+			"degree_short": "理学部 情報技術学科／統計学科卒",
 			"grad": "2015年5月・バンクーバー"
 		},
 		"bcit": {
 			"name": "ブリティッシュコロンビア工科大学",
 			"short": "BCIT大学",
 			"degree": "認定 優良テクニカルウェブデザイナー",
-			"degree_short": "Front-end Developer w/ Distinction",
+			"degree_short": "認定 優良テクニカルウェブデザイナー",
 			"grad": "2015年10月・バンクーバー"
 		}
 	},
 	"bio_closing": {
-		"part1": "ウェブデザインに関して、機能と美学的な視点から、細部にまでこだわっているのでプロジェクトを最大限活用しています。機能と美学のバランスを刺激して、視覚的に見易く、新規性や革新性ばかりではなく、使いやすい高品質なウェブサイトを制作することを目標にしています。面白いプロジェクトを探していますので、ご興味があれば、是非お気軽に",
+		"part1": "ウェブデザインに関して、機能と美学的な視点から、細部にまでこだわっているのでプロジェクトを最大限活用しています。機能と美学のバランスを刺激して、視覚的に見易く、新規性や革新性ばかりではなく、使いやすい高品質なサイトとアプリを制作することを目標にしています。面白いプロジェクトを探していますので、ご興味があれば、是非お気軽に",
 		"contact_me": "ご連絡",
 		"part2": "ください。"
 	},
 	"projects": {
 		"flexstats": {
 			"title": "Flexstats",
-			"footnote": "React Application",
-			"description": "An ETH mining pool React app built from scratch that utilizes APIs to display dynamic data."
+			"footnote": "React アプリケーション",
+			"description": "API を使用して動的データを表示する、ゼロから構築された ETH マイニング プール React アプリ"
 		},
 		"clearseas-oil-spills": {
 			"title": "Clear Seas",
-			"footnote": "Wordpress Microsite",
-			"description": "One of the six bilingual microsites I have built for Clear Seas with custom Wordpress themes."
+			"footnote": "Wordpress マイクロサイト",
+			"description": "カスタム Wordpress テーマを使用して Clear Seas 用に構築した 6 つのバイリンガルサイトの 1 つ"
 		},
 		"foundry": {
 			"title": "Foundry BC",
-			"footnote": "Complex Wordpress Site",
-			"description": "A large-scale Wordpress site that helps youth and young adults of BC find services and help they need."
+			"footnote": "大規模な Wordpress サイト",
+			"description": "BC 州の若者や若年成人が必要なサービスや支援を見つけるのに役立つ大規模な Wordpress サイト"
 		},
 		"youth-service-finder": {
-			"title": "Youth Service Finder",
-			"footnote": "Location Search App",
-			"description": "A Foundry app that groups data and allows users to search and filter services fetched from an API."
+			"title": "青少年サービスファインダー",
+			"footnote": "場所検索アプリ",
+			"description": "データをグループ化し、ユーザーが API から取得したサービスを検索およびフィルタリングできるようにする Foundry アプリ"
 		},
 		"gbf": {
 			"title": "Graham Boeckh Foundation",
-			"footnote": "Wordpress Theme",
-			"description": "A bilingual Wordpress site built for a private foundation with various custom components."
+			"footnote": "Wordpress テーマ",
+			"description": "さまざまなカスタムコンポーネントを備えたプライベートファウンデーション向けに構築されたバイリンガルの Wordpress サイト"
 		},
 		"bcnu": {
-			"title": "BCNU Annual Report",
-			"footnote": "Brochure Site",
-			"description": "A brochure site built for BC Nurses' Union using a Wordpress theme written from scratch."
+			"title": "BCNU 年次報告",
+			"footnote": "パンフレットサイト",
+			"description": "ゼロから作成した Wordpress テーマを使用して作成された BC 看護師組合のパンフレットサイト"
 		},
 		"underwater-noise": {
 			"title": "Underwater Noise",
-			"footnote": "Wordpress Microsite",
-			"description": "One of the six bilingual microsites I have built for Clear Seas with custom Wordpress themes."
+			"footnote": "Wordpress マイクロサイト",
+			"description": "カスタム Wordpress テーマを使用して Clear Seas 用に構築した 6 つのバイリンガルサイトの 1 つ"
 		},
 		"asher": {
 			"title": "Asher Eyewear",
-			"footnote": "E-commerce Template",
-			"description": "A five-page e-commerce demo site with some basic hover and scroll effects. School project."
+			"footnote": "ECサイトテンプレート",
+			"description": "基本的なホバー効果とスクロール効果を備えた 5 ページの EC デモサイト"
 		},
 		"la": {
 			"title": "Los Angeles",
-			"footnote": "School Project",
-			"description": "A single-page responsive site that showcases some simple user interactions. School Project."
+			"footnote": "学校プロジェクト",
+			"description": "シンプルなユーザーインタラクションを紹介する単一ページのレスポンシブサイト"
 		},
 		"gooner": {
 			"title": "Gooner Blog",
-			"footnote": "News Site Template",
-			"description": "A single-page blog/news demo site that changes from columns to tabs on mobile. School Project."
+			"footnote": "ブログのレイアウト",
+			"description": "モバイルで列からタブに変わる単一ページのニュースデモサイト"
 		},
 		"blackjack": {
 			"title": "Blackjack",
-			"footnote": "JavaScript Game",
-			"description": "A web game written in jQuery utilizing classes and animation libraries. School project."
+			"footnote": "JavaScript ゲーム",
+			"description": "クラスとアニメーションライブラリを利用した jQuery で書かれた Web ゲーム"
 		}
 	},
 	"project_tooltip": {
-		"open_application": "Open Application",
-		"visit_site": "Visit Site",
-		"view_project": "View Project",
-		"play_game": "Play Game"
+		"open_application": "アプリを見る",
+		"visit_site": "サイトを見る",
+		"view_project": "プロジェクトを見る",
+		"play_game": "ゲームを見る"
 	},
 	"learn_more_about_ian": {
-		"part1": "Everything you need to know about ",
-		"ian": "Ian",
-		"part2": ""
+		"part1": "",
+		"ian": "イアン",
+		"part2": "についてお知りになりたいことがあれば、ここをクリック"
 	},
 	"need_help": {
 		"part1": "お気軽にお問い",
 		"part2": "合わせください"
 	},
-	"download_resume": "履歴書をダウンロード",
+	"download_resume": "履歴書をダウンロード (英語)",
 	"form": {
 		"name": "お名前",
 		"email": "メールアドレス",
 		"subject": "件名",
 		"message": "お問い合わせ内容",
 		"submit": "送信する",
-		"min": "min.",
-		"max": "max.",
-		"sending": "Sending...",
+		"min": "最小限",
+		"max": "最大限",
+		"sending": "送信中...",
 		"sent": "メッセージをいただき、ありがとうございます。後ほど、こちらからご連絡致します。",
-		"failed": "Oops... Something went wrong. Please try again later or use the contact information above."
+		"failed": "おっと！何かが間違っていた。 後でもう一度やり直すか、上記の連絡先情報を使用してください。"
 	}
 }

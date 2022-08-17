@@ -1,0 +1,170 @@
+{
+	"frontend_web_engineer": "Ingeniero Web Front-end",
+	"frontend_engineer": "front-end engineer",
+	"menu": "Menú",
+	"close": "Close",
+	"credits": "Copyright",
+	"design": "Design",
+	"code": "Code",
+	"translation": "Translation",
+	"photos": "Photos",
+	"menu_items": {
+		"work": "Work",
+		"about": "About",
+		"contact": "Contact"
+	},
+	"about_headings": {
+		"bio": "Sobre mí",
+		"skills": "Conocimientos técnicos",
+		"experience": "Experiencia",
+		"education": "Educación"
+	},
+	"bio": {
+		"p1": "Hola Mundo. Soy Ian, un meticuloso ingeniero web front-end con sede en la Columbia Británica que se especializa en el desarrollo y mantenimiento de sistemas de administración de contenido personalizados, sitios web modernos y aplicaciones web construidas dinámicamente con marcos de JavaScript como React utilizando las últimas herramientas y tecnologías.",
+		"p2": {
+			"part1": "Como siempre tuve un gran interés en la programación, el diseño y las matemáticas, me gradué de la UBC, una de las 3 mejores universidades de Canadá, con una Licenciado en Ciencias de la ",
+			"cpsc": "Informática",
+			"and": " y ",
+			"stats": "Estadística",
+			"part2": " en 2015, después de lo cual asistí a la Escuela de Computación de BCIT para estudiar ",
+			"frontend_dev": "desarrollo front-end",
+			"part3": " y terminó el programa como el mejor de la clase. Desde entonces, he trabajado en una variedad de proyectos con una amplia gama de clientes, he codificado docenas de sitios web en varios formatos y he desarrollado múltiples aplicaciones que integran datos obtenidos de las API."
+		},
+		"p3": {
+			"part1": "Aunque soy un programador por definición, también soy experto en la edición de gráficos de trama con Photoshop y he estado muy involucrado en el proceso de diseño a lo largo de mi carrera. Soy pianista y ",
+			"composer": "compositor aficionado",
+			"part2": " en mi tiempo libre."
+		}
+	},
+	"skill_list": {
+		"programming_languages": "Lenguajes de programación",
+		"professional_skillset": "Habilidades profesionales",
+		"development_tools": "Herramientas de desarrollo",
+		"latest": "último",
+		"development": "Development",
+		"animation": "Animation",
+		"database": "Database"
+	},
+	"jobs": {
+		"signals": {
+			"company": "Signals Design",
+			"role": "Interactive Developer",
+			"time": "July 2017 - July 2020",
+			"description": "Trabajó en una amplia gama de proyectos con clientes de empresas y organizaciones como UBC, Clear Seas, Foundry, BCNU, Crofton House, MYM, Graham Boeckh Foundation, etc. Integré varias API para diseñar y desarrollar de forma independiente una herramienta interna de gestión de equipos, proyectos y presupuestos que fue ampliamente utilizada por los gerentes y contadores de la empresa.",
+			"footnote": "Vancouver based design agency"
+		},
+		"shoes": {
+			"company": "Shoes.com",
+			"role": "Front-end Developer",
+			"time": "November 2015 - August 2016",
+			"description": "Colaboró con diseñadores, gerentes de proyectos, estrategas de marketing y otros desarrolladores para crear nuevas funcionalidades de interfaz de usuario y producir páginas web receptivas para los sitios de comercio electrónico de la empresa en varios entornos de desarrollo. Suscrito a flujos de trabajo modernos, incluida la automatización a través de grunt and gulp, control de versiones a través de Git y pruebas A/B a través de Maxymiser.",
+			"footnote": "Vancouver & Seattle based e-commerce company"
+		}
+	},
+	"education": {
+		"ubc": {
+			"name": "Universidad de Columbia Británica",
+			"short": "UBC",
+			"degree": "Licenciatura en Ciencias en Informática y Estadística",
+			"degree_short": "Licenciatura Informática y Estadística",
+			"grad": "Vancouver BC, mayo de 2015"
+		},
+		"bcit": {
+			"name": "Instituto de Tecnología de la Columbia Británica",
+			"short": "BCIT",
+			"degree": "Certificado en Desarrollador Front-end con Distinción",
+			"degree_short": "Desarrollador Front-end con Distinción",
+			"grad": "Vancouver BC, octubre de 2015"
+		}
+	},
+	"bio_closing": {
+		"part1": "Como pensador crítico con gran atención a los detalles, me esfuerzo por sacar el máximo provecho de un proyecto centrándome en los aspectos funcionales y estéticos del desarrollo web. Mi objetivo de lograr este equilibrio alimenta mi deseo de producir sitios web y aplicaciones web de calidad que no solo sean agradables a la vista y frescos, sino también innovadores, interactivos y fáciles de usar. Siempre estoy buscando proyectos interesantes con gente increíble. ¿Necesito una mano? Por favor ",
+		"contact_me": "póngase en contacto conmigo",
+		"part2": "."
+	},
+	"projects": {
+		"flexstats": {
+			"title": "Flexstats",
+			"footnote": "React Application",
+			"description": "An ETH mining pool React app built from scratch that utilizes APIs to display dynamic data."
+		},
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "Wordpress Microsite",
+			"description": "One of the six bilingual microsites I have built for Clear Seas with custom Wordpress themes."
+		},
+		"foundry": {
+			"title": "Foundry BC",
+			"footnote": "Complex Wordpress Site",
+			"description": "A large-scale Wordpress site that helps youth and young adults of BC find services and help they need."
+		},
+		"youth-service-finder": {
+			"title": "Youth Service Finder",
+			"footnote": "Location Search App",
+			"description": "A Foundry app that groups data and allows users to search and filter services fetched from an API."
+		},
+		"gbf": {
+			"title": "Graham Boeckh Foundation",
+			"footnote": "Wordpress Theme",
+			"description": "A bilingual Wordpress site built for a private foundation with various custom components."
+		},
+		"bcnu": {
+			"title": "BCNU Annual Report",
+			"footnote": "Brochure Site",
+			"description": "A brochure site built for BC Nurses' Union using a Wordpress theme written from scratch."
+		},
+		"underwater-noise": {
+			"title": "Underwater Noise",
+			"footnote": "Wordpress Microsite",
+			"description": "One of the six bilingual microsites I have built for Clear Seas with custom Wordpress themes."
+		},
+		"asher": {
+			"title": "Asher Eyewear",
+			"footnote": "E-commerce Template",
+			"description": "A five-page e-commerce demo site with some basic hover and scroll effects. School project."
+		},
+		"la": {
+			"title": "Los Angeles",
+			"footnote": "School Project",
+			"description": "A single-page responsive site that showcases some simple user interactions. School Project."
+		},
+		"gooner": {
+			"title": "Gooner Blog",
+			"footnote": "News Site Template",
+			"description": "A single-page blog/news demo site that changes from columns to tabs on mobile. School Project."
+		},
+		"blackjack": {
+			"title": "Blackjack",
+			"footnote": "JavaScript Game",
+			"description": "A web game written in jQuery utilizing classes and animation libraries. School project."
+		}
+	},
+	"project_tooltip": {
+		"open_application": "Open Application",
+		"visit_site": "Visit Site",
+		"view_project": "View Project",
+		"play_game": "Play Game"
+	},
+	"learn_more_about_ian": {
+		"part1": "Everything you need to know about ",
+		"ian": "Ian",
+		"part2": ""
+	},
+	"need_help": {
+		"part1": "Need a hand? ",
+		"part2": "Drop me a line!"
+	},
+	"download_resume": "Download Résumé",
+	"form": {
+		"name": "Name",
+		"email": "Email",
+		"subject": "Subject",
+		"message": "Message",
+		"submit": "Send Message",
+		"min": "min.",
+		"max": "max.",
+		"sending": "Sending...",
+		"sent": "Your message has been sent. I will be in touch!",
+		"failed": "Oops... Something went wrong. Please try again later or use the contact information above."
+	}
+}
