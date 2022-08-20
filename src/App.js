@@ -33,7 +33,6 @@ export default function App() {
 	const loadingTitle = useRef(null);
 	const transitionBox = useRef(null);
 	const transitionText = useRef(null);
-	const testBox = useRef(null);
 	const loading = useRef(null);
 	const transitionCharRef = useRef([]);
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -84,11 +83,7 @@ export default function App() {
 				tl.to(transitionBox.current, { duration: 0.5, ease: 'power4.inOut', backgroundColor: black });
 				tl.to(loading.current, { duration: 0.5, color: white }, '-=.5');
 				tl.to(loadingName.current, { duration: 0.9, ease: 'power4.inOut', y: '-100%', alpha: 0 }, '-=.5');
-				tl.from(
-					loadingTitle.current,
-					{ duration: 0.9, ease: 'power4.inOut', y: '100%', alpha: 0 },
-					'-=.9'
-				);
+				tl.from(loadingTitle.current, { duration: 0.9, ease: 'power4.inOut', y: '100%', alpha: 0 }, '-=.9');
 				tl.add(() => {
 					setPageTransInProgress(false);
 				});
@@ -100,11 +95,7 @@ export default function App() {
 					rotationZ: 10,
 					alpha: 0,
 				});
-				tl.to(
-					transitionBox.current,
-					{ duration: 1.5 / 2, ease: 'power4.in', y: '-50%', skewY: 7 },
-					'-=' + 1.5
-				);
+				tl.to(transitionBox.current, { duration: 1.5 / 2, ease: 'power4.in', y: '-50%', skewY: 7 }, '-=' + 1.5);
 				tl.to(
 					transitionBox.current,
 

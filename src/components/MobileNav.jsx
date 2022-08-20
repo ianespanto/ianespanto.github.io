@@ -49,7 +49,8 @@ export default function MobileNav({
 				{menuItems.map(({ id, link }, i) => (
 					<div
 						key={'mobileNavLink_' + i + '_' + id}
-						className={`mn-item${link === location.pathname ? ' current' : ''}`}>
+						className={`mn-item${link === location.pathname ? ' current' : ''}`}
+					>
 						<NavLink to={link} onClick={e => clickHandle(e, link)}>
 							<span>{t(`menu_items.${id}`)}</span>
 						</NavLink>

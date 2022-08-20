@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { creditList, langList } from './utils/variables';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -46,11 +45,9 @@ export default function Footer({
 					<li
 						onClick={() => {
 							setCreditTooltipOpen(cur => !cur);
-						}}>
-						<span
-							className={`pointer credits-trigger tooltipTrigger${
-								creditTooltipOpen ? ' active' : ''
-							}`}>
+						}}
+					>
+						<span className={`pointer credits-trigger tooltipTrigger${creditTooltipOpen ? ' active' : ''}`}>
 							{t('credits')}
 						</span>
 						<AnimatePresence>
@@ -60,7 +57,8 @@ export default function Footer({
 									animate={'animate'}
 									exit={'exit'}
 									variants={variants}
-									className="tooltip tooltip--credits">
+									className="tooltip tooltip--credits"
+								>
 									{creditList.map(({ role, name }, i) => {
 										return (
 											<div key={`creditItem_${i}`}>
@@ -83,7 +81,8 @@ export default function Footer({
 					<li
 						onClick={() => {
 							setLangTooltipOpen(cur => !cur);
-						}}>
+						}}
+					>
 						<span className={`pointer lang-trigger tooltipTrigger${langTooltipOpen ? ' active' : ''}`}>
 							{langList.find(({ id }) => id === lang).name}
 						</span>
@@ -94,14 +93,15 @@ export default function Footer({
 									animate={'animate'}
 									exit={'exit'}
 									variants={variants}
-									className="tooltip tooltip--lang">
+									className="tooltip tooltip--lang"
+								>
 									{langList.map(({ id, name }, i) => {
 										return (
 											<div
-												className={id}
 												key={`langListItem_${i}`}
 												className={`langOption ${id}${lang === id ? ' current' : ''}`}
-												onClick={() => setLang(id)}>
+												onClick={() => setLang(id)}
+											>
 												<span>{name}</span>
 											</div>
 										);

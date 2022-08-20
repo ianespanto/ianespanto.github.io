@@ -32,12 +32,7 @@ export default function About({
 				const alpha = Math.min(height / 2, windowSize > 1024 ? 600 : 150);
 				const heightInView = windowSize.h + scrollTop - getPosition(section).y;
 
-				if (
-					heightInView > alpha &&
-					inViewSections <= i &&
-					!pageTransInProgress &&
-					entireAnimationCompleted
-				) {
+				if (heightInView > alpha && inViewSections <= i && !pageTransInProgress && entireAnimationCompleted) {
 					section.classList.add('in-view');
 					setInViewSections(old => (old += 1));
 
@@ -145,7 +140,8 @@ export default function About({
 								<Link
 									className="link-hover transition-link"
 									to="/contact"
-									onClick={e => delayRedirect(e, '/contact', navigate, setPageTransInProgress)}>
+									onClick={e => delayRedirect(e, '/contact', navigate, setPageTransInProgress)}
+								>
 									{t('bio_closing.contact_me')}
 								</Link>
 								{t('bio_closing.part2')}
@@ -228,11 +224,7 @@ function Bio() {
 								{t('bio.p2.cpsc')}
 							</a>
 							{t('bio.p2.and')}
-							<a
-								className="link-hover"
-								href="https://www.stat.ubc.ca/"
-								target="_blank"
-								rel="noreferrer">
+							<a className="link-hover" href="https://www.stat.ubc.ca/" target="_blank" rel="noreferrer">
 								{t('bio.p2.stats')}
 							</a>
 							{t('bio.p2.part2')}
@@ -240,7 +232,8 @@ function Bio() {
 								className="link-hover"
 								href="https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
 								target="_blank"
-								rel="noreferrer">
+								rel="noreferrer"
+							>
 								{t('bio.p2.frontend_dev')}
 							</a>
 							{t('bio.p2.part3')}
@@ -251,7 +244,8 @@ function Bio() {
 								className="link-hover"
 								href="https://soundcloud.com/ianespanto"
 								target="_blank"
-								rel="noreferrer">
+								rel="noreferrer"
+							>
 								{t('bio.p3.composer')}
 							</a>
 							{t('bio.p3.part2')}
@@ -318,7 +312,8 @@ function SkillList({ isDesktopVers }) {
 				return (
 					<div
 						key={`skillList_${i}_${isDesktopVers ? 'list' : 'carousel'}`}
-						className={`sl__i${isDesktopVers ? ' jello-child' : ''}`}>
+						className={`sl__i${isDesktopVers ? ' jello-child' : ''}`}
+					>
 						<div className="sl-icon">
 							<span className={`mono-icon i-${icon}`}></span>
 							<span className={`color-icon i-${icon}-c`}>{colorIcon}</span>

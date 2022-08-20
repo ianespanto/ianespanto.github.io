@@ -67,7 +67,8 @@ export default function Header({
 										className={({ isActive }) =>
 											'link-hover link-hover--long' + (isActive ? ' current' : '')
 										}
-										onClick={e => delayRedirect(e, link, navigate, setPageTransInProgress)}>
+										onClick={e => delayRedirect(e, link, navigate, setPageTransInProgress)}
+									>
 										{t(`menu_items.${id}`)}
 									</NavLink>
 								</li>

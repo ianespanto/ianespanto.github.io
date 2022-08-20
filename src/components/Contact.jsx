@@ -78,8 +78,7 @@ export default function Contact() {
 				if (
 					!val ||
 					(field.name === 'email' && !isValidEmailAddress(val)) ||
-					(field.name === 'message' &&
-						(message?.length < minCharCount || message?.length > maxCharCount))
+					(field.name === 'message' && (message?.length < minCharCount || message?.length > maxCharCount))
 				) {
 					hasError = true;
 					field.classList.add('input-error');
@@ -100,22 +99,20 @@ export default function Contact() {
 			if (!hasError) {
 				setSending(true);
 				if (!devMode) {
-					emailjs
-						.sendForm('service_qebiq6j', 'template_erhzsac', form.current, 'iayBg-ydeMU9ypk7L')
-						.then(
-							result => {
-								console.log(result.text);
-								setSuccess(true);
-								setFailed(false);
-								e.target.reset();
-							},
-							error => {
-								console.log(error.text);
-								setSuccess(false);
-								setFailed(true);
-								setSending(false);
-							}
-						);
+					emailjs.sendForm('service_qebiq6j', 'template_erhzsac', form.current, 'iayBg-ydeMU9ypk7L').then(
+						result => {
+							console.log(result.text);
+							setSuccess(true);
+							setFailed(false);
+							e.target.reset();
+						},
+						error => {
+							console.log(error.text);
+							setSuccess(false);
+							setFailed(true);
+							setSending(false);
+						}
+					);
 				}
 			}
 		}
@@ -161,7 +158,8 @@ export default function Contact() {
 									className="link-hover link-hover--light"
 									href="mailto:ianjespanto@gmail.com"
 									target="_blank"
-									rel="noreferrer">
+									rel="noreferrer"
+								>
 									ianjespanto@gmail.com
 								</a>
 							</div>
@@ -236,7 +234,8 @@ export default function Contact() {
 												placeholder={t('form.message')}
 												ref={messageRef}
 												onChange={e => setMessage(e.target.value)}
-												onBlur={validateField}></textarea>
+												onBlur={validateField}
+											></textarea>
 											<label htmlFor="input-message" className="required">
 												{t('form.message')}
 											</label>
@@ -247,7 +246,8 @@ export default function Contact() {
 														animate={{ opacity: 1, x: 0 }}
 														exit={{ opacity: 0, x: 5 }}
 														transition={{ duration: 0.15 }}
-														className="char-count">
+														className="char-count"
+													>
 														{message.length}
 														{message?.length < minCharCount && (
 															<span>
@@ -273,7 +273,8 @@ export default function Contact() {
 											className="btn btn--primary btn--full"
 											type="submit"
 											name="action"
-											value="submit">
+											value="submit"
+										>
 											<span data-hover={t('form.submit')}>{t('form.submit')}</span>
 										</button>
 
@@ -283,20 +284,12 @@ export default function Contact() {
 							</form>
 						)}
 						{success && (
-							<motion.p
-								initial={'initial'}
-								animate={'animate'}
-								variants={variants}
-								className="space-top">
+							<motion.p initial={'initial'} animate={'animate'} variants={variants} className="space-top">
 								{t('form.sent')}
 							</motion.p>
 						)}
 						{failed && (
-							<motion.p
-								initial={'initial'}
-								animate={'animate'}
-								variants={variants}
-								className="space-top">
+							<motion.p initial={'initial'} animate={'animate'} variants={variants} className="space-top">
 								{t('form.failed')}
 							</motion.p>
 						)}

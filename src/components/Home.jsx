@@ -143,14 +143,7 @@ export default function Home({
 	);
 }
 
-function Projects({
-	scrollTop,
-	windowSize,
-	projectsRevealed,
-	pageTransInProgress,
-	setPageTransInProgress,
-	navigate,
-}) {
+function Projects({ scrollTop, windowSize, projectsRevealed, pageTransInProgress, setPageTransInProgress, navigate }) {
 	return (
 		<div className="work">
 			<div className="inner-wrapper inner-wrapper--large">
@@ -244,11 +237,7 @@ function Project({
 			);
 
 			if (id !== 'about') {
-				tl.from(
-					pCopy.current,
-					{ duration: 1, ease: 'power4.inOut', alpha: 0, clearProps: 'all' },
-					'l+=.9'
-				);
+				tl.from(pCopy.current, { duration: 1, ease: 'power4.inOut', alpha: 0, clearProps: 'all' }, 'l+=.9');
 			}
 
 			tl.eventCallback('onComplete', () => {
@@ -332,7 +321,8 @@ function Project({
 							ref={pImgContainer}
 							onMouseEnter={e => pMouseEnterHandler(e)}
 							onMouseMove={e => pMouseMoveHandler(e)}
-							onMouseLeave={e => pMouseLeaveHandler(e)}>
+							onMouseLeave={e => pMouseLeaveHandler(e)}
+						>
 							<img
 								className="pl__tl no-action"
 								src={project.img}
@@ -354,10 +344,7 @@ function Project({
 									{t(`projects.${id}.title`)}
 								</span>
 								<span className="pl__u" style={theme}></span>
-								<span
-									className="pl__o"
-									style={theme}
-									ref={elm => (pOverlays.current[1] = elm)}></span>
+								<span className="pl__o" style={theme} ref={elm => (pOverlays.current[1] = elm)}></span>
 							</p>
 							<div className="pl__in responsive-text">
 								<span className="pl__d">
@@ -367,7 +354,8 @@ function Project({
 									<span
 										className="pl__o"
 										style={theme}
-										ref={elm => (pOverlays.current[2] = elm)}></span>
+										ref={elm => (pOverlays.current[2] = elm)}
+									></span>
 								</span>
 								<span className="pl__fn show-landscape">
 									<span className="pl__copy" ref={elm => (pCopy.current[2] = elm)}>
@@ -376,7 +364,8 @@ function Project({
 									<span
 										className="pl__o"
 										style={theme}
-										ref={elm => (pOverlays.current[3] = elm)}></span>
+										ref={elm => (pOverlays.current[3] = elm)}
+									></span>
 								</span>
 							</div>
 						</div>
@@ -390,7 +379,8 @@ function Project({
 						onMouseEnter={e => pMouseEnterHandler(e)}
 						onMouseMove={e => pMouseMoveHandler(e)}
 						onMouseLeave={e => pMouseLeaveHandler(e)}
-						onClick={e => delayRedirect(e, '/about', navigate, setPageTransInProgress)}>
+						onClick={e => delayRedirect(e, '/about', navigate, setPageTransInProgress)}
+					>
 						<div className="pl__o" ref={elm => (pOverlays.current[0] = elm)}></div>
 						<div className="extra-container pl__tl no-action" ref={pImg}>
 							<div className="extra-link">
