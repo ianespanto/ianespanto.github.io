@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.46341820.css",
-    "main.js": "/static/js/main.0525371d.js",
+    "main.css": "/static/css/main.b2e124c4.css",
+    "main.js": "/static/js/main.1fba3d47.js",
     "static/media/hkgrotesk-regular.svg": "/static/media/hkgrotesk-regular.6dfb5f7fd054eb237c0e.svg",
     "static/media/hkgrotesk-semibold.svg": "/static/media/hkgrotesk-semibold.fea6c89e7a2a4432e5ba.svg",
     "static/media/hkgrotesk-medium.svg": "/static/media/hkgrotesk-medium.0ce3c265be4fcc570179.svg",
@@ -47,11 +47,11 @@
     "static/media/ubc.png": "/static/media/ubc.1d21e331c35a3698df60.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.46341820.css.map": "/static/css/main.46341820.css.map",
-    "main.0525371d.js.map": "/static/js/main.0525371d.js.map"
+    "main.b2e124c4.css.map": "/static/css/main.b2e124c4.css.map",
+    "main.1fba3d47.js.map": "/static/js/main.1fba3d47.js.map"
   },
   "entrypoints": [
-    "static/css/main.46341820.css",
-    "static/js/main.0525371d.js"
+    "static/css/main.b2e124c4.css",
+    "static/js/main.1fba3d47.js"
   ]
 }
