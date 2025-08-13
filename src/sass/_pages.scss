@@ -21,7 +21,7 @@ main.about {
 		top: 0;
 		height: rem(1);
 		width: 85%;
-		background: $sand;
+		background-color: $sand;
 		z-index: 1;
 		@include horizontalCenter;
 	}
@@ -55,13 +55,13 @@ main.about {
 	}
 
 	&:lang(en),
-	&:lang(es) {
+	&:lang(es),
+	&:lang(fr) {
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 500;
 	}
 	> span {
 		font-size: rem(10);
-		background: $white;
 		padding: 0 rem(8) 0 0;
 		letter-spacing: rem(2);
 		position: relative;
@@ -84,8 +84,9 @@ main.about {
 		left: rem(80);
 		transition: opacity 1s 0.5s;
 		&:lang(en),
-		&:lang(es) {
-			transform: rotate(-90deg) translateX(-100%);
+		&:lang(es),
+		&:lang(fr) {
+			transform: rotate(-90deg) translateX(-100%) translateX(rem(-10));
 			transform-origin: 0% 0%;
 		}
 		&:lang(zh),
@@ -93,8 +94,13 @@ main.about {
 		&:lang(jp) {
 			@include verticalText;
 		}
-		span {
+		> span {
 			padding: 0;
+		}
+	}
+	@include bpmax(large) {
+		> span {
+			background-color: $white;
 		}
 	}
 }
@@ -112,11 +118,16 @@ main.about {
 }
 
 // bio
+.bio {
+	@include bpmin(landscape) {
+		gap: rem(60);
+	}
+}
+
 .bio-t {
 	width: 100%;
 	@include bpmin(landscape) {
 		width: auto;
-		padding-left: rem(60);
 	}
 	p {
 		margin-bottom: rem(25);
@@ -131,7 +142,7 @@ main.about {
 
 	&__overlay {
 		@extend .pl__o;
-		background: $sand;
+		background-color: $sand;
 	}
 
 	@include bpmax(landscape) {
@@ -143,6 +154,7 @@ main.about {
 		}
 	}
 	@include bpmin(landscape) {
+		align-self: flex-start;
 		img {
 			width: rem(360);
 			max-width: none;
@@ -192,7 +204,7 @@ main.about {
 				margin: 0 rem(6);
 				opacity: 0.3;
 				transform: scale(0.8);
-				background: $silver;
+				background-color: $silver;
 				transition: opacity $speed, transform $speed;
 				&.is-selected {
 					transform: scale(1);
@@ -229,7 +241,6 @@ main.about {
 	ul {
 		li {
 			line-height: 1.8;
-			font-weight: 500;
 		}
 	}
 	&__i {
@@ -260,14 +271,20 @@ main.about {
 // work-experience
 // jl = job list
 .jl {
+	gap: rem(60);
+	flex-wrap: wrap;
 	&__i {
-		&:nth-of-type(2n + 1) {
+		@include bpmax(landscape) {
+			margin-bottom: rem(50);
+		}
+		&:last-of-type {
 			@include bpmax(landscape) {
-				margin-bottom: rem(50);
+				margin-bottom: 0;
 			}
-			@include bpmin(landscape) {
-				margin-right: rem(60);
-			}
+		}
+		flex-basis: calc(50% - rem(30));
+		&:first-of-type {
+			flex-basis: 100%;
 		}
 		p {
 			&.job-company {
@@ -283,7 +300,8 @@ main.about {
 					width: rem(4);
 					left: rem(5);
 					border-radius: 50%;
-					background: $iron;
+					border: rem(1) solid $black;
+					box-sizing: border-box;
 					@include bpmin(small) {
 						left: rem(3);
 						height: rem(6);
@@ -296,6 +314,7 @@ main.about {
 			}
 			&.footnote {
 				font-size: rem(12);
+				color: $silver;
 				@include bpmin(medium) {
 					font-size: rem(13);
 				}
@@ -307,9 +326,10 @@ main.about {
 
 .job-company,
 .school-name {
-	font-size: rem(27);
+	font-size: rem(24);
+	line-height: 1.15;
 	@include bpmin(small) {
-		font-size: rem(34);
+		font-size: rem(32);
 	}
 	@include bpmin(landscape) {
 		font-size: rem(42);
@@ -319,19 +339,36 @@ main.about {
 // education
 // el = education list
 .el {
+	.school-name-container {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(15);
+
+		img {
+			margin-top: rem(10);
+			width: 50px;
+			height: auto;
+		}
+
+		@include bpmin(portrait) {
+			gap: rem(20);
+
+			img {
+				width: 60px;
+			}
+		}
+	}
 	.school-name {
 		margin-bottom: rem(10);
 	}
 	&__i {
 		position: relative;
-		&:first-of-type {
-			padding-bottom: rem(18);
-		}
+		margin-bottom: rem(60);
 		&:last-of-type {
-			padding-top: rem(18);
+			margin-bottom: 0;
 		}
 		@include bpmin(portrait) {
-			text-align: center;
+			// text-align: center;
 		}
 	}
 }
@@ -340,7 +377,7 @@ main.about {
 .profile-section {
 	@include bpmin(portrait) {
 		.about-content {
-			text-align: center;
+			// text-align: center;
 		}
 	}
 }
@@ -356,7 +393,7 @@ main.about {
 // CONTACT PAGE
 .contact {
 	.hero-heading {
-		font-weight: 700;
+		font-weight: 600;
 		line-height: 1.4;
 		margin-bottom: rem(40);
 		font-size: rem(35);
@@ -380,6 +417,7 @@ main.about {
 		a {
 			line-height: 1.7;
 			display: block;
+			font-weight: 500;
 		}
 	}
 	.contact-email {

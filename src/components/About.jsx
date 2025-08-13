@@ -7,7 +7,7 @@ import Flickity from 'flickity';
 import { jobList, schoolList } from './utils/variables';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { delayRedirect, getPosition } from './utils/helpers';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function About({
 	pageTransInProgress,
@@ -105,24 +105,30 @@ export default function About({
 						</div>
 						<div className="about-content">
 							<div className="el">
-								{schoolList.map(({ id }, i) => (
+								{schoolList.map(({ id, logo }, i) => (
 									<div key={`school_${i}`} className="el__i jello-child">
 										<div>
-											<p className="heading school-name">
-												<span className="show-medium">{t(`education.${id}.name`)}</span>
-												<span className="hide-medium">{t(`education.${id}.short`)}</span>
-											</p>
-											<p>
-												<span className="show-small">{t(`education.${id}.degree`)}</span>
-												<span className="hide-small">
-													{t(`education.${id}.degree_short`)
-														? t(`education.${id}.degree_short`)
-														: t(`education.${id}.degree`)}
-												</span>
-											</p>
-											<p>
-												<span>{t(`education.${id}.grad`)}</span>
-											</p>
+											<div className="school-name-container">
+												<img src={logo} alt={t(`education.${id}.name`)} />
+												<div>
+													<p className="heading school-name">
+														<span>{t(`education.${id}.name`)}</span>
+													</p>
+													<p>
+														<span className="show-medium">
+															{t(`education.${id}.degree`)}
+														</span>
+														<span className="hide-medium">
+															{t(`education.${id}.degree_short`)
+																? t(`education.${id}.degree_short`)
+																: t(`education.${id}.degree`)}
+														</span>
+													</p>
+													<p>
+														<span>{t(`education.${id}.grad`)}</span>
+													</p>
+												</div>
+											</div>
 										</div>
 									</div>
 								))}
@@ -136,15 +142,15 @@ export default function About({
 					<div className="inner-wrapper">
 						<div className="about-content">
 							<p className="jello-child">
-								{t('bio_closing.part1')}
+								<Trans i18nKey="bio_closing.part1" />
 								<Link
 									className="link-hover transition-link"
 									to="/contact"
 									onClick={e => delayRedirect(e, '/contact', navigate, setPageTransInProgress)}
 								>
-									{t('bio_closing.contact_me')}
+									<Trans i18nKey="bio_closing.contact_me" />
 								</Link>
-								{t('bio_closing.part2')}
+								<Trans i18nKey="bio_closing.part2" />
 							</p>
 						</div>
 					</div>
@@ -196,7 +202,7 @@ function Bio() {
 				<div className="about-heading">
 					<span>{t('about_headings.bio')}</span>
 				</div>
-				<div className="responsive-row responsive-row--landscape about-content align-center">
+				<div className="responsive-row responsive-row--landscape about-content align-center bio">
 					<div className="bio-img" ref={bioImgWrap}>
 						<img
 							className="hide-landscape"
@@ -217,38 +223,40 @@ function Bio() {
 						<div className="bio-img__overlay" ref={bioImgOverlay}></div>
 					</div>
 					<div className="bio-t">
-						<p ref={elm => (bioCopy.current[0] = elm)}>{t('bio.p1')}</p>
+						<p ref={elm => (bioCopy.current[0] = elm)}>
+							<Trans i18nKey="bio.p1" />
+						</p>
 						<p ref={elm => (bioCopy.current[1] = elm)}>
-							{t('bio.p2.part1')}
+							<Trans i18nKey="bio.p2.part1" />
 							<a className="link-hover" href="https://www.cs.ubc.ca/" target="_blank" rel="noreferrer">
-								{t('bio.p2.cpsc')}
+								<Trans i18nKey="bio.p2.cpsc" />
 							</a>
-							{t('bio.p2.and')}
+							<Trans i18nKey="bio.p2.and" />
 							<a className="link-hover" href="https://www.stat.ubc.ca/" target="_blank" rel="noreferrer">
-								{t('bio.p2.stats')}
+								<Trans i18nKey="bio.p2.stats" />
 							</a>
-							{t('bio.p2.part2')}
+							<Trans i18nKey="bio.p2.part2" />
 							<a
 								className="link-hover"
 								href="https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
 								target="_blank"
 								rel="noreferrer"
 							>
-								{t('bio.p2.frontend_dev')}
+								<Trans i18nKey="bio.p2.frontend_dev" />
 							</a>
-							{t('bio.p2.part3')}
+							<Trans i18nKey="bio.p2.part3" />
 						</p>
 						<p ref={elm => (bioCopy.current[2] = elm)}>
-							{t('bio.p3.part1')}
+							<Trans i18nKey="bio.p3.part1" />
 							<a
 								className="link-hover"
 								href="https://soundcloud.com/ianespanto"
 								target="_blank"
 								rel="noreferrer"
 							>
-								{t('bio.p3.composer')}
+								<Trans i18nKey="bio.p3.composer" />
 							</a>
-							{t('bio.p3.part2')}
+							<Trans i18nKey="bio.p3.part2" />
 						</p>
 					</div>
 				</div>
@@ -273,11 +281,11 @@ function SkillList({ isDesktopVers }) {
 			icon: 'bulb',
 			icon_paths: 15,
 			list: [
-				`React.js (${t('skill_list.latest')})`,
-				'CMS / Wordpress',
-				`SPA ${t('skill_list.development')}`,
-				`GSAP ${t('skill_list.animation')}`,
-				`SQL ${t('skill_list.database')}`,
+				`React.js${t('skill_list.latest')}`,
+				'Wordpress / AEM',
+				`${t('skill_list.spa_development')}`,
+				`${t('skill_list.gsap_animation')}`,
+				`${t('skill_list.sql_database')}`,
 			],
 		},
 		{
@@ -318,7 +326,7 @@ function SkillList({ isDesktopVers }) {
 							<span className={`mono-icon i-${icon}`}></span>
 							<span className={`color-icon i-${icon}-c`}>{colorIcon}</span>
 						</div>
-						<p className="heading skill-heading">{t(`skill_list.${title}`)}</p>
+						<p className="skill-heading heading">{t(`skill_list.${title}`)}</p>
 						<ul className="responsive-text">
 							{list.map((listItem, listItemIndex) => (
 								<li key={`skillListItem_${i}_${listItemIndex}`}>

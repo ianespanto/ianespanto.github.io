@@ -1,3 +1,6 @@
+import ubcLogo from '../../assets/img/logos/ubc.png';
+import bcitLogo from '../../assets/img/logos/bcit.png';
+
 export const ease = {
 	power4: {
 		in: [0.64, 0, 0.78, 0],
@@ -28,10 +31,10 @@ export const pageTransitionVariants = {
 
 export const langList = [
 	{ id: 'en', name: 'English' },
-	// { id: 'es', name: 'Español' },
+	{ id: 'es', name: 'Español' },
+	{ id: 'fr', name: 'Français' },
 	{ id: 'jp', name: '日本語' },
-	{ id: 'zh', name: '简体中文' },
-	{ id: 'zh-TW', name: '繁體中文' },
+	{ id: 'zh-TW', name: '中文' },
 ];
 
 export const menuItems = [
@@ -51,6 +54,9 @@ export const menuItems = [
 
 export const jobList = [
 	{
+		id: 'sfu',
+	},
+	{
 		id: 'signals',
 	},
 	{
@@ -61,9 +67,11 @@ export const jobList = [
 export const schoolList = [
 	{
 		id: 'ubc',
+		logo: ubcLogo,
 	},
 	{
 		id: 'bcit',
+		logo: bcitLogo,
 	},
 ];
 

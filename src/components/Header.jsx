@@ -65,7 +65,8 @@ export default function Header({
 									<NavLink
 										to={link}
 										className={({ isActive }) =>
-											'link-hover link-hover--long' + (isActive ? ' current' : '')
+											'link-hover link-hover--black link-hover--long' +
+											(isActive ? ' current' : '')
 										}
 										onClick={e => delayRedirect(e, link, navigate, setPageTransInProgress)}
 									>

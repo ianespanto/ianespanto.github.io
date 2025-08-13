@@ -52,17 +52,18 @@
 }
 
 @mixin responsiveText {
-	font-size: rem(17);
-	@include bpmax(medium) {
-		font-size: rem(16);
+	font-size: rem(18);
+	@include bpmax(landscape) {
+		font-size: rem(17);
 	}
 	@include bpmax(small) {
 		font-size: rem(15);
 	}
 }
 
-@mixin linkHover($color: $mineshaft) {
+@mixin linkHover($color: $cyclamen, $weight: 600) {
 	color: $color;
+	font-weight: $weight;
 	cursor: pointer;
 	@include bpmin(landscape) {
 		transition: color $speed * 1.5;
@@ -79,19 +80,37 @@
 			right: 0;
 			z-index: -1;
 			opacity: 0.7;
-			background: $platinum;
+			background: $peach;
 			transition: transform $speed * 1.5, opacity $speed * 1.5;
 			transform: scale(0, 1);
 			transform-origin: 100% 0%;
 		}
 		&:hover {
-			color: $black !important;
+			color: $black;
 			&::after {
 				opacity: 1;
 				transform: scale(1, 1);
 				transform-origin: 0% 0%;
 			}
 		}
+	}
+}
+
+@mixin underlined($color: $black, $weight: 500) {
+	color: $color;
+	font-weight: $weight;
+	display: inline-block;
+	z-index: 1;
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: rem(2);
+		height: rem(10);
+		left: 0;
+		right: 0;
+		z-index: -1;
+		background: $peach;
 	}
 }
 
@@ -195,16 +214,7 @@
 	background-size: rem(3) rem(3);
 }
 
-@mixin textGlitch(
-	$name,
-	$intensity,
-	$textColor,
-	$background,
-	$highlightColor1,
-	$highlightColor2,
-	$width,
-	$height
-) {
+@mixin textGlitch($name, $intensity, $textColor, $background, $highlightColor1, $highlightColor2, $width, $height) {
 	color: $textColor;
 	position: relative;
 	$steps: $intensity;
@@ -284,4 +294,16 @@
 // replacement for overflow hidden
 @mixin clipBox {
 	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+@mixin giantName {
+	font-weight: 700;
+	text-transform: lowercase;
+	font-size: min(10vw, rem(100));
+	letter-spacing: min(1vw, rem(10));
+	margin-right: max(-1vw, rem(-10));
+
+	.char {
+		display: inline-block;
+	}
 }

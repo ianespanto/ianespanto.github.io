@@ -36,6 +36,11 @@ export default function Footer({
 	return (
 		<div className="inner-wrapper">
 			<div className="footer-nav">
+				<div className="copyright">
+					<span>
+						{t('copyright')} &copy; {new Date().getFullYear()} Ian Espanto{t('rights')}
+					</span>
+				</div>
 				<ul>
 					<li>
 						<a href="https://codepen.io/ianespanto/" target="_blank" rel="noreferrer">
@@ -73,7 +78,6 @@ export default function Footer({
 											</div>
 										);
 									})}
-									<span className="copyright">&copy; {new Date().getFullYear()} Ian Espanto</span>
 								</motion.div>
 							)}
 						</AnimatePresence>

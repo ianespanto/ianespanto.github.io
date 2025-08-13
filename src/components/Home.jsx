@@ -120,7 +120,9 @@ export default function Home({
 										</span>
 									))}
 								</h1>
-								<p ref={subheading}>{t('frontend_web_engineer')}</p>
+								<p className="subheading" ref={subheading}>
+									{t('frontend_web_engineer')}
+								</p>
 							</div>
 						</div>
 						{showDownArrow && (
@@ -235,6 +237,7 @@ function Project({
 				{ duration: 1, ease: 'power4.inOut', transformOrigin: '100% 0%', scaleX: 0, stagger: 0.05 },
 				'l+=.9'
 			);
+			tl.set(pOverlays.current, { alpha: 0, stagger: 0.05 }, 'l+=1.9');
 
 			if (id !== 'about') {
 				tl.from(pCopy.current, { duration: 1, ease: 'power4.inOut', alpha: 0, clearProps: 'all' }, 'l+=.9');
@@ -279,7 +282,7 @@ function Project({
 
 			if (!isAbout) {
 				gsap.to(pTooltip.current, {
-					duration: 0.6,
+					duration: 0.4,
 					rotationY: ((offsetX / width) * 2 - 1) * angle,
 					rotationX: (1 - (offsetY / height) * 2) * angle,
 					rotationZ: 0,
@@ -339,7 +342,7 @@ function Project({
 							</div>
 						</a>
 						<div className="pl__footer threed" ref={pFooter}>
-							<p className="pl__t heading">
+							<p className="pl__t">
 								<span className="pl__copy" ref={elm => (pCopy.current[0] = elm)}>
 									{t(`projects.${id}.title`)}
 								</span>
