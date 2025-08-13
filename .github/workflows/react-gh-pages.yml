@@ -31,7 +31,7 @@ jobs:
 
       # Step 4: Build the React app
       - name: Build React app
-        run: npm run build
+        run: npm run build --verbose
 
       # Step 5: Upload build folder as Pages artifact
       - name: Upload Pages artifact
