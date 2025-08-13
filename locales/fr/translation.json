@@ -1,0 +1,159 @@
+{
+	"frontend_web_engineer": "Ingénieur Web Front-end",
+	"frontend_engineer": "ingénieur front-end",
+	"menu": "Menu",
+	"close": "Fermer",
+	"copyright": "Droits d’auteur",
+	"rights": ". Tous droits réservés.",
+	"credits": "Crédits",
+	"design": "Design",
+	"code": "Code",
+	"translation": "Traduction",
+	"photos": "Photos",
+	"menu_items": {
+		"work": "Réalisations",
+		"about": "À propos",
+		"contact": "Contact"
+	},
+	"about_headings": {
+		"bio": "Moi en bref",
+		"skills": "Compétences techniques",
+		"experience": "Expérience professionnelle",
+		"education": "Formation"
+	},
+	"bio": {
+		"p1": "Je suis Ian, un développeur front-end méticuleux basé en Colombie-Britannique, <strong>créant des sites web élégants et performants, des plateformes CMS personnalisées et des applications web dynamiques</strong> propulsées par JavaScript moderne et React.",
+		"p2": {
+			"part1": "<strong>Je m’épanouis à l’intersection du code, du design et de la logique</strong>. J’ai obtenu un baccalauréat en ",
+			"cpsc": "informatique",
+			"and": " et en ",
+			"stats": "statistiques",
+			"part2": " à l’UBC, puis j’ai terminé parmi les meilleurs du programme de ",
+			"frontend_dev": "développement front-end",
+			"part3": " du BCIT. Depuis, je consacre mon temps à transformer des idées complexes en expériences numériques claires et intuitives."
+		},
+		"p3": {
+			"part1": "Même si le développement est mon domaine principal, j’ai toujours été impliqué dans le domaine du design. Je maîtrise Photoshop et <strong>j’aime contribuer aux décisions d’interface utilisateur (UI) et d’expérience utilisateur (UX) pour que les projets soient aussi esthétiques que fonctionnels</strong>. En dehors du code, je joue du piano et ",
+			"composer": "compose de la musique",
+			"part2": " comme forme d’expression créative."
+		}
+	},
+	"skill_list": {
+		"programming_languages": "Langages de programmation",
+		"professional_skillset": "Compétences professionnelles",
+		"development_tools": "Outils de développement",
+		"latest": " (dernière version)",
+		"spa_development": "Développement SPA",
+		"gsap_animation": "Animation GSAP",
+		"sql_database": "Base de données SQL"
+	},
+	"jobs": {
+		"sfu": {
+			"company": "Université Simon Fraser",
+			"role": "Développeur d’applications",
+			"time": "Juillet 2022 – Présent",
+			"description": "Seul spécialiste front-end au sein de l’équipe centrale des services informatiques de SFU, responsable du développement front-end et du support technique pour l’ensemble de l’écosystème des applications web de l’université. Chargé de créer et de maintenir les applications web personnalisées de SFU, y compris les systèmes de gestion de contenu Adobe Experience Manager (AEM), utilisés quotidiennement par des milliers de professeurs et employés pour gérer leurs sites départementaux et facultaires.",
+			"footnote": "Université publique de recherche en Colombie-Britannique"
+		},
+		"signals": {
+			"company": "Signals Design",
+			"role": "Développeur front-end",
+			"time": "Juillet 2017 – Juillet 2020",
+			"description": "Collaboré sur divers projets pour des clients tels que UBC, Clear Seas, Foundry, BCNU, Crofton House, MYM et la Graham Boeckh Foundation. Conçu et développé de manière autonome une application web personnalisée de gestion d’équipes, de projets et de budgets, intégrant plusieurs API. La plateforme a été largement adoptée par les gestionnaires et comptables internes pour leurs opérations quotidiennes.",
+			"footnote": "Agence de design basée à Vancouver"
+		},
+		"shoes": {
+			"company": "Shoes.com",
+			"role": "Développeur front-end",
+			"time": "Novembre 2015 – Août 2016",
+			"description": "Travaillé en étroite collaboration avec des designers, chefs de projet, marketeurs et développeurs pour créer des fonctionnalités UI réactives et des pages web pour les plateformes e-commerce de l’entreprise sur plusieurs environnements. Suivi des flux de travail modernes, incluant l’automatisation des tâches avec Grunt et Gulp, le contrôle de version avec Git, et les tests A/B via Maxymiser.",
+			"footnote": "Entreprise e-commerce basée à Vancouver et Seattle"
+		}
+	},
+	"education": {
+		"ubc": {
+			"name": "Université de la Colombie-Britannique",
+			"short": "UBC",
+			"degree": "Baccalauréat ès sciences, informatique et statistique",
+			"degree_short": "B.Sc. informatique et statistique",
+			"grad": "Vancouver (C.-B.), mai 2015"
+		},
+		"bcit": {
+			"name": "Institut de technologie de la Colombie-Britannique",
+			"short": "BCIT",
+			"degree": "Certificat, développeur front-end avec distinction",
+			"degree_short": "Développeur front-end avec distinction",
+			"grad": "Vancouver (C.-B.), octobre 2015"
+		}
+	},
+	"bio_closing": {
+		"part1": "J’apporte un regard critique et une grande attention aux détails à chaque projet, cherchant toujours le bon équilibre entre fonction et forme. Pour moi, un excellent développement web, c’est bien plus qu’un code propre — c’est créer des expériences modernes, visuellement soignées et intuitives, qui sont réellement agréables à utiliser. Je suis toujours à la recherche de projets intéressants avec des gens formidables. Vous avez quelque chose en tête ? N’hésitez pas à ",
+		"contact_me": "me contacter",
+		"part2": "."
+	},
+	"projects": {
+		"sfu": {
+			"title": "Université Simon Fraser",
+			"footnote": "Adobe Experience Manager",
+			"description": "Une plateforme AEM à grande échelle permettant à des milliers de professeurs et membres du personnel de créer et gérer facilement leurs propres sites web."
+		},
+		"foundry": {
+			"title": "Foundry BC",
+			"footnote": "Site WordPress Avancé",
+			"description": "Un site WordPress complet guidant les jeunes et jeunes adultes de la Colombie-Britannique pour découvrir les services et ressources essentiels."
+		},
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "Microsite WordPress",
+			"description": "L'un des six microsites bilingues conçus pour Clear Seas, chacun présentant des thèmes WordPress entièrement personnalisés."
+		},
+		"ubc-med-pathways": {
+			"title": "UBC Med Pathways",
+			"footnote": "Magazine Numérique Universitaire",
+			"description": "Un magazine numérique pour la Faculté de médecine de l'UBC, présentant plusieurs numéros avec une variété de composants interactifs personnalisés."
+		},
+		"gbf": {
+			"title": "Graham Boeckh Foundation",
+			"footnote": "Thème WordPress Personnalisé",
+			"description": "Un site WordPress bilingue pour une fondation privée, intégrant plusieurs composants sur mesure."
+		},
+		"bcnu": {
+			"title": "Rapport Annuel BCNU",
+			"footnote": "Site de type Brochure",
+			"description": "Un site WordPress de type brochure pour le Syndicat des infirmières de la Colombie-Britannique, construit à partir d'un thème entièrement personnalisé développé de zéro."
+		},
+		"underwater-noise": {
+			"title": "Bruit Sous-Marin",
+			"footnote": "Microsite WordPress",
+			"description": "Un autre des six microsites bilingues construits pour Clear Seas, présentant des thèmes WordPress sur mesure."
+		}
+	},
+	"project_tooltip": {
+		"open_application": "Ouvrir l’application",
+		"visit_site": "Visiter le site",
+		"view_project": "Voir le projet",
+		"play_game": "Jouer au jeu"
+	},
+	"learn_more_about_ian": {
+		"part1": "Tout ce que vous devez savoir sur ",
+		"ian": "Ian",
+		"part2": ""
+	},
+	"need_help": {
+		"part1": "Besoin d’aide ? ",
+		"part2": "Envoyez-moi un message !"
+	},
+	"download_resume": "Télécharger le CV",
+	"form": {
+		"name": "Nom",
+		"email": "Courriel",
+		"subject": "Sujet",
+		"message": "Message",
+		"submit": "Envoyer le message",
+		"min": "minimum",
+		"max": "maximum",
+		"sending": "Envoi en cours…",
+		"sent": "Votre message a été envoyé. Je vous reviens sous peu !",
+		"failed": "Oups… Quelque chose a mal tourné. Veuillez réessayer plus tard ou utiliser les coordonnées ci-dessus."
+	}
+}

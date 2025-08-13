@@ -1,170 +1,159 @@
 {
-	"frontend_web_engineer": "Ingeniero Web Front-end",
-	"frontend_engineer": "front-end engineer",
+	"frontend_web_engineer": "Ingeniero Web Front-End",
+	"frontend_engineer": "ingeniero front-end",
 	"menu": "Menú",
-	"close": "Close",
-	"credits": "Copyright",
-	"design": "Design",
-	"code": "Code",
-	"translation": "Translation",
-	"photos": "Photos",
+	"close": "Cerrar",
+	"copyright": "Derechos de autor",
+	"rights": ". Todos los derechos reservados.",
+	"credits": "Créditos",
+	"design": "Diseño",
+	"code": "Código",
+	"translation": "Traducción",
+	"photos": "Fotos",
 	"menu_items": {
-		"work": "Work",
-		"about": "About",
-		"contact": "Contact"
+		"work": "Proyectos",
+		"about": "Acerca de",
+		"contact": "Contacto"
 	},
 	"about_headings": {
 		"bio": "Sobre mí",
-		"skills": "Conocimientos técnicos",
-		"experience": "Experiencia",
+		"skills": "Experiencia técnica",
+		"experience": "Historial laboral",
 		"education": "Educación"
 	},
 	"bio": {
-		"p1": "Hola Mundo. Soy Ian, un meticuloso ingeniero web front-end con sede en la Columbia Británica que se especializa en el desarrollo y mantenimiento de sistemas de administración de contenido personalizados, sitios web modernos y aplicaciones web construidas dinámicamente con marcos de JavaScript como React utilizando las últimas herramientas y tecnologías.",
+		"p1": "Soy Ian, un meticuloso desarrollador front-end radicado en BC, <strong>creando sitios web elegantes y de alto rendimiento, plataformas CMS personalizadas y aplicaciones web dinámicas</strong> impulsadas por JavaScript moderno y React.",
 		"p2": {
-			"part1": "Como siempre tuve un gran interés en la programación, el diseño y las matemáticas, me gradué de la UBC, una de las 3 mejores universidades de Canadá, con una Licenciado en Ciencias de la ",
-			"cpsc": "Informática",
+			"part1": "<strong>Me desenvuelvo en la intersección del código, el diseño y la lógica</strong>. Con una Licenciatura en ",
+			"cpsc": "Ciencias de la Computación",
 			"and": " y ",
 			"stats": "Estadística",
-			"part2": " en 2015, después de lo cual asistí a la Escuela de Computación de BCIT para estudiar ",
-			"frontend_dev": "desarrollo front-end",
-			"part3": " y terminó el programa como el mejor de la clase. Desde entonces, he trabajado en una variedad de proyectos con una amplia gama de clientes, he codificado docenas de sitios web en varios formatos y he desarrollado múltiples aplicaciones que integran datos obtenidos de las API."
+			"part2": " de la UBC, y habiendo terminado como uno de los mejores en el programa de ",
+			"frontend_dev": "Desarrollo Front-End",
+			"part3": " de BCIT, he pasado la última década transformando ideas complejas en experiencias digitales limpias e intuitivas."
 		},
 		"p3": {
-			"part1": "Aunque soy un programador por definición, también soy experto en la edición de gráficos de trama con Photoshop y he estado muy involucrado en el proceso de diseño a lo largo de mi carrera. Soy pianista y ",
-			"composer": "compositor aficionado",
-			"part2": " en mi tiempo libre."
+			"part1": "Aunque el desarrollo es mi enfoque principal, siempre he estado involucrado también en el mundo del diseño. Tengo experiencia con Photoshop y <strong>disfruto contribuir a las decisiones de UI y UX para que los proyectos luzcan tan bien como funcionan</strong>. Fuera del editor de código, disfruto tocar el piano y ",
+			"composer": "componer música",
+			"part2": " como una vía de expresión creativa."
 		}
 	},
 	"skill_list": {
 		"programming_languages": "Lenguajes de programación",
-		"professional_skillset": "Habilidades profesionales",
+		"professional_skillset": "Conjunto de habilidades profesionales",
 		"development_tools": "Herramientas de desarrollo",
-		"latest": "último",
-		"development": "Development",
-		"animation": "Animation",
-		"database": "Database"
+		"latest": " (última versión)",
+		"spa_development": "Desarrollo de SPA",
+		"gsap_animation": "Animación GSAP",
+		"sql_database": "Base de datos SQL"
 	},
 	"jobs": {
+		"sfu": {
+			"company": "Universidad Simon Fraser",
+			"role": "Desarrollador de aplicaciones",
+			"time": "Julio 2022 - Presente",
+			"description": "Único especialista front-end dentro del equipo central de Servicios de TI de SFU, liderando todo el desarrollo front-end y brindando soporte técnico en el ecosistema de aplicaciones web de la universidad. Responsable de construir y mantener las aplicaciones web personalizadas de SFU, incluyendo sus sistemas de gestión de contenido Adobe Experience Manager (AEM), utilizados diariamente por miles de profesores y personal para crear y gestionar sus propios sitios web de departamento y facultad.",
+			"footnote": "Universidad pública de investigación en Columbia Británica"
+		},
 		"signals": {
 			"company": "Signals Design",
-			"role": "Interactive Developer",
-			"time": "July 2017 - July 2020",
-			"description": "Trabajó en una amplia gama de proyectos con clientes de empresas y organizaciones como UBC, Clear Seas, Foundry, BCNU, Crofton House, MYM, Graham Boeckh Foundation, etc. Integré varias API para diseñar y desarrollar de forma independiente una herramienta interna de gestión de equipos, proyectos y presupuestos que fue ampliamente utilizada por los gerentes y contadores de la empresa.",
-			"footnote": "Vancouver based design agency"
+			"role": "Desarrollador front-end",
+			"time": "Julio 2017 - Julio 2020",
+			"description": "Colaboré en diversos proyectos para clientes como UBC, Clear Seas, Foundry, BCNU, Crofton House, MYM y la Graham Boeckh Foundation. Diseñé y desarrollé de forma independiente una aplicación web personalizada para la gestión de equipos, proyectos y presupuestos, integrando múltiples APIs. La plataforma fue ampliamente adoptada por gerentes y contadores internos para operaciones diarias.",
+			"footnote": "Agencia de diseño con base en Vancouver"
 		},
 		"shoes": {
 			"company": "Shoes.com",
-			"role": "Front-end Developer",
-			"time": "November 2015 - August 2016",
-			"description": "Colaboró con diseñadores, gerentes de proyectos, estrategas de marketing y otros desarrolladores para crear nuevas funcionalidades de interfaz de usuario y producir páginas web receptivas para los sitios de comercio electrónico de la empresa en varios entornos de desarrollo. Suscrito a flujos de trabajo modernos, incluida la automatización a través de grunt and gulp, control de versiones a través de Git y pruebas A/B a través de Maxymiser.",
-			"footnote": "Vancouver & Seattle based e-commerce company"
+			"role": "Desarrollador front-end",
+			"time": "Noviembre 2015 - Agosto 2016",
+			"description": "Trabajé en estrecha colaboración con diseñadores, gerentes de proyecto, mercadólogos y desarrolladores para construir funcionalidades UI responsivas y páginas web para las plataformas de comercio electrónico de la empresa en varios entornos. Seguí flujos de trabajo modernos de desarrollo, incluyendo automatización de tareas con Grunt y Gulp, control de versiones con Git y pruebas A/B usando Maxymiser.",
+			"footnote": "Empresa de comercio electrónico con base en Vancouver y Seattle"
 		}
 	},
 	"education": {
 		"ubc": {
 			"name": "Universidad de Columbia Británica",
 			"short": "UBC",
-			"degree": "Licenciatura en Ciencias en Informática y Estadística",
-			"degree_short": "Licenciatura Informática y Estadística",
-			"grad": "Vancouver BC, mayo de 2015"
+			"degree": "Licenciatura en Ciencias, informática y estadística",
+			"degree_short": "Lic. Ciencias en informática y estadística",
+			"grad": "Vancouver, Columbia Británica, mayo 2015"
 		},
 		"bcit": {
-			"name": "Instituto de Tecnología de la Columbia Británica",
+			"name": "Instituto de Tecnología de Columbia Británica",
 			"short": "BCIT",
-			"degree": "Certificado en Desarrollador Front-end con Distinción",
-			"degree_short": "Desarrollador Front-end con Distinción",
-			"grad": "Vancouver BC, octubre de 2015"
+			"degree": "Certificado, desarrollador front-end con distinción",
+			"degree_short": "Desarrollador front-end con distinción",
+			"grad": "Vancouver, Columbia Británica, octubre 2015"
 		}
 	},
 	"bio_closing": {
-		"part1": "Como pensador crítico con gran atención a los detalles, me esfuerzo por sacar el máximo provecho de un proyecto centrándome en los aspectos funcionales y estéticos del desarrollo web. Mi objetivo de lograr este equilibrio alimenta mi deseo de producir sitios web y aplicaciones web de calidad que no solo sean agradables a la vista y frescos, sino también innovadores, interactivos y fáciles de usar. Siempre estoy buscando proyectos interesantes con gente increíble. ¿Necesito una mano? Por favor ",
-		"contact_me": "póngase en contacto conmigo",
+		"part1": "Aporto un ojo crítico y una gran atención al detalle a cada proyecto, buscando lograr el equilibrio adecuado entre función y forma. Para mí, un buen desarrollo web significa más que código limpio: se trata de crear experiencias modernas, visualmente pulidas e intuitivas que sean realmente agradables de usar. Siempre estoy en busca de proyectos interesantes con gente increíble. ¿Tienes algo en mente? No dudes en ",
+		"contact_me": "contactarme",
 		"part2": "."
 	},
 	"projects": {
-		"flexstats": {
-			"title": "Flexstats",
-			"footnote": "React Application",
-			"description": "An ETH mining pool React app built from scratch that utilizes APIs to display dynamic data."
-		},
-		"clearseas-oil-spills": {
-			"title": "Clear Seas",
-			"footnote": "Wordpress Microsite",
-			"description": "One of the six bilingual microsites I have built for Clear Seas with custom Wordpress themes."
+		"sfu": {
+			"title": "Universidad Simon Fraser",
+			"footnote": "Adobe Experience Manager",
+			"description": "Una plataforma AEM a gran escala que permite a miles de profesores y personal crear y gestionar fácilmente sus propios sitios web."
 		},
 		"foundry": {
 			"title": "Foundry BC",
-			"footnote": "Complex Wordpress Site",
-			"description": "A large-scale Wordpress site that helps youth and young adults of BC find services and help they need."
+			"footnote": "Sitio WordPress Avanzado",
+			"description": "Un sitio WordPress completo que guía a los jóvenes y adultos jóvenes de Columbia Británica a descubrir servicios y recursos esenciales."
 		},
-		"youth-service-finder": {
-			"title": "Youth Service Finder",
-			"footnote": "Location Search App",
-			"description": "A Foundry app that groups data and allows users to search and filter services fetched from an API."
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "Micrositio WordPress",
+			"description": "Uno de seis micrositios bilingües desarrollados para Clear Seas, cada uno con temas WordPress completamente personalizados."
+		},
+		"ubc-med-pathways": {
+			"title": "UBC Med Pathways",
+			"footnote": "Revista Digital Universitaria",
+			"description": "Una revista digital de la Facultad de Medicina de la UBC que presenta múltiples números y una variedad de componentes interactivos personalizados."
 		},
 		"gbf": {
 			"title": "Graham Boeckh Foundation",
-			"footnote": "Wordpress Theme",
-			"description": "A bilingual Wordpress site built for a private foundation with various custom components."
+			"footnote": "Tema WordPress Personalizado",
+			"description": "Un sitio WordPress bilingüe para una fundación privada, incorporando múltiples componentes hechos a medida."
 		},
 		"bcnu": {
-			"title": "BCNU Annual Report",
-			"footnote": "Brochure Site",
-			"description": "A brochure site built for BC Nurses' Union using a Wordpress theme written from scratch."
+			"title": "Informe Anual BCNU",
+			"footnote": "Sitio tipo Folleto",
+			"description": "Un sitio WordPress tipo folleto para el Sindicato de Enfermeras de Columbia Británica, construido a partir de un tema totalmente personalizado desarrollado desde cero."
 		},
 		"underwater-noise": {
-			"title": "Underwater Noise",
-			"footnote": "Wordpress Microsite",
-			"description": "One of the six bilingual microsites I have built for Clear Seas with custom Wordpress themes."
-		},
-		"asher": {
-			"title": "Asher Eyewear",
-			"footnote": "E-commerce Template",
-			"description": "A five-page e-commerce demo site with some basic hover and scroll effects. School project."
-		},
-		"la": {
-			"title": "Los Angeles",
-			"footnote": "School Project",
-			"description": "A single-page responsive site that showcases some simple user interactions. School Project."
-		},
-		"gooner": {
-			"title": "Gooner Blog",
-			"footnote": "News Site Template",
-			"description": "A single-page blog/news demo site that changes from columns to tabs on mobile. School Project."
-		},
-		"blackjack": {
-			"title": "Blackjack",
-			"footnote": "JavaScript Game",
-			"description": "A web game written in jQuery utilizing classes and animation libraries. School project."
+			"title": "Ruido Submarino",
+			"footnote": "Micrositio WordPress",
+			"description": "Otro de los seis micrositios bilingües construidos para Clear Seas, con temas WordPress a medida."
 		}
 	},
 	"project_tooltip": {
-		"open_application": "Open Application",
-		"visit_site": "Visit Site",
-		"view_project": "View Project",
-		"play_game": "Play Game"
+		"open_application": "Abrir aplicación",
+		"visit_site": "Visitar sitio",
+		"view_project": "Ver proyecto",
+		"play_game": "Jugar juego"
 	},
 	"learn_more_about_ian": {
-		"part1": "Everything you need to know about ",
+		"part1": "Todo lo que necesitas saber sobre ",
 		"ian": "Ian",
 		"part2": ""
 	},
 	"need_help": {
-		"part1": "Need a hand? ",
-		"part2": "Drop me a line!"
+		"part1": "¿Necesitas ayuda? ",
+		"part2": "¡Envíame un mensaje!"
 	},
-	"download_resume": "Download Résumé",
+	"download_resume": "Descargar currículum",
 	"form": {
-		"name": "Name",
-		"email": "Email",
-		"subject": "Subject",
-		"message": "Message",
-		"submit": "Send Message",
-		"min": "min.",
-		"max": "max.",
-		"sending": "Sending...",
-		"sent": "Your message has been sent. I will be in touch!",
-		"failed": "Oops... Something went wrong. Please try again later or use the contact information above."
+		"name": "Nombre",
+		"email": "Correo electrónico",
+		"subject": "Asunto",
+		"message": "Mensaje",
+		"submit": "Enviar mensaje",
+		"min": "mínimo",
+		"max": "máximo",
+		"sending": "Enviando...",
+		"sent": "Tu mensaje ha sido enviado. ¡Me pondré en contacto contigo pronto!",
+		"failed": "Vaya… Algo salió mal. Por favor, inténtalo de nuevo más tarde o utiliza la información de contacto arriba."
 	}
 }

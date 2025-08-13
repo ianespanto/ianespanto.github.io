@@ -1,170 +1,159 @@
 {
-	"frontend_web_engineer": "前端網絡工程師",
-	"frontend_engineer": "front-end engineer",
-	"menu": "菜單",
+	"frontend_web_engineer": "前端應用開發工程師",
+	"frontend_engineer": "前端工程師",
+	"menu": "選單",
 	"close": "關閉",
-	"credits": "版權信息",
+	"copyright": "版權所有",
+	"rights": "。保留所有權利。",
+	"credits": "致謝",
 	"design": "設計",
-	"code": "編碼",
+	"code": "程式碼",
 	"translation": "翻譯",
-	"photos": "照片版權",
+	"photos": "照片",
 	"menu_items": {
-		"work": "作品集",
-		"about": "關於我",
+		"work": "作品",
+		"about": "關於",
 		"contact": "聯絡"
 	},
 	"about_headings": {
-		"bio": "我的簡介",
-		"skills": "技術知識",
-		"experience": "就職經歷",
-		"education": "教育背景"
+		"bio": "個人簡介",
+		"skills": "技術專長",
+		"experience": "工作經歷",
+		"education": "學歷"
 	},
 	"bio": {
-		"p1": "你好！我是 Ian，一名現位於加拿大不列顛哥倫比亞省的前端網絡工程師。非常專心仔細的我專門從事開發和維護網絡內容管理系統、現代的網站、以及使用最新的工具和技術，例如 React 之類的 JavaScript 框架動態地構建的網絡應用程序。",
+		"p1": "我是常駐在不列顛哥倫比亞省的一名嚴謹的前端工程師 Ian，<strong>專注於打造時尚、高效能的網站、自訂 CMS 平台，以及由現代 JavaScript 和 React 驅動的動態網頁應用程式</strong>。",
 		"p2": {
-			"part1": "一直對編程、設計、與數學很感興趣的我在二〇一五年從加拿大名列前三位的 UBC 大學畢業，取得了",
+			"part1": "<strong>我擅長在程式碼、設計與邏輯的交會點工作</strong>。我在 UBC 獲得了",
 			"cpsc": "電腦科學",
-			"and": "以及",
+			"and": "與",
 			"stats": "統計學",
-			"part2": "的科學系學士學位。然後我參加了 BCIT 的計算機學院來專門學習",
-			"frontend_dev": "前端網絡卡發",
-			"part3": "並以全班最卓越的成績完成學業。從那以後，我已為各行各業的客戶合作完成了很多不同的項目、編寫了數十個各種各樣的網站、並開發了多個集成從 API 獲取的數據的網絡應用程序。"
+			"part2": "的理學學士學位，並以優異成績畢業於 BCIT 的",
+			"frontend_dev": "前端開發",
+			"part3": "課程。過去十年，我一直致力於將複雜的想法轉化為簡潔直觀的數位體驗。"
 		},
 		"p3": {
-			"part1": "儘管我本質上是一名程序師，我也精通使用 Photoshop 來進行光柵圖形的編輯，並且在我的整個職業生涯中都大量參與了項目的設計和美化過程。鋼琴和",
-			"composer": "作曲",
-			"part2": "是我在我的閒暇時間中的業餘愛好。"
+			"part1": "雖然我主要專注於開發，但我也始終參與在設計領域。我熟悉 Photoshop，<strong>也樂於參與 UI 和 UX 的設計決策，讓專案在功能良好的同時，也具備出色的視覺呈現</strong>。在程式碼之外，我喜歡彈鋼琴和",
+			"composer": "創作音樂",
+			"part2": "，作為我的創意出口。"
 		}
 	},
 	"skill_list": {
-		"programming_languages": "程序設計語言",
-		"professional_skillset": "專業的技能",
-		"development_tools": "開發環境及工具",
-		"latest": "最新版",
-		"development": "軟件開發",
-		"animation": "動畫及特效",
-		"database": "數據庫管理"
+		"programming_languages": "程式語言",
+		"professional_skillset": "專業技能",
+		"development_tools": "開發工具",
+		"latest": "（最新版本）",
+		"spa_development": "SPA 開發",
+		"gsap_animation": "GSAP 動畫",
+		"sql_database": "SQL 資料庫"
 	},
 	"jobs": {
+		"sfu": {
+			"company": "西門菲沙大學",
+			"role": "應用程式開發工程師",
+			"time": "2022 年 7 月 - 至今",
+			"description": "作為 SFU 中央 IT 服務團隊中唯一的前端專家，負責領導所有前端開發工作並為全校的網頁應用生態系統提供技術支援。負責構建和維護 SFU 的自訂網頁應用程式，包括 Adobe Experience Manager（AEM）內容管理系統，每天有數千名教職員使用該系統來建立和管理自己的系所與學院網站。",
+			"footnote": "位於不列顛哥倫比亞省的公立研究型大學"
+		},
 		"signals": {
 			"company": "Signals Design",
-			"role": "網絡互動開發師",
-			"time": "一七年七月 至 二〇年七月",
-			"description": "與來自 UBC 大學、Clear Seas、Foundry、BC 省護士聯盟、Crofton House 學校、MYM 保健品公司、Graham Boeckh 基金會等的企業和組織的客戶合作完成了各種各樣的項目。集成不同的 API，自主設計並開發了一個用於團隊、項目、預算管理的內部使用的工具，該程序被公司經理、會計師廣泛使用。",
-			"footnote": "位於溫哥華的設計機構"
+			"role": "前端開發工程師",
+			"time": "2017 年 7 月 - 2020 年 7 月",
+			"description": "參與多個多樣化專案，客戶包括 UBC、Clear Seas、Foundry、BCNU、Crofton House、MYM 以及 Graham Boeckh 基金會。獨立設計並開發了一個團隊、專案及預算管理的自訂網頁應用程式，整合多個 API。該平台被公司內部管理者和會計師廣泛採用於日常作業。",
+			"footnote": "總部位於溫哥華的設計機構"
 		},
 		"shoes": {
 			"company": "Shoes.com",
-			"role": "前端開發師",
-			"time": "一五年十一月 至 一六年八月",
-			"description": "與設計師、項目經理、營銷策略師以及其他開發人員合作，在各種開發環境中為公司的多個網上商店創建新的用戶界面功能，並製作響應式網頁。應用了現代工作流程，包括通過 grunt 和 gulp 實現自動化、通過 Git 進行團隊合作和版本控制、以及通過 Maxymiser 進行 A/B 測試。",
-			"footnote": "位於溫哥華和西雅圖的網上商店"
+			"role": "前端開發工程師",
+			"time": "2015 年 11 月 - 2016 年 8 月",
+			"description": "與設計師、專案經理、行銷人員及開發人員緊密合作，在多個開發環境中為公司的電子商務平台建構響應式 UI 功能與網頁。遵循現代開發流程，包括使用 Grunt 和 Gulp 進行任務自動化、使用 Git 進行版本控制，以及透過 Maxymiser 進行 A/B 測試。",
+			"footnote": "總部位於溫哥華與西雅圖的電子商務公司"
 		}
 	},
 	"education": {
 		"ubc": {
-			"name": "不列顛哥倫比亞大學",
-			"short": "UBC 大學",
-			"degree": "電腦科學及統計學科學系學士學位",
-			"degree_short": "電腦科學及統計學科學系學士學位",
-			"grad": "二〇一五年五月於溫哥華"
+			"name": "英屬哥倫比亞大學",
+			"short": "UBC",
+			"degree": "理學士，電腦科學與統計學",
+			"degree_short": "BSc. 電腦科學與統計學",
+			"grad": "溫哥華 BC，2015 年 5 月"
 		},
 		"bcit": {
 			"name": "不列顛哥倫比亞理工學院",
-			"short": "BCIT 學院",
-			"degree": "前端開發師特別證書",
-			"degree_short": "前端開發師特別證書",
-			"grad": "二〇一五年十月於溫哥華"
+			"short": "BCIT",
+			"degree": "前端開發證書（優異）",
+			"degree_short": "前端開發（優異）",
+			"grad": "溫哥華 BC，2015 年 10 月"
 		}
 	},
 	"bio_closing": {
-		"part1": "作為一個非常注重細節的批判性思考者，我努力通過同時注重網絡開發的功能和美觀兩個方面來充分揮發每個項目的亮點。實現這種平衡的目標激發了我對製作高質量的、不僅視覺上充滿美感和新鮮感而且還具有創新性、互動性和用戶友好性的網站和網絡應用程序的願望。我對各種各樣的有意思的項目都很感興趣，所以如果您需要我幫忙，",
-		"contact_me": "請點一下這裡",
-		"part2": "來聯繫我。"
+		"part1": "我對每個專案都帶來批判性眼光與對細節的高度專注，致力於在功能與形式間取得平衡。對我來說，優秀的網頁開發不只是乾淨的程式碼，而是創造現代、視覺精緻且直覺的使用體驗，讓人用起來感覺良好。我一直在尋找有趣的專案和很棒的人合作。有想法嗎？隨時",
+		"contact_me": "聯絡我",
+		"part2": "。"
 	},
 	"projects": {
-		"flexstats": {
-			"title": "Flexstats",
-			"footnote": "React 應用程序",
-			"description": "從頭開始獨立由 React 構建的利用 API 來顯示一個以太坊礦池的動態數據的雙語言網絡應用程序"
-		},
-		"clearseas-oil-spills": {
-			"title": "Clear Seas",
-			"footnote": "Wordpress 微型網站",
-			"description": "為 Clear Seas 加拿大海運中心用 Wordpress 管理系統構建的六個雙語言微型網站之一"
+		"sfu": {
+			"title": "西門菲沙大學",
+			"footnote": "Adobe Experience Manager",
+			"description": "一個大型 AEM 平台，使數千名教師和員工能夠輕鬆創建並管理自己的網站。"
 		},
 		"foundry": {
 			"title": "Foundry BC",
-			"footnote": "Wordpress 大型網站",
-			"description": "為一個非盈利組織製作的 BC 省青年用來尋找他們需要的服務和幫助的大型 Wordpress 網站"
+			"footnote": "進階 WordPress 網站",
+			"description": "一個完整的 WordPress 網站，幫助卑詩省的青年和年輕成年人找到所需的服務和資源。"
 		},
-		"youth-service-finder": {
-			"title": "青年服務查找器",
-			"footnote": "地點地圖應用程序",
-			"description": "對從 API 獲取的數據進行分組並允許用戶來用搜索和過濾本地服務的 Foundry 應用程序"
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "WordPress 微型網站",
+			"description": "為 Clear Seas 建立的 6 個雙語微型網站之一，每個網站都採用完全自訂的 WordPress 主題。"
+		},
+		"ubc-med-pathways": {
+			"title": "UBC Med Pathways",
+			"footnote": "大學數位雜誌",
+			"description": "UBC 醫學院的數位雜誌，展示多個期刊以及各種自訂互動元件。"
 		},
 		"gbf": {
 			"title": "Graham Boeckh Foundation",
-			"footnote": "Wordpress 主題網站",
-			"description": "為一個加拿大私立基金會製作的具備一些自定義組件的雙語言 Wordpress 網站"
+			"footnote": "自訂 WordPress 主題",
+			"description": "為私人基金會建立的雙語 WordPress 網站，整合多個量身定制的元件。"
 		},
 		"bcnu": {
 			"title": "BCNU 年度報告",
-			"footnote": "Wordpress 宣傳冊網站",
-			"description": "為 BC 省護士聯盟的一七年年度報告由頭構建的 Wordpress 宣傳冊式網站"
+			"footnote": "手冊型網站",
+			"description": "為 BC 護士工會建立的手冊型 WordPress 網站，使用從零設計的完整自訂主題。"
 		},
 		"underwater-noise": {
-			"title": "Underwater Noise",
-			"footnote": "Wordpress 微型網站",
-			"description": "為 Clear Seas 加拿大海運中心用 Wordpress 管理系統構建的六個雙語言微型網站之一"
-		},
-		"asher": {
-			"title": "Asher Eyewear",
-			"footnote": "網上商店框架",
-			"description": "具備一些基本的懸停和滾動效果的五頁網上商店框架主題學校項目"
-		},
-		"la": {
-			"title": "Los Angeles",
-			"footnote": "學校項目",
-			"description": "展示一些簡單的滾動效果以及用戶互動的單頁響應式網頁學校項目"
-		},
-		"gooner": {
-			"title": "Gooner Blog",
-			"footnote": "新聞網站框架",
-			"description": "一個可以在移動設備上從豎列變成標籤式佈局的博客或新聞構架學校項目"
-		},
-		"blackjack": {
-			"title": "二十一點",
-			"footnote": "JavaScript 小遊戲",
-			"description": "一個用 jQuery 建造的應用 class 概念和動畫特效庫的小遊戲學校項目"
+			"title": "水下噪音",
+			"footnote": "WordPress 微型網站",
+			"description": "Clear Seas 建立的 6 個雙語微型網站中的另一個，採用量身定制的 WordPress 主題。"
 		}
 	},
 	"project_tooltip": {
-		"open_application": "打開程序",
-		"visit_site": "參觀網站",
-		"view_project": "查看項目",
-		"play_game": "玩小遊戲"
+		"open_application": "打開應用程式",
+		"visit_site": "訪問網站",
+		"view_project": "查看專案",
+		"play_game": "玩遊戲"
 	},
 	"learn_more_about_ian": {
-		"part1": "如果您希望更多了解 ",
+		"part1": "關於 ",
 		"ian": "Ian",
-		"part2": " 點一下即可"
+		"part2": " 的一切"
 	},
 	"need_help": {
-		"part1": "項目需要幫助？",
-		"part2": "馬上聯繫我！"
+		"part1": "需要幫忙嗎？",
+		"part2": " 給我留言吧！"
 	},
-	"download_resume": "下載簡歷(英文)",
+	"download_resume": "下載履歷",
 	"form": {
 		"name": "姓名",
-		"email": "郵箱地址",
-		"subject": "信息標題",
-		"message": "信息內容",
-		"submit": "發送信息",
-		"min": "最少",
+		"email": "電子郵件",
+		"subject": "主題",
+		"message": "留言",
+		"submit": "發送留言",
+		"min": "至少",
 		"max": "最多",
-		"sending": "正在發送中...",
-		"sent": "您的信息已被成功發送。我會盡快聯繫您！",
-		"failed": "不好意思，發送失敗了。請您稍後重試或者用上述的聯繫方式直接聯繫我。"
+		"sending": "發送中...",
+		"sent": "留言已發送，我會盡快回覆！",
+		"failed": "哎呀……出了點問題。請稍後再試，或使用上方的聯絡資訊。"
 	}
 }

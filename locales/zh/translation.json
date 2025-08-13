@@ -1,86 +1,95 @@
 {
-	"frontend_web_engineer": "前端网络工程师",
-	"frontend_engineer": "front-end engineer",
+	"frontend_web_engineer": "前端应用开发工程师",
+	"frontend_engineer": "前端工程师",
 	"menu": "菜单",
 	"close": "关闭",
-	"credits": "版权信息",
+	"copyright": "版权",
+	"rights": "。保留所有权利。",
+	"credits": "鸣谢",
 	"design": "设计",
 	"code": "编码",
 	"translation": "翻译",
-	"photos": "照片版权",
+	"photos": "照片",
 	"menu_items": {
-		"work": "作品集",
-		"about": "关于我",
-		"contact": "联络"
+		"work": "作品",
+		"about": "关于",
+		"contact": "联系"
 	},
 	"about_headings": {
-		"bio": "我的简介",
-		"skills": "技术知识",
-		"experience": "就职经历",
+		"bio": "简介",
+		"skills": "技术专长",
+		"experience": "工作经历",
 		"education": "教育背景"
 	},
 	"bio": {
-		"p1": "你好！我是 Ian，一名现位于加拿大不列颠哥伦比亚省的前端网络工程师。非常专心仔细的我专门从事开发和维护网络内容管理系统、现代的网站、以及使用最新的工具和技术，例如 React 之类的 JavaScript 框架动态地构建的网络应用程序。",
+		"p1": "我是常驻在不列颠哥伦比亚省的一名严谨的前端工程师 Ian，<strong>专注于构建时尚、高性能的网站、自定义 CMS 平台，以及由现代 JavaScript 和 React 驱动的动态 Web 应用</strong>。",
 		"p2": {
-			"part1": "一直对编程、设计、与数学很感兴趣的我在二〇一五年从加拿大名列前三位的 UBC 大学毕业，取得了",
-			"cpsc": "电脑科学",
-			"and": "以及",
+			"part1": "<strong>我擅长在代码、设计与逻辑的交汇点中工作</strong>。我在 UBC 获得了",
+			"cpsc": "计算机科学",
+			"and": "与",
 			"stats": "统计学",
-			"part2": "的科学系学士学位。然后我参加了 BCIT 的计算机学院来专门学习",
-			"frontend_dev": "前端网络开发",
-			"part3": "并以全班最卓越的成绩完成学业。从那以后，我已为各行各业的客户合作完成了很多不同的项目、编写了数十个各种各样的网站、并开发了多个集成从 API 获取的数据的网络应用程序。"
+			"part2": "的理学学士学位，并在 BCIT 的",
+			"frontend_dev": "前端开发",
+			"part3": "课程中以优异成绩毕业。过去十年里，我一直致力于将复杂的想法转化为简洁直观的数字体验。"
 		},
 		"p3": {
-			"part1": "尽管我本质上是一名程序师，我也精通使用 Photoshop 来进行光栅图形的编辑，并且在我的整个职业生涯中都大量参与了项目的设计和美化过程。钢琴和",
-			"composer": "作曲",
-			"part2": "是我在我的闲暇时间中的业余爱好。"
+			"part1": "尽管开发是我的主要工作方向，我也始终活跃在设计领域。我精通 Photoshop，<strong>并乐于参与UI和UX的设计决策，确保项目不仅运行良好，也拥有出色的视觉表现</strong>。在编码之外，我喜欢弹钢琴和",
+			"composer": "创作音乐",
+			"part2": "，作为我的创意表达方式。"
 		}
 	},
 	"skill_list": {
-		"programming_languages": "程序设计语言",
-		"professional_skillset": "专业的技能",
-		"development_tools": "开发环境及工具",
-		"latest": "最新版",
-		"development": "软件开发",
-		"animation": "动画及特效",
-		"database": "数据库管理"
+		"programming_languages": "编程语言",
+		"professional_skillset": "专业技能",
+		"development_tools": "开发工具",
+		"latest": "（最新版本）",
+		"spa_development": "SPA 开发",
+		"gsap_animation": "GSAP 动画",
+		"sql_database": "SQL 数据库"
 	},
 	"jobs": {
+		"sfu": {
+			"company": "西蒙弗雷泽大学",
+			"role": "应用开发工程师",
+			"time": "2022 年 7 月 - 至今",
+			"description": "作为 SFU 中央 IT 服务团队的唯一前端专家，主导所有前端开发并为全校的网页应用生态系统提供技术支持。负责构建和维护 SFU 的自定义网页应用程序，包括其 Adobe Experience Manager（AEM）内容管理系统，每天有数千名教职员工使用该系统创建和管理各自的部门与学院网站。",
+			"footnote": "不列颠哥伦比亚省的一所公立研究型大学"
+		},
 		"signals": {
 			"company": "Signals Design",
-			"role": "网络互动开发师",
-			"time": "一七年七月 至 二〇年七月",
-			"description": "与来自 UBC 大学、Clear Seas、Foundry、BC 省护士联盟、Crofton House 学校、MYM 保健品公司、Graham Boeckh 基金会等的企业和组织的客户合作完成了各种各样的项目。集成不同的 API，自主设计并开发了一个用于团队、项目、预算管理的内部使用的工具，该程序被公司经理、会计师广泛使用。",
-			"footnote": "位于温哥华的设计机构"
+			"role": "前端开发工程师",
+			"time": "2017 年 7 月 - 2020 年 7 月",
+			"description": "参与为多个客户的多样化项目开发，包括 UBC、Clear Seas、Foundry、BCNU、Crofton House、MYM 以及 Graham Boeckh 基金会。独立设计并开发了一个用于团队、项目与预算管理的定制网页应用程序，集成了多个 API，广泛应用于公司内部的管理人员和会计人员日常工作中。",
+			"footnote": "总部位于温哥华的设计机构"
 		},
 		"shoes": {
 			"company": "Shoes.com",
-			"role": "前端开发师",
-			"time": "一五年十一月 至 一六年八月",
-			"description": "与设计师、项目经理、营销策略师以及其他开发人员合作，在各种开发环境中为公司的多个网上商店创建新的用户界面功能，并制作响应式网页。应用了现代工作流程，包括通过 grunt 和 gulp 实现自动化、通过 Git 进行团队合作和版本控制、以及通过 Maxymiser 进行 A/B 测试。",
-			"footnote": "位于温哥华和西雅图的网上商店"
+			"role": "前端开发工程师",
+			"time": "2015 年 11 月 - 2016 年 8 月",
+			"description": "与设计师、项目经理、营销人员及开发人员密切合作，在多个开发环境中为公司的电子商务平台构建响应式 UI 功能与网页。遵循现代开发流程，包括使用 Grunt 和 Gulp 进行任务自动化、使用 Git 进行版本控制，以及通过 Maxymiser 进行 A/B 测试。",
+			"footnote": "总部位于温哥华和西雅图的电子商务公司"
 		}
 	},
 	"education": {
 		"ubc": {
-			"name": "不列颠哥伦比亚大学",
-			"short": "UBC 大学",
-			"degree": "电脑科学及统计学科学系学士学位",
-			"degree_short": "电脑科学及统计学科学系学士学位",
-			"grad": "二〇一五年五月于温哥华"
+			"name": "英属哥伦比亚大学",
+			"short": "UBC",
+			"degree": "理学学士，计算机科学与统计学",
+			"degree_short": "BSc. 计算机科学与统计学",
+			"grad": "温哥华 BC，2015 年 5 月"
 		},
 		"bcit": {
 			"name": "不列颠哥伦比亚理工学院",
-			"short": "BCIT 学院",
-			"degree": "前端开发师特别证书",
-			"degree_short": "前端开发师特别证书",
-			"grad": "二〇一五年十月于温哥华"
+			"short": "BCIT",
+			"degree": "前端开发证书（荣誉）",
+			"degree_short": "前端开发（荣誉）",
+			"grad": "温哥华 BC，2015 年 10 月"
 		}
 	},
 	"bio_closing": {
-		"part1": "作为一个非常注重细节的批判性思考者，我努力通过同时注重网络开发的功能和美观两个方面来充分挥发每个项目的亮点。实现这种平衡的目标激发了我对制作高质量的、不仅视觉上充满美感和新鲜感而且还具有创新性、互动性和用户友好性的网站和网络应用程序的愿望。我对各种各样的有意思的项目都很感兴趣，所以如果您需要我帮忙，",
-		"contact_me": "请点一下这里",
-		"part2": "来联系我。"
+		"part1": "我为每一个项目都带来严谨的视角和出色的细节关注，致力于在功能与美感之间取得平衡。对我而言，优秀的网页开发不仅是干净的代码，更是打造现代、美观且直观的使用体验。我始终在寻找有趣的项目和志同道合的人合作。如果你有想法，欢迎",
+		"contact_me": "联系我",
+		"part2": "。"
 	},
 	"projects": {
 		"flexstats": {
@@ -140,31 +149,31 @@
 		}
 	},
 	"project_tooltip": {
-		"open_application": "打开程序",
-		"visit_site": "参观网站",
+		"open_application": "打开应用程序",
+		"visit_site": "访问网站",
 		"view_project": "查看项目",
-		"play_game": "玩小游戏"
+		"play_game": "玩游戏"
 	},
 	"learn_more_about_ian": {
-		"part1": "如果您希望更多了解 ",
+		"part1": "关于 ",
 		"ian": "Ian",
-		"part2": " 点一下即可"
+		"part2": " 的一切"
 	},
 	"need_help": {
-		"part1": "项目需要帮助？",
-		"part2": "马上联系我！"
+		"part1": "需要帮忙吗？",
+		"part2": " 给我留言吧！"
 	},
-	"download_resume": "下载简历(英文)",
+	"download_resume": "下载简历",
 	"form": {
 		"name": "姓名",
-		"email": "邮箱地址",
-		"subject": "信息标题",
-		"message": "信息内容",
-		"submit": "发送信息",
-		"min": "最少",
+		"email": "电子邮件",
+		"subject": "主题",
+		"message": "留言",
+		"submit": "发送留言",
+		"min": "至少",
 		"max": "最多",
-		"sending": "正在发送中...",
-		"sent": "您的信息已被成功发送。我会尽快联系您！",
-		"failed": "不好意思，发送失败了。请您稍后重试或者用上述的联系方式直接联系我。"
+		"sending": "发送中...",
+		"sent": "留言已发送，我会尽快回复！",
+		"failed": "哎呀……出了点问题。请稍后再试，或使用上方的联系信息。"
 	}
 }

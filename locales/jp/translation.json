@@ -1,170 +1,159 @@
 {
-	"frontend_web_engineer": "フロントエンドエンジニア",
-	"frontend_engineer": "front-end engineer",
+	"frontend_web_engineer": "フロントエンドウェブエンジニア",
+	"frontend_engineer": "フロントエンドエンジニア",
 	"menu": "メニュー",
 	"close": "閉じる",
-	"credits": "コピーライト",
+	"copyright": "著作権",
+	"rights": "。全著作権所有。",
+	"credits": "クレジット",
 	"design": "デザイン",
 	"code": "コード",
 	"translation": "翻訳",
 	"photos": "写真",
 	"menu_items": {
-		"work": "実績",
-		"about": "紹介",
+		"work": "作品",
+		"about": "プロフィール",
 		"contact": "連絡先"
 	},
 	"about_headings": {
-		"bio": "バイオグラフィー",
-		"skills": "専門分野",
-		"experience": "実務経験",
+		"bio": "私について",
+		"skills": "技術スキル",
+		"experience": "職歴",
 		"education": "学歴"
 	},
 	"bio": {
-		"p1": "こんにちは！私はイアンです。ブリティッシュコロンビア州を拠点とする細心の注意を払ったフロントエンドエンジニアです。カスタムコンテンツ管理システム、および最新のツールと技術を使用して React などの JavaScript フレームワークで動的に構築される現代のサイトとアプリの開発と維持を専門としています。",
+		"p1": "私は BC 在住の几帳面なフロントエンドエンジニア Ian です。<strong>洗練された高性能なウェブサイト、カスタム CMS プラットフォーム、そして動的なウェブアプリケーション</strong>を最新の JavaScript と React を使って開発しています。",
 		"p2": {
-			"part1": "プログラミング、デザイン、数学に常に強い興味を持っていた私は、カナダのトップ 3 の UBC 大学を 2015 年に卒業し、",
-			"cpsc": "情報技術",
+			"part1": "<strong>コード、デザイン、論理の交差点に身を置くことを得意としています</strong>。UBC で",
+			"cpsc": "コンピュータサイエンス",
 			"and": "と",
 			"stats": "統計学",
-			"part2": "の二つの学位を取得しました。 その後、BCIT のコンピューティングスクールに通い、",
+			"part2": "の学士号を取得し、BCIT の",
 			"frontend_dev": "フロントエンド開発",
-			"part3": "を学び、クラスのトップでプログラムを修了しました。それ以来、私は幅広いクライアントといろいろなプロジェクトに取り組み、さまざまな形式で数十のサイトをコーディングし、API から取得したデータを統合した多くのアプリを開発してきました。"
+			"part3": "プログラムを首席で修了しました。それ以来 10 年間、複雑なアイデアをわかりやすく直感的なデジタル体験へと変換してきました。"
 		},
 		"p3": {
-			"part1": "プログラマーですが、Photoshop を使用したラスター画像加工編集にも精通しており、キャリアを通じてユーザーエクスペリエンスの設計プロセスに深く携わってきました。仕事の余暇は、ずっと興味を持っているピアノや",
-			"composer": "音楽の制作",
-			"part2": "もしています。"
+			"part1": "開発を中心に活動していますが、常にデザインの世界にも関わってきました。Photoshop の経験があり、<strong>UI や UX の意思決定に貢献して、プロジェクトが機能面だけでなく見た目にも優れるようにすること</strong>が好きです。コードエディタの外では、ピアノを弾いたり、",
+			"composer": "音楽を作曲したり",
+			"part2": "して、創造的な表現を楽しんでいます。"
 		}
 	},
 	"skill_list": {
 		"programming_languages": "プログラミング言語",
-		"professional_skillset": "スキルセット",
+		"professional_skillset": "専門スキル",
 		"development_tools": "開発ツール",
-		"latest": "最新",
-		"development": "開発",
-		"animation": "アニメーション",
-		"database": "データベース"
+		"latest": "（最新）",
+		"spa_development": "SPA 開発",
+		"gsap_animation": "GSAP アニメーション",
+		"sql_database": "SQL データベース"
 	},
 	"jobs": {
+		"sfu": {
+			"company": "サイモンフレーザー大学",
+			"role": "アプリケーション開発者",
+			"time": "2022 年 7 月 〜 現在",
+			"description": "SFU の中央 IT サービスチームで唯一のフロントエンド専門家として、全てのフロントエンド開発をリードし、大学のウェブアプリケーションエコシステム全体の技術サポートを提供。Adobe Experience Manager（AEM）を含むカスタムウェブアプリケーションの構築と維持を担当し、数千人の教職員が日々利用して、各自の学部や部署のウェブサイトを作成・管理しています。",
+			"footnote": "ブリティッシュコロンビア州にある公立研究大学"
+		},
 		"signals": {
 			"company": "Signals Design",
-			"role": "インタラクティブ開発者",
-			"time": "2017年7月〜2020年7月",
-			"description": "UBC、Clear Seas、Foundry、BCNU、Crofton House、MYM、Graham Boeckh Foundation などの企業や組織のクライアントと幅広いプロジェクトに携わっていました。さまざまな API を統合して、会社のマネージャーや会計士によって広く使用されているチーム、プロジェクト、および予算管理の内部ツールを独自に設計および開発しました。",
-			"footnote": "バンクーバーを拠点としたデザインエージェンシー"
+			"role": "フロントエンド開発者",
+			"time": "2017 年 7 月 〜 2020 年 7 月",
+			"description": "UBC、Clear Seas、Foundry、BCNU、Crofton House、MYM、Graham Boeckh Foundation など、多様なクライアントのプロジェクトに携わりました。複数の API を統合したチーム・プロジェクト・予算管理用のカスタムウェブアプリケーションを単独で設計・開発。社内のマネージャーや会計担当者に広く活用されました。",
+			"footnote": "バンクーバー拠点のデザイン会社"
 		},
 		"shoes": {
-			"company": "SHOES.com",
+			"company": "Shoes.com",
 			"role": "フロントエンド開発者",
-			"time": "2015年11月〜2016年8月",
-			"description": "デザイナー、プロジェクトマネージャ、マーケティングストラテジスト、および他の開発者と協力して、さまざまな開発環境で企業の EC サイト用のレスポンシブな UI を作成しました。 Grunt や Gulp による自動化、Git によるバージョン管理、Maxymiser による A/B テストなど、最新のワークフローを使用しました。",
-			"footnote": "バンクーバーとシアトルを拠点とした会社"
+			"time": "2015 年 11 月 〜 2016 年 8 月",
+			"description": "デザイナー、プロジェクトマネージャー、マーケター、他の開発者と密に連携し、同社の複数環境にまたがる e コマースプラットフォーム向けにレスポンシブな UI 機能とウェブページを構築。Grunt や Gulp によるタスク自動化、Git によるバージョン管理、Maxymiser を使った A / B テストなど、最新の開発ワークフローを遵守しました。",
+			"footnote": "バンクーバーおよびシアトルに拠点を置く e コマース企業"
 		}
 	},
 	"education": {
 		"ubc": {
 			"name": "ブリティッシュコロンビア大学",
-			"short": "UBC 大学",
-			"degree": "理学部 情報技術学科／統計学科卒",
-			"degree_short": "理学部 情報技術学科／統計学科卒",
-			"grad": "2015年5月・バンクーバー"
+			"short": "UBC",
+			"degree": "理学士（コンピュータサイエンスおよび統計学）",
+			"degree_short": "理学士（コンピュータサイエンス・統計学）",
+			"grad": "バンクーバー（BC 州）、2015 年 5 月"
 		},
 		"bcit": {
 			"name": "ブリティッシュコロンビア工科大学",
-			"short": "BCIT 大学",
-			"degree": "認定 優良フロントエンド開発者",
-			"degree_short": "認定 優良テクニカルウェブデザイナー",
-			"grad": "2015年10月・バンクーバー"
+			"short": "BCIT",
+			"degree": "フロントエンド開発者証明書（優秀賞）",
+			"degree_short": "優秀賞付きフロントエンド開発者証明書",
+			"grad": "バンクーバー（BC 州）、2015 年 10 月"
 		}
 	},
 	"bio_closing": {
-		"part1": "ウェブデザインに関して、機能と美学的な視点から、細部にまでこだわっているのでプロジェクトを最大限活用しています。機能と美学のバランスを刺激して、視覚的に見易く、新規性や革新性ばかりではなく、使いやすい高品質なサイトとアプリを制作することを目標にしています。面白いプロジェクトを探していますので、ご興味があれば、是非お気軽に",
-		"contact_me": "ご連絡",
-		"part2": "ください。"
+		"part1": "私は、機能と形のバランスを的確に捉え、細部まで目を配る批判的な視点を持って、すべてのプロジェクトに取り組んでいます。優れたウェブ開発とは、単なるきれいなコード以上のものであり、モダンで視覚的に洗練され、直感的で使いやすい体験を生み出すことだと考えています。常に素晴らしい人たちと面白いプロジェクトを探しています。もし何かお考えがあれば、ぜひ",
+		"contact_me": "ご連絡ください",
+		"part2": "。"
 	},
 	"projects": {
-		"flexstats": {
-			"title": "Flexstats",
-			"footnote": "React アプリケーション",
-			"description": "API を使用して動的データを表示する、ゼロから構築された ETH マイニング プール React アプリ"
-		},
-		"clearseas-oil-spills": {
-			"title": "Clear Seas",
-			"footnote": "Wordpress マイクロサイト",
-			"description": "カスタム Wordpress テーマを使用して Clear Seas 用に構築した 6 つのバイリンガルサイトの 1 つ"
+		"sfu": {
+			"title": "サイモンフレーザー大学",
+			"footnote": "Adobe Experience Manager",
+			"description": "数千人の教職員が自分のウェブサイトを簡単に作成・管理できる大規模な AEM プラットフォーム。"
 		},
 		"foundry": {
 			"title": "Foundry BC",
-			"footnote": "大規模な Wordpress サイト",
-			"description": "BC 州の若者や若年成人が必要なサービスや支援を見つけるのに役立つ大規模な Wordpress サイト"
+			"footnote": "高度な WordPress サイト",
+			"description": "BC 州の若者や若年成人が必要なサービスやリソースを見つける手助けをする包括的な WordPress サイト。"
 		},
-		"youth-service-finder": {
-			"title": "青少年サービスファインダー",
-			"footnote": "場所検索アプリ",
-			"description": "データをグループ化し、ユーザーが API から取得したサービスを検索およびフィルタリングできるようにする Foundry アプリ"
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "WordPress マイクロサイト",
+			"description": "Clear Seas 向けに作成された 6 つのバイリンガルマイクロサイトのうちの 1 つで、それぞれ完全にカスタムされた WordPress テーマを特徴としています。"
+		},
+		"ubc-med-pathways": {
+			"title": "UBC Med Pathways",
+			"footnote": "大学デジタルマガジン",
+			"description": "UBC 医学部向けのデジタルマガジンで、複数の号とさまざまなカスタムインタラクティブコンポーネントを紹介しています。"
 		},
 		"gbf": {
 			"title": "Graham Boeckh Foundation",
-			"footnote": "Wordpress テーマ",
-			"description": "さまざまなカスタムコンポーネントを備えたプライベートファウンデーション向けに構築されたバイリンガルの Wordpress サイト"
+			"footnote": "カスタム WordPress テーマ",
+			"description": "複数のオーダーメイドコンポーネントを組み込んだ、私立財団向けのバイリンガル WordPress サイト。"
 		},
 		"bcnu": {
 			"title": "BCNU 年次報告",
-			"footnote": "パンフレットサイト",
-			"description": "ゼロから作成した Wordpress テーマを使用して作成された BC 看護師組合のパンフレットサイト"
+			"footnote": "パンフレット型サイト",
+			"description": "BC 州看護師組合向けに、ゼロからデザインされた完全カスタムテーマで構築されたパンフレット型 WordPress サイト。"
 		},
 		"underwater-noise": {
-			"title": "Underwater Noise",
-			"footnote": "Wordpress マイクロサイト",
-			"description": "カスタム Wordpress テーマを使用して Clear Seas 用に構築した 6 つのバイリンガルサイトの 1 つ"
-		},
-		"asher": {
-			"title": "Asher Eyewear",
-			"footnote": "ECサイトテンプレート",
-			"description": "基本的なホバー効果とスクロール効果を備えた 5 ページの EC デモサイト"
-		},
-		"la": {
-			"title": "Los Angeles",
-			"footnote": "学校プロジェクト",
-			"description": "シンプルなユーザーインタラクションを紹介する単一ページのレスポンシブサイト"
-		},
-		"gooner": {
-			"title": "Gooner Blog",
-			"footnote": "ブログのレイアウト",
-			"description": "モバイルで列からタブに変わる単一ページのニュースデモサイト"
-		},
-		"blackjack": {
-			"title": "Blackjack",
-			"footnote": "JavaScript ゲーム",
-			"description": "クラスとアニメーションライブラリを利用した jQuery で書かれた Web ゲーム"
+			"title": "水中騒音",
+			"footnote": "WordPress マイクロサイト",
+			"description": "Clear Seas 向けに構築された 6 つのバイリンガルマイクロサイトのもう 1 つで、オーダーメイドの WordPress テーマを特徴としています。"
 		}
 	},
 	"project_tooltip": {
-		"open_application": "アプリを見る",
-		"visit_site": "サイトを見る",
+		"open_application": "アプリケーションを開く",
+		"visit_site": "サイトを訪問",
 		"view_project": "プロジェクトを見る",
-		"play_game": "ゲームを見る"
+		"play_game": "ゲームをプレイ"
 	},
 	"learn_more_about_ian": {
-		"part1": "",
-		"ian": "イアン",
-		"part2": "についてお知りになりたいことがあれば、ここをクリック"
+		"part1": "すべて知っておくべきこと ",
+		"ian": "Ian",
+		"part2": ""
 	},
 	"need_help": {
-		"part1": "お気軽にお問い",
-		"part2": "合わせください"
+		"part1": "手助けが必要ですか？",
+		"part2": "お気軽にご連絡ください！"
 	},
-	"download_resume": "履歴書をダウンロード (英語)",
+	"download_resume": "履歴書をダウンロード",
 	"form": {
-		"name": "お名前",
-		"email": "メールアドレス",
+		"name": "名前",
+		"email": "メール",
 		"subject": "件名",
-		"message": "お問い合わせ内容",
-		"submit": "送信する",
-		"min": "最小限",
-		"max": "最大限",
-		"sending": "送信中...",
-		"sent": "メッセージをいただき、ありがとうございます。後ほど、こちらからご連絡致します。",
-		"failed": "おっと！何かが間違っていた。 後でもう一度やり直すか、上記の連絡先情報を使用してください。"
+		"message": "メッセージ",
+		"submit": "メッセージを送信",
+		"min": "最小文字数",
+		"max": "最大文字数",
+		"sending": "送信中…",
+		"sent": "メッセージが送信されました。折り返しご連絡いたします！",
+		"failed": "おっと… 問題が発生しました。後でもう一度お試しいただくか、上記の連絡先情報をご利用ください。"
 	}
 }

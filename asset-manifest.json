@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9324cce.css",
-    "main.js": "/static/js/main.b253cb9a.js",
+    "main.css": "/static/css/main.46341820.css",
+    "main.js": "/static/js/main.0525371d.js",
     "static/media/hkgrotesk-regular.svg": "/static/media/hkgrotesk-regular.6dfb5f7fd054eb237c0e.svg",
     "static/media/hkgrotesk-semibold.svg": "/static/media/hkgrotesk-semibold.fea6c89e7a2a4432e5ba.svg",
     "static/media/hkgrotesk-medium.svg": "/static/media/hkgrotesk-medium.0ce3c265be4fcc570179.svg",
@@ -9,7 +9,7 @@
     "static/media/hkgrotesk-light.svg": "/static/media/hkgrotesk-light.715e3d7e77d16d0117fc.svg",
     "static/media/m.jpg": "/static/media/m.8c8424b08b2d9efc5c68.jpg",
     "static/media/clearseas1.jpg": "/static/media/clearseas1.ed2914adb5bd270060fa.jpg",
-    "static/media/flexstats.jpg": "/static/media/flexstats.630dd28bfa1174ac586f.jpg",
+    "static/media/sfu.jpg": "/static/media/sfu.630dd28bfa1174ac586f.jpg",
     "static/media/clearseas2.jpg": "/static/media/clearseas2.8e8ae1569c67eb0e8851.jpg",
     "static/media/foundry.jpg": "/static/media/foundry.f24b848c9431d2b3ee22.jpg",
     "static/media/hkgrotesk-regular.eot": "/static/media/hkgrotesk-regular.b2365509cae60dd13e31.eot",
@@ -27,7 +27,7 @@
     "static/media/la.jpg": "/static/media/la.e975da3e4ae09f270ecb.jpg",
     "static/media/gooner.jpg": "/static/media/gooner.1d7710b5e14ec1521b54.jpg",
     "static/media/blackjack.jpg": "/static/media/blackjack.14380b735b9e1b543757.jpg",
-    "static/media/youth-service-finder.jpg": "/static/media/youth-service-finder.fbbe90e0a37180265b57.jpg",
+    "static/media/ubc-pathways.jpg": "/static/media/ubc-pathways.fbbe90e0a37180265b57.jpg",
     "static/media/icons.svg?f53qb7": "/static/media/icons.e7a5a444742cc16da79d.svg",
     "static/media/hkgrotesk-regular.woff": "/static/media/hkgrotesk-regular.efed9cb888842c984a36.woff",
     "static/media/hkgrotesk-semibold.woff": "/static/media/hkgrotesk-semibold.794ca09e83fcd429d72c.woff",
@@ -44,13 +44,14 @@
     "static/media/icons.eot?f53qb7": "/static/media/icons.3810de9be38001ce5c35.eot",
     "static/media/icons.woff?f53qb7": "/static/media/icons.ecfd2903ab4278ce871d.woff",
     "static/media/icons.ttf?f53qb7": "/static/media/icons.08e790789c2a1dac47ab.ttf",
+    "static/media/ubc.png": "/static/media/ubc.1d21e331c35a3698df60.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.e9324cce.css.map": "/static/css/main.e9324cce.css.map",
-    "main.b253cb9a.js.map": "/static/js/main.b253cb9a.js.map"
+    "main.46341820.css.map": "/static/css/main.46341820.css.map",
+    "main.0525371d.js.map": "/static/js/main.0525371d.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9324cce.css",
-    "static/js/main.b253cb9a.js"
+    "static/css/main.46341820.css",
+    "static/js/main.0525371d.js"
   ]
 }
