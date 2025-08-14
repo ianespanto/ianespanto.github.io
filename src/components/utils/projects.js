@@ -16,7 +16,7 @@ export const projects = [
 		id: 'sfu',
 		color: '#d6eae8',
 		img: sfuImg,
-		tooltip: 'open_application',
+		tooltip: 'visit_site',
 	},
 	{
 		link: 'https://foundrybc.ca/',
@@ -40,7 +40,7 @@ export const projects = [
 		id: 'ubc-med-pathways',
 		color: '#d0deea',
 		img: ubcPathwaysImg,
-		tooltip: 'open_application',
+		tooltip: 'visit_site',
 	},
 	{
 		link: 'https://grahamboeckhfoundation.org/',

@@ -345,9 +345,15 @@ main.about {
 		gap: rem(15);
 
 		img {
-			margin-top: rem(10);
+			margin-top: rem(5);
 			width: 50px;
 			height: auto;
+		}
+
+		@include bpmin(small) {
+			img {
+				margin-top: rem(10);
+			}
 		}
 
 		@include bpmin(portrait) {

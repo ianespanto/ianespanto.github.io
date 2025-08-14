@@ -43,7 +43,12 @@ export default function Footer({
 				</div>
 				<ul>
 					<li>
-						<a href="https://codepen.io/ianespanto/" target="_blank" rel="noreferrer">
+						<a href="https://wellfound.com/u/ianespanto" target="_blank" rel="noreferrer">
+							Wellfound
+						</a>
+					</li>
+					<li>
+						<a href="https://codepen.io/ianespanto" target="_blank" rel="noreferrer">
 							Codepen
 						</a>
 					</li>
