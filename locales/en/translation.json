@@ -3,8 +3,8 @@
 	"frontend_engineer": "front-end engineer",
 	"menu": "Menu",
 	"close": "Close",
-	"copyright": "Copyright",
-	"rights": ". All rights reserved.",
+	"copyright_line": "Copyright © {{year}} Ian Espanto. All rights reserved.",
+	"links": "Links",
 	"credits": "Credits",
 	"design": "Design",
 	"code": "Code",
@@ -23,20 +23,8 @@
 	},
 	"bio": {
 		"p1": "I'm Ian, a meticulous front-end engineer based in BC, <strong>building sleek, high-performance websites, custom CMS platforms, and dynamic web apps</strong> powered by modern JavaScript and React.",
-		"p2": {
-			"part1": "<strong>I thrive at the intersection of code, design, and logic.</strong> With a Bachelor of Science in ",
-			"cpsc": "Computer Science",
-			"and": " and ",
-			"stats": "Statistics",
-			"part2": " from UBC and a top-of-class finish at BCIT’s ",
-			"frontend_dev": "Front-End Development ",
-			"part3": " program, I’ve spent the past decade transforming complex ideas into clean, intuitive digital experiences."
-		},
-		"p3": {
-			"part1": "While development is my main focus, I’ve always had one foot in the design world. I’m experienced with Photoshop and enjoy <strong>contributing to UI and UX decisions to help projects look as good as they work.</strong> Outside the code editor, I enjoy playing piano and ",
-			"composer": "composing music",
-			"part2": " as a creative outlet."
-		}
+		"p2": "<0>I thrive at the intersection of code, design, and logic.</0> With a Bachelor of Science in <1>Computer Science</1> and <2>Statistics</2> from UBC and a top-of-class finish at BCIT’s <3>Front-End Development</3> program, I’ve spent the past decade transforming complex ideas into clean, intuitive digital experiences.",
+		"p3": "While development is my main focus, I’ve always had one foot in the design world. I’m experienced with Photoshop and enjoy <0>contributing to UI and UX decisions to help projects look as good as they work.</0> Outside the code editor, I enjoy playing piano and <1>composing music</1> as a creative outlet."
 	},
 	"skill_list": {
 		"programming_languages": "Programming Languages",
@@ -86,11 +74,7 @@
 			"grad": "Vancouver BC, October 2015"
 		}
 	},
-	"bio_closing": {
-		"part1": "I bring a critical eye and strong attention to detail to every project, aiming to strike the right balance between function and form. For me, great web development means more than clean code — it’s about creating modern, visually polished, and intuitive experiences that actually feel good to use. I'm always on the lookout for interesting projects with awesome people. Got something in mind? Free free to ",
-		"contact_me": "drop me a line",
-		"part2": "."
-	},
+	"bio_closing": "I bring a critical eye and strong attention to detail to every project, aiming to strike the right balance between function and form. For me, great web development means more than clean code — it’s about creating modern, visually polished, and intuitive experiences that actually feel good to use. I'm always on the lookout for interesting projects with awesome people. Got something in mind? Feel free to <0>drop me a line</0>.",
 	"projects": {
 		"sfu": {
 			"title": "Simon Fraser University",
@@ -134,15 +118,8 @@
 		"view_project": "View Project",
 		"play_game": "Play Game"
 	},
-	"learn_more_about_ian": {
-		"part1": "Everything you need to know about ",
-		"ian": "Ian",
-		"part2": ""
-	},
-	"need_help": {
-		"part1": "Need a hand? ",
-		"part2": "Drop me a line!"
-	},
+	"learn_more_about_ian": "Everything you need to know about <0>Ian</0>",
+	"need_help": "<0>Need a hand?</0><1>Drop me a line!</1>",
 	"download_resume": "Download Résumé",
 	"form": {
 		"name": "Name",

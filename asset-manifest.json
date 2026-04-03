@@ -1,7 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.b2e124c4.css",
-    "main.js": "/static/js/main.222e2e9b.js",
+    "main.css": "/static/css/main.fe6dbcfe.css",
+    "main.js": "/static/js/main.d027eb89.js",
+    "static/media/noto-sans-sc-v40-chinese-simplified-regular.ttf": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.1cdee5bf0ac189396d11.ttf",
+    "static/media/noto-sans-sc-v40-chinese-simplified-600.ttf": "/static/media/noto-sans-sc-v40-chinese-simplified-600.cd00893a265ed937e868.ttf",
+    "static/media/noto-sans-jp-v56-japanese-regular.ttf": "/static/media/noto-sans-jp-v56-japanese-regular.ef0437686bac1f093a60.ttf",
+    "static/media/noto-sans-jp-v56-japanese-600.ttf": "/static/media/noto-sans-jp-v56-japanese-600.6acc4d67fc7132ac0fff.ttf",
+    "static/media/noto-sans-tc-v39-chinese-traditional-regular.ttf": "/static/media/noto-sans-tc-v39-chinese-traditional-regular.fa11bfcc9c42ef1e4504.ttf",
+    "static/media/noto-sans-tc-v39-chinese-traditional-600.ttf": "/static/media/noto-sans-tc-v39-chinese-traditional-600.21994c035c15f7dcf92e.ttf",
+    "static/media/noto-sans-sc-v40-chinese-simplified-600.woff": "/static/media/noto-sans-sc-v40-chinese-simplified-600.99fa3ab13e52bef88328.woff",
+    "static/media/noto-sans-sc-v40-chinese-simplified-regular.woff": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.1e7e10b0b6def2cc727d.woff",
+    "static/media/noto-sans-jp-v56-japanese-600.woff": "/static/media/noto-sans-jp-v56-japanese-600.a57293522ceb921f010f.woff",
+    "static/media/noto-sans-jp-v56-japanese-regular.woff": "/static/media/noto-sans-jp-v56-japanese-regular.38a3966ede52f957cbe8.woff",
+    "static/media/noto-sans-tc-v39-chinese-traditional-600.woff": "/static/media/noto-sans-tc-v39-chinese-traditional-600.03e489df3d756f5dba66.woff",
+    "static/media/noto-sans-tc-v39-chinese-traditional-regular.woff": "/static/media/noto-sans-tc-v39-chinese-traditional-regular.c49e2c3bc7f3e28d5f57.woff",
+    "static/media/noto-sans-sc-v40-chinese-simplified-600.eot": "/static/media/noto-sans-sc-v40-chinese-simplified-600.ea2ce35fd745f2a303e1.eot",
+    "static/media/noto-sans-sc-v40-chinese-simplified-regular.eot": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.5ba802cb971a4bf289d5.eot",
+    "static/media/noto-sans-sc-v40-chinese-simplified-600.woff2": "/static/media/noto-sans-sc-v40-chinese-simplified-600.41438590648770c69a85.woff2",
+    "static/media/noto-sans-jp-v56-japanese-600.eot": "/static/media/noto-sans-jp-v56-japanese-600.e20ad3d96398a02205ab.eot",
+    "static/media/noto-sans-sc-v40-chinese-simplified-regular.woff2": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.aaa0d4a47b117eb86312.woff2",
+    "static/media/noto-sans-jp-v56-japanese-regular.eot": "/static/media/noto-sans-jp-v56-japanese-regular.a1a61ccd14e787031dd5.eot",
+    "static/media/noto-sans-tc-v39-chinese-traditional-600.eot": "/static/media/noto-sans-tc-v39-chinese-traditional-600.1b2507f0fc6d14c1c36a.eot",
+    "static/media/noto-sans-tc-v39-chinese-traditional-regular.eot": "/static/media/noto-sans-tc-v39-chinese-traditional-regular.03d6d08a4ed82218f2f6.eot",
+    "static/media/noto-sans-jp-v56-japanese-600.woff2": "/static/media/noto-sans-jp-v56-japanese-600.0ce47860f7d9d65fb9a3.woff2",
+    "static/media/noto-sans-jp-v56-japanese-regular.woff2": "/static/media/noto-sans-jp-v56-japanese-regular.90f5e4481d7d4dd705b5.woff2",
+    "static/media/noto-sans-tc-v39-chinese-traditional-600.woff2": "/static/media/noto-sans-tc-v39-chinese-traditional-600.f234ccd7b496c908c9a2.woff2",
+    "static/media/noto-sans-tc-v39-chinese-traditional-regular.woff2": "/static/media/noto-sans-tc-v39-chinese-traditional-regular.9cf7689d72eb89c393a6.woff2",
     "static/media/hkgrotesk-regular.svg": "/static/media/hkgrotesk-regular.6dfb5f7fd054eb237c0e.svg",
     "static/media/hkgrotesk-semibold.svg": "/static/media/hkgrotesk-semibold.fea6c89e7a2a4432e5ba.svg",
     "static/media/hkgrotesk-medium.svg": "/static/media/hkgrotesk-medium.0ce3c265be4fcc570179.svg",
@@ -24,6 +48,12 @@
     "static/media/asher.jpg": "/static/media/asher.4d620302ca5ebdef91d1.jpg",
     "static/media/hkgrotesk-bold.eot": "/static/media/hkgrotesk-bold.5527a2dc899626d266db.eot",
     "static/media/hkgrotesk-bold.ttf": "/static/media/hkgrotesk-bold.c728b4cacda1dbc0ffef.ttf",
+    "static/media/noto-sans-sc-v40-chinese-simplified-600.svg": "/static/media/noto-sans-sc-v40-chinese-simplified-600.b8864c6c52038a62bf08.svg",
+    "static/media/noto-sans-tc-v39-chinese-traditional-600.svg": "/static/media/noto-sans-tc-v39-chinese-traditional-600.54cf4deb5cbe03c7e676.svg",
+    "static/media/noto-sans-jp-v56-japanese-600.svg": "/static/media/noto-sans-jp-v56-japanese-600.580e3d692a1ae0c3746a.svg",
+    "static/media/noto-sans-jp-v56-japanese-regular.svg": "/static/media/noto-sans-jp-v56-japanese-regular.b9bf5d15f739fbe4ffd1.svg",
+    "static/media/noto-sans-sc-v40-chinese-simplified-regular.svg": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.07e111af53cddae074b1.svg",
+    "static/media/noto-sans-tc-v39-chinese-traditional-regular.svg": "/static/media/noto-sans-tc-v39-chinese-traditional-regular.fa0727eeed21d5276b58.svg",
     "static/media/la.jpg": "/static/media/la.e975da3e4ae09f270ecb.jpg",
     "static/media/gooner.jpg": "/static/media/gooner.1d7710b5e14ec1521b54.jpg",
     "static/media/blackjack.jpg": "/static/media/blackjack.14380b735b9e1b543757.jpg",
@@ -47,11 +77,11 @@
     "static/media/ubc.png": "/static/media/ubc.1d21e331c35a3698df60.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.b2e124c4.css.map": "/static/css/main.b2e124c4.css.map",
-    "main.222e2e9b.js.map": "/static/js/main.222e2e9b.js.map"
+    "main.fe6dbcfe.css.map": "/static/css/main.fe6dbcfe.css.map",
+    "main.d027eb89.js.map": "/static/js/main.d027eb89.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2e124c4.css",
-    "static/js/main.222e2e9b.js"
+    "static/css/main.fe6dbcfe.css",
+    "static/js/main.d027eb89.js"
   ]
 }
