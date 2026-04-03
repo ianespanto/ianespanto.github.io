@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fe6dbcfe.css",
-    "main.js": "/static/js/main.d027eb89.js",
+    "main.js": "/static/js/main.48c581a4.js",
     "static/media/noto-sans-sc-v40-chinese-simplified-regular.ttf": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.1cdee5bf0ac189396d11.ttf",
     "static/media/noto-sans-sc-v40-chinese-simplified-600.ttf": "/static/media/noto-sans-sc-v40-chinese-simplified-600.cd00893a265ed937e868.ttf",
     "static/media/noto-sans-jp-v56-japanese-regular.ttf": "/static/media/noto-sans-jp-v56-japanese-regular.ef0437686bac1f093a60.ttf",
@@ -45,7 +45,6 @@
     "static/media/d.jpg": "/static/media/d.64a70db8cd619e8bb05c.jpg",
     "static/media/hkgrotesk-light.eot": "/static/media/hkgrotesk-light.e70332df3a9e314beb4b.eot",
     "static/media/hkgrotesk-light.ttf": "/static/media/hkgrotesk-light.7ec176e1c9fe862653eb.ttf",
-    "static/media/asher.jpg": "/static/media/asher.4d620302ca5ebdef91d1.jpg",
     "static/media/hkgrotesk-bold.eot": "/static/media/hkgrotesk-bold.5527a2dc899626d266db.eot",
     "static/media/hkgrotesk-bold.ttf": "/static/media/hkgrotesk-bold.c728b4cacda1dbc0ffef.ttf",
     "static/media/noto-sans-sc-v40-chinese-simplified-600.svg": "/static/media/noto-sans-sc-v40-chinese-simplified-600.b8864c6c52038a62bf08.svg",
@@ -54,9 +53,6 @@
     "static/media/noto-sans-jp-v56-japanese-regular.svg": "/static/media/noto-sans-jp-v56-japanese-regular.b9bf5d15f739fbe4ffd1.svg",
     "static/media/noto-sans-sc-v40-chinese-simplified-regular.svg": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.07e111af53cddae074b1.svg",
     "static/media/noto-sans-tc-v39-chinese-traditional-regular.svg": "/static/media/noto-sans-tc-v39-chinese-traditional-regular.fa0727eeed21d5276b58.svg",
-    "static/media/la.jpg": "/static/media/la.e975da3e4ae09f270ecb.jpg",
-    "static/media/gooner.jpg": "/static/media/gooner.1d7710b5e14ec1521b54.jpg",
-    "static/media/blackjack.jpg": "/static/media/blackjack.14380b735b9e1b543757.jpg",
     "static/media/ubc-pathways.jpg": "/static/media/ubc-pathways.fbbe90e0a37180265b57.jpg",
     "static/media/icons.svg?f53qb7": "/static/media/icons.e7a5a444742cc16da79d.svg",
     "static/media/hkgrotesk-regular.woff": "/static/media/hkgrotesk-regular.efed9cb888842c984a36.woff",
@@ -78,10 +74,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.fe6dbcfe.css.map": "/static/css/main.fe6dbcfe.css.map",
-    "main.d027eb89.js.map": "/static/js/main.d027eb89.js.map"
+    "main.48c581a4.js.map": "/static/js/main.48c581a4.js.map"
   },
   "entrypoints": [
     "static/css/main.fe6dbcfe.css",
-    "static/js/main.d027eb89.js"
+    "static/js/main.48c581a4.js"
   ]
 }
