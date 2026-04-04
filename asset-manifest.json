@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.235f6a02.css",
-    "main.js": "/static/js/main.3ade6f3d.js",
+    "main.css": "/static/css/main.5a231bfb.css",
+    "main.js": "/static/js/main.aa3f5f8e.js",
     "static/media/noto-sans-sc-v40-chinese-simplified-regular.ttf": "/static/media/noto-sans-sc-v40-chinese-simplified-regular.1cdee5bf0ac189396d11.ttf",
     "static/media/noto-sans-sc-v40-chinese-simplified-600.ttf": "/static/media/noto-sans-sc-v40-chinese-simplified-600.cd00893a265ed937e868.ttf",
     "static/media/noto-sans-jp-v56-japanese-regular.ttf": "/static/media/noto-sans-jp-v56-japanese-regular.ef0437686bac1f093a60.ttf",
@@ -73,11 +73,11 @@
     "static/media/ubc.png": "/static/media/ubc.1d21e331c35a3698df60.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.235f6a02.css.map": "/static/css/main.235f6a02.css.map",
-    "main.3ade6f3d.js.map": "/static/js/main.3ade6f3d.js.map"
+    "main.5a231bfb.css.map": "/static/css/main.5a231bfb.css.map",
+    "main.aa3f5f8e.js.map": "/static/js/main.aa3f5f8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.235f6a02.css",
-    "static/js/main.3ade6f3d.js"
+    "static/css/main.5a231bfb.css",
+    "static/js/main.aa3f5f8e.js"
   ]
 }
