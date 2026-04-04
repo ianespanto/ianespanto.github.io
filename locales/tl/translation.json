@@ -1,0 +1,136 @@
+{
+	"frontend_web_engineer": "Inhenyero ng Front-End Web",
+	"frontend_engineer": "inhenyero ng front-end",
+	"menu": "Menu",
+	"close": "Isara",
+	"copyright_line": "Copyright © {{year}} Ian Espanto. Lahat ng karapatan ay nakalaan.",
+	"links": "Mga Link",
+	"credit": "Kredito",
+	"design": "Disenyo",
+	"code": "Code",
+	"translation": "Pagsasalin",
+	"photos": "Mga Larawan",
+	"menu_items": {
+		"work": "Trabaho",
+		"about": "Tungkol Sa",
+		"contact": "Kontak"
+	},
+	"about_headings": {
+		"bio": "Ako sa Maikling Salita",
+		"skills": "Teknikal na Kadalubhasaan",
+		"experience": "Kasaysayan ng Trabaho",
+		"education": "Edukasyon"
+	},
+	"bio": {
+		"p1": "Ako si Ian, isang maingat na inhenyero ng front-end na nakabase sa BC, <strong>gumagawa ng makinis, mataas na pagganap na mga website, custom na CMS platform, at dynamic na web app</strong> na pinapagana ng modernong JavaScript at React.",
+		"p2": "<0>Gumagaling ako sa intersection ng code, disenyo, at lohika.</0> Sa isang Bachelor of Science sa <1>Computer Science</1> at <2>Statistics</2> mula sa UBC at isang top-of-class na pagtatapos sa BCIT’s <3>Front-End Development</3> program, ginugol ko ang nakaraang dekada sa pagbabago ng mga kumplikadong ideya sa malinis, intuitive na digital na karanasan.",
+		"p3": "Habang ang development ang aking pangunahing focus, palagi akong may isang paa sa mundo ng disenyo. May karanasan ako sa Photoshop at nasisiyahan ako sa <0>pag-aambag sa mga desisyon sa UI at UX upang tulungan ang mga proyekto na magmukhang kasing ganda ng kanilang pagtatrabaho.</0> Sa labas ng code editor, nasisiyahan ako sa paglalaro ng piyano at <1>pagbuo ng musika</1> bilang isang creative outlet."
+	},
+	"skill_list": {
+		"programming_languages": "Mga Programming Language",
+		"professional_skillset": "Propesyonal na Skillset",
+		"development_tools": "Mga Tool sa Development",
+		"latest": " (pinakabagong bersyon)",
+		"spa_development": "SPA Development",
+		"gsap_animation": "GSAP Animation",
+		"sql_database": "SQL Database"
+	},
+	"jobs": {
+		"sfu": {
+			"company": "Simon Fraser University",
+			"role": "Application Developer",
+			"time": "Hulyo 2022 - Kasalukuyan",
+			"description": "Tanging front-end specialist sa loob ng central IT Services team ng SFU, namumuno sa lahat ng front-end development at nagbibigay ng teknikal na suporta sa buong web application ecosystem ng unibersidad. Responsable sa pagbuo at pagpapanatili ng custom na web applications ng SFU — kabilang ang Adobe Experience Manager (AEM) content management systems — na ginagamit araw-araw ng libu-libong faculty at staff upang lumikha at pamahalaan ang kanilang sariling department at faculty websites.",
+			"footnote": "Pampublikong research university sa British Columbia"
+		},
+		"signals": {
+			"company": "Signals Design",
+			"role": "Front-end Developer",
+			"time": "Hulyo 2017 - Hulyo 2020",
+			"description": "Nakipagtulungan sa iba't ibang proyekto para sa mga kliyente kabilang ang UBC, Clear Seas, Foundry, BCNU, Crofton House, MYM, at ang Graham Boeckh Foundation. Independently na idinisenyo at binuo ang isang custom na team, project, at budget management web application, na nag-iintegrate ng maraming APIs. Ang platform ay malawakang tinanggap ng internal na mga manager at accountant para sa araw-araw na operasyon.",
+			"footnote": "Vancouver based design agency"
+		},
+		"shoes": {
+			"company": "Shoes.com",
+			"role": "Front-end Developer",
+			"time": "Nobyembre 2015 - Agosto 2016",
+			"description": "Nakipagtulungan nang malapit sa mga designer, project manager, marketer, at developer upang bumuo ng responsive na UI features at webpage para sa e-commerce platforms ng kompanya sa maraming environment. Sinunod ang modernong development workflows, kabilang ang task automation gamit ang Grunt at Gulp, version control gamit ang Git, at A/B testing gamit ang Maxymiser.",
+			"footnote": "Vancouver & Seattle based e-commerce company"
+		}
+	},
+	"education": {
+		"ubc": {
+			"name": "University of British Columbia",
+			"short": "UBC",
+			"degree": "Bachelor of Science, Computer Science and Statistics",
+			"degree_short": "BSc. Computer Science and Statistics",
+			"grad": "Vancouver BC, Mayo 2015"
+		},
+		"bcit": {
+			"name": "British Columbia Institute of Technology",
+			"short": "BCIT",
+			"degree": "Certificate, Front-end Developer with Distinction",
+			"degree_short": "Front-end Developer w/ Distinction",
+			"grad": "Vancouver BC, Oktubre 2015"
+		}
+	},
+	"bio_closing": "Dala ko ang isang kritikal na mata at malakas na atensyon sa detalye sa bawat proyekto, na naglalayong makamit ang tamang balanse sa pagitan ng function at form. Para sa akin, ang mahusay na web development ay higit pa sa malinis na code — ito ay tungkol sa paglikha ng modern, visually polished, at intuitive na karanasan na talagang magandang gamitin. Palagi akong naghahanap ng mga kawili-wiling proyekto kasama ang mga awesome na tao. Mayroon ka bang isang bagay sa isip? Pakiramdam na <0>mag-drop ng linya</0>.",
+	"projects": {
+		"sfu": {
+			"title": "Simon Fraser University",
+			"footnote": "Adobe Experience Manager",
+			"description": "Isang malaking-scale na AEM platform na nagbibigay kapangyarihan sa libu-libong faculty at staff upang madaling lumikha at pamahalaan ang kanilang sariling mga website."
+		},
+		"foundry": {
+			"title": "Foundry BC",
+			"footnote": "Advanced WordPress Site",
+			"description": "Isang komprehensibong WordPress site na nagbibigay gabay sa mga kabataan at young adult ng BC upang tuklasin ang mga mahahalagang serbisyo at resources."
+		},
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "WordPress Microsite",
+			"description": "Isa sa anim na bilingual na microsite na ginawa para sa Clear Seas, bawat isa ay may fully custom na WordPress themes."
+		},
+		"ubc-med-pathways": {
+			"title": "UBC Med Pathways",
+			"footnote": "University Digital Magazine",
+			"description": "Isang digital magazine para sa UBC School of Medicine, na nagpapakita ng maraming issue na may iba't ibang custom na interactive na komponent."
+		},
+		"gbf": {
+			"title": "Graham Boeckh Foundation",
+			"footnote": "Custom WordPress Theme",
+			"description": "Isang bilingual na WordPress site para sa isang pribadong foundation, na naglalaman ng maraming tailor-made na komponent."
+		},
+		"bcnu": {
+			"title": "BCNU Annual Report",
+			"footnote": "Brochure-style Site",
+			"description": "Isang brochure-style na WordPress site para sa BC Nurses' Union, na binuo mula sa isang fully custom na theme na idinisenyo mula sa simula."
+		},
+		"underwater-noise": {
+			"title": "Underwater Noise",
+			"footnote": "WordPress Microsite",
+			"description": "Isa pa sa anim na bilingual na microsite na binuo para sa Clear Seas, na may bespoke na WordPress themes."
+		}
+	},
+	"project_tooltip": {
+		"open_application": "Buksan ang Application",
+		"visit_site": "Bisitahin ang Site",
+		"view_project": "Tingnan ang Proyekto",
+		"play_game": "Maglaro ng Game"
+	},
+	"learn_more_about_ian": "Lahat ng kailangan mong malaman tungkol sa <0>Ian</0>",
+	"need_help": "<0>Kailangan ng tulong? </0><1>Mag-drop ng linya!</1>",
+	"download_resume": "I-download ang Résumé",
+	"form": {
+		"name": "Pangalan",
+		"email": "Email",
+		"subject": "Paksa",
+		"message": "Mensahe",
+		"submit": "Ipadala ang Mensahe",
+		"min": "min.",
+		"max": "max.",
+		"sending": "Nagpapadala...",
+		"sent": "Ang iyong mensahe ay naipadala. Makikipag-ugnayan ako!",
+		"failed": "Oops... May mali. Pakisubukang muli mamaya o gamitin ang contact information sa itaas."
+	}
+}
