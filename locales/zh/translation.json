@@ -5,7 +5,7 @@
 	"close": "关闭",
 	"copyright_line": "版权 © {{year}} Ian Espanto。保留所有权利。",
 	"links": "链接",
-	"credits": "鸣谢",
+	"credit": "鸣谢",
 	"design": "设计",
 	"code": "编码",
 	"translation": "翻译",
@@ -110,26 +110,6 @@
 			"title": "Underwater Noise",
 			"footnote": "Wordpress 微型网站",
 			"description": "为 Clear Seas 加拿大海运中心用 Wordpress 管理系统构建的六个双语言微型网站之一"
-		},
-		"asher": {
-			"title": "Asher Eyewear",
-			"footnote": "网上商店框架",
-			"description": "具备一些基本的悬停和滚动效果的五页网上商店框架主题学校项目"
-		},
-		"la": {
-			"title": "Los Angeles",
-			"footnote": "学校项目",
-			"description": "展示一些简单的滚动效果以及用户互动的单页响应式网页学校项目"
-		},
-		"gooner": {
-			"title": "Gooner Blog",
-			"footnote": "新闻网站框架",
-			"description": "一个可以在移动设备上从竖列变成标签式布局的博客或新闻构架学校项目"
-		},
-		"blackjack": {
-			"title": "二十一点",
-			"footnote": "JavaScript 小游戏",
-			"description": "一个用 jQuery 建造的应用 class 概念和动画特效库的小游戏学校项目"
 		}
 	},
 	"project_tooltip": {

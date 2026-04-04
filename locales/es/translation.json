@@ -5,7 +5,7 @@
 	"close": "Cerrar",
 	"copyright_line": "Derechos de autor © {{year}} Ian Espanto. Todos los derechos reservados.",
 	"links": "Enlaces",
-	"credits": "Créditos",
+	"credit": "Crédito",
 	"design": "Diseño",
 	"code": "Código",
 	"translation": "Traducción",
@@ -119,7 +119,7 @@
 		"play_game": "Jugar juego"
 	},
 	"learn_more_about_ian": "Todo lo que necesitas saber sobre <0>Ian</0>",
-	"need_help": "<0>¿Necesitas ayuda?</0><1>¡Envíame un mensaje!</1>",
+	"need_help": "<0>¿Necesitas ayuda? </0><1>¡Envíame un mensaje!</1>",
 	"download_resume": "Descargar currículum",
 	"form": {
 		"name": "Nombre",

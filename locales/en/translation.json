@@ -5,7 +5,7 @@
 	"close": "Close",
 	"copyright_line": "Copyright © {{year}} Ian Espanto. All rights reserved.",
 	"links": "Links",
-	"credits": "Credits",
+	"credit": "Credit",
 	"design": "Design",
 	"code": "Code",
 	"translation": "Translation",
@@ -119,7 +119,7 @@
 		"play_game": "Play Game"
 	},
 	"learn_more_about_ian": "Everything you need to know about <0>Ian</0>",
-	"need_help": "<0>Need a hand?</0><1>Drop me a line!</1>",
+	"need_help": "<0>Need a hand? </0><1>Drop me a line!</1>",
 	"download_resume": "Download Résumé",
 	"form": {
 		"name": "Name",

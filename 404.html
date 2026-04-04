@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" translate="no">
+	<head>
+		<meta charset="utf-8" />
+		<title>Ian Espanto</title>
+		<script>
+			(function () {
+				const path = window.location.pathname;
+				const query = window.location.search.slice(1).replace(/&/g, '~and~');
+				const hash = window.location.hash || '';
+				const redirectUrl = `${window.location.origin}/?p=${encodeURIComponent(path)}${query ? `&q=${query}` : ''}${hash}`;
+
+				window.location.replace(redirectUrl);
+			})();
+		</script>
+	</head>
+	<body></body>
+</html>
