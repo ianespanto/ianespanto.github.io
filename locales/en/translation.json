@@ -132,5 +132,7 @@
 		"sending": "Sending...",
 		"sent": "Your message has been sent. I will be in touch!",
 		"failed": "Oops... Something went wrong. Please try again later or use the contact information above."
-	}
+	},
+	"page_not_found": "Sorry, page not found",
+	"return_to_home": "Return to home"
 }

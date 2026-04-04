@@ -132,5 +132,7 @@
 		"sending": "Nagpapadala...",
 		"sent": "Ang iyong mensahe ay naipadala. Makikipag-ugnayan ako!",
 		"failed": "Oops... May mali. Pakisubukang muli mamaya o gamitin ang contact information sa itaas."
-	}
+	},
+	"page_not_found": "Paumanhin, ang pahina ay hindi nakita",
+	"return_to_home": "Bumalik sa home"
 }

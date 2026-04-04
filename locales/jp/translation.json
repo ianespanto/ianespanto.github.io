@@ -5,7 +5,7 @@
 	"close": "閉じる",
 	"copyright_line": "著作権 © {{year}} Ian Espanto",
 	"links": "リンク",
-	"credits": "クレジット",
+	"credit": "クレジット",
 	"design": "デザイン",
 	"code": "コード",
 	"translation": "翻訳",
@@ -132,5 +132,7 @@
 		"sending": "送信中…",
 		"sent": "メッセージが送信されました。折り返しご連絡いたします！",
 		"failed": "おっと… 問題が発生しました。後でもう一度お試しいただくか、上記の連絡先情報をご利用ください。"
-	}
+	},
+	"page_not_found": "申し訳ございません。ページが見つかりません",
+	"return_to_home": "ホームに戻る"
 }

@@ -132,5 +132,7 @@
 		"sending": "Enviando...",
 		"sent": "Tu mensaje ha sido enviado. ¡Me pondré en contacto contigo pronto!",
 		"failed": "Vaya… Algo salió mal. Por favor, inténtalo de nuevo más tarde o utiliza la información de contacto arriba."
-	}
+	},
+	"page_not_found": "Disculpa, página no encontrada",
+	"return_to_home": "Volver al inicio"
 }
