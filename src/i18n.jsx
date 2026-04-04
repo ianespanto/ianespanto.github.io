@@ -2,12 +2,25 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import Backend from 'i18next-http-backend';
+import { defaultLang, langIds } from './components/utils/variables';
 // import LanguageDetector from 'i18next-browser-languagedetector';
 // don't want to use this?
 // have a look at the Quick start guide
 // for passing in lng and translations on init
 
-const langs = ['en', 'jp', 'zh-TW', 'fr', 'es'];
+const getInitialLanguage = () => {
+	const searchLang = new URLSearchParams(window.location.search).get('lang');
+
+	if (searchLang && langIds.includes(searchLang)) {
+		return searchLang;
+	}
+
+	if (localStorage.lang && langIds.includes(localStorage.lang)) {
+		return localStorage.lang;
+	}
+
+	return defaultLang;
+};
 
 i18n
 	// load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
@@ -22,8 +35,8 @@ i18n
 	// init i18next
 	// for all options read: https://www.i18next.com/overview/configuration-options
 	.init({
-		lng: localStorage.lang && langs.includes(localStorage.lang) ? localStorage.lang : 'en',
-		fallbackLng: 'en',
+		lng: getInitialLanguage(),
+		fallbackLng: defaultLang,
 		ns: ['translation'],
 		defaultNS: 'translation',
 		backend: {

@@ -1,19 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Noto+Sans+SC:wght@400;600&family=Noto+Sans+TC:wght@400;600');
-
-@import 'vendors/flickity';
-@import 'reset';
+@use 'vendors/flickity';
+@use 'reset';
 
 // Core partials
-@import 'utilities';
-@import 'variables';
-@import 'mixins';
-@import 'typography';
-@import 'layout';
-@import 'base';
-@import 'buttons';
-@import 'modules';
+@use 'typography';
+@use 'layout';
+@use 'base';
+@use 'buttons';
+@use 'modules';
 
 // Pages and snippets
-@import 'header';
-@import 'home';
-@import 'pages';
+@use 'header';
+@use 'home';
+@use 'pages';

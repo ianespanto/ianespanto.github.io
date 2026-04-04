@@ -1,3 +1,5 @@
+@use 'globals' as *;
+
 .btn {
 	border: rem(1) solid;
 	font-weight: 400;
@@ -10,26 +12,22 @@
 	text-align: center;
 	display: inline-block;
 	letter-spacing: rem(0.35);
-	appearance: none;
 	@include noSelect;
-	transition: background $speed, border-color $speed;
+	transition: background var(--speed), border-color var(--speed);
 
 	&:hover {
 		cursor: pointer;
 	}
-	&:focus {
-		outline: none;
-	}
 
-	@include scrollOnHover($white);
+	@include scrollOnHover(var(--color-white));
 
 	&--primary {
-		background: $mineshaft;
-		border-color: $mineshaft;
-		color: $white;
+		background-color: var(--color-mineshaft);
+		border-color: var(--color-mineshaft);
+		color: var(--color-white);
 		&:hover {
-			background: $black;
-			border-color: $black;
+			background-color: var(--color-black);
+			border-color: var(--color-black);
 		}
 	}
 

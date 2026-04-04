@@ -1,16 +1,18 @@
+@use 'globals' as *;
+
 .link-hover {
 	@include linkHover();
 	&--light {
-		color: $silver;
+		color: var(--color-silver);
 	}
 	&--white {
-		color: $white;
+		color: var(--color-white);
 	}
 	&--black {
-		color: $black;
+		color: var(--color-black);
 		@include bpmin(landscape) {
 			&:hover {
-				color: $black;
+				color: var(--color-black);
 			}
 		}
 	}
@@ -33,25 +35,21 @@
 	input,
 	textarea {
 		padding: rem(10) rem(13);
-		color: $black;
+		color: var(--color-black);
 		line-height: rem(24);
 		font-size: rem(15);
 		width: 100%;
-		outline: rem(1) solid $platinum;
 		border: rem(2) solid transparent;
-		background: $sand;
-		outline-offset: 0;
+		background-color: var(--color-sand);
 		letter-spacing: rem(0.5);
 		font-weight: 400;
-		appearance: none;
-		@include placeholder($silver);
-		border-radius: 0;
-		transition: border-color $speed, outline-color $speed;
+		@include placeholder(var(--color-silver));
+		transition: border-color var(--speed);
 
 		& + label {
 			display: block;
 			position: absolute;
-			color: $black;
+			color: var(--color-black);
 			top: 0;
 			left: 0;
 			line-height: 1;
@@ -61,7 +59,10 @@
 			letter-spacing: rem(1);
 			opacity: 0;
 			transform: translateY(rem(5));
-			transition: opacity $speed, color $speed, transform $speed;
+			transition:
+				opacity var(--speed),
+				color var(--speed),
+				transform var(--speed);
 			&.required {
 				&::before {
 					content: '*';
@@ -72,17 +73,15 @@
 
 		&.input-error {
 			& + label {
-				color: $red;
+				color: var(--color-red);
 				opacity: 1;
 				transform: translateY(0);
 			}
-			border-color: $red !important;
-			outline-color: $red !important;
+			border-color: var(--color-red) !important;
 		}
 
 		&:focus {
-			border-color: $black;
-			outline-color: $black;
+			border-color: var(--color-black);
 			@include placeholder(transparent);
 
 			& + label {
@@ -104,7 +103,7 @@
 		position: absolute;
 		bottom: rem(-20);
 		right: rem(5);
-		color: $silver;
+		color: var(--color-silver);
 		display: block;
 	}
 
@@ -129,10 +128,10 @@
 }
 
 .transitionText {
-	width: 100vw;
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	z-index: 1000;
 	display: flex;
 	justify-content: center;
@@ -143,7 +142,7 @@
 	transform-origin: 50% 50%;
 
 	& > span {
-		color: $white;
+		color: var(--color-white);
 		opacity: 0.2;
 		@include giantName();
 	}
@@ -151,22 +150,22 @@
 
 // Page load animations
 .transitionBox {
-	width: 100vw;
 	min-height: -webkit-fill-available;
 	position: fixed;
 	z-index: 999;
 	top: 0;
 	left: 0;
-	background: $black;
+	right: 0;
+	background-color: var(--color-black);
 }
 
 .loading {
-	width: 100vw;
 	height: 100vh;
-	color: $black;
+	color: var(--color-black);
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	z-index: 1000;
 	line-height: 1.3;
 	text-align: center;
@@ -227,7 +226,7 @@
 }
 .loading-title {
 	position: absolute;
-	left: 50%;
+	left: 0;
 	top: 0;
 	width: 100%;
 }
@@ -264,7 +263,7 @@
 }
 
 .no-transition {
-	transition: none !important;
+	@include noTransition;
 }
 
 .pointer {

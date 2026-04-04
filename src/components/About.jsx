@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import bioImgDesktop from '../assets/img/bio/d.jpg';
 import bioImgMobile from '../assets/img/bio/m.jpg';
@@ -23,8 +23,10 @@ export default function About({
 	const location = useLocation();
 
 	const sections = useRef([]);
-	const [inViewSections, setInViewSections] = useState(0);
+	const inViewSections = useRef(0);
 
+	// route guard and intro setup should only run on mount for this page
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		if (sections?.current?.length > 0) {
 			sections.current.forEach((section, i) => {
@@ -32,9 +34,14 @@ export default function About({
 				const alpha = Math.min(height / 2, windowSize > 1024 ? 600 : 150);
 				const heightInView = windowSize.h + scrollTop - getPosition(section).y;
 
-				if (heightInView > alpha && inViewSections <= i && !pageTransInProgress && entireAnimationCompleted) {
+				if (
+					heightInView > alpha &&
+					inViewSections.current <= i &&
+					!pageTransInProgress &&
+					entireAnimationCompleted
+				) {
 					section.classList.add('in-view');
-					setInViewSections(old => (old += 1));
+					inViewSections.current += 1;
 
 					gsap.from(section, {
 						delay: 0.2,
@@ -49,6 +56,8 @@ export default function About({
 		}
 	}, [windowSize, scrollTop, pageTransInProgress, entireAnimationCompleted]);
 
+	// flickity should only initialize once for the mobile carousel instance
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		document.title = 'About · Ian Espanto';
 		gsap.set(window, { scrollTo: 0 });
@@ -65,25 +74,25 @@ export default function About({
 				<Bio />
 
 				{/* Technical Expertise */}
-				<div className="about-section jello" ref={elm => (sections.current[0] = elm)}>
+				<section className="about-section jello" ref={elm => (sections.current[0] = elm)}>
 					<div className="inner-wrapper">
-						<div className="about-heading">
+						<header className="about-heading">
 							<span>{t('about_headings.skills')}</span>
-						</div>
+						</header>
 						<SkillList isDesktopVers={true} />
 						<SkillList isDesktopVers={false} />
 					</div>
-				</div>
+				</section>
 
 				{/* Work Experience */}
-				<div className="about-section jello" ref={elm => (sections.current[1] = elm)}>
+				<section className="about-section jello" ref={elm => (sections.current[1] = elm)}>
 					<div className="inner-wrapper">
-						<div className="about-heading">
+						<header className="about-heading">
 							<span>{t('about_headings.experience')}</span>
-						</div>
+						</header>
 						<div className="responsive-row responsive-row--landscape about-content jl">
 							{jobList.map(({ id }, i) => (
-								<div key={`job_${i}`} className="jl__i jello-child">
+								<article key={`job_${i}`} className="jl__i jello-child">
 									<p className="job-company heading">{t(`jobs.${id}.company`)}</p>
 									<p className="job-info job-role">{t(`jobs.${id}.role`)}</p>
 									<p className="job-info job-time">{t(`jobs.${id}.time`)}</p>
@@ -91,22 +100,22 @@ export default function About({
 									{t(`jobs.${id}.footnote`) && (
 										<p className="footnote">* {t(`jobs.${id}.footnote`)}</p>
 									)}
-								</div>
+								</article>
 							))}
 						</div>
 					</div>
-				</div>
+				</section>
 
 				{/* Education */}
-				<div className="about-section jello" ref={elm => (sections.current[2] = elm)}>
+				<section className="about-section jello" ref={elm => (sections.current[2] = elm)}>
 					<div className="inner-wrapper">
-						<div className="about-heading">
+						<header className="about-heading">
 							<span>{t('about_headings.education')}</span>
-						</div>
+						</header>
 						<div className="about-content">
 							<div className="el">
 								{schoolList.map(({ id, logo }, i) => (
-									<div key={`school_${i}`} className="el__i jello-child">
+									<article key={`school_${i}`} className="el__i jello-child">
 										<div>
 											<div className="school-name-container">
 												<img src={logo} alt={t(`education.${id}.name`)} />
@@ -130,31 +139,37 @@ export default function About({
 												</div>
 											</div>
 										</div>
-									</div>
+									</article>
 								))}
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 
 				{/* Closing */}
-				<div className="about-section jello profile-section" ref={elm => (sections.current[3] = elm)}>
+				<section className="about-section jello profile-section" ref={elm => (sections.current[3] = elm)}>
 					<div className="inner-wrapper">
 						<div className="about-content">
 							<p className="jello-child">
-								<Trans i18nKey="bio_closing.part1" />
-								<Link
-									className="link-hover transition-link"
-									to="/contact"
-									onClick={e => delayRedirect(e, '/contact', navigate, setPageTransInProgress)}
-								>
-									<Trans i18nKey="bio_closing.contact_me" />
-								</Link>
-								<Trans i18nKey="bio_closing.part2" />
+								<Trans
+									i18nKey="bio_closing"
+									components={[
+										<Link
+											key="bio-closing-contact"
+											className="link-hover transition-link"
+											to="/contact"
+											onClick={e =>
+												delayRedirect(e, '/contact', navigate, setPageTransInProgress)
+											}
+										>
+											contact
+										</Link>,
+									]}
+								/>
 							</p>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 		</>
 	);
@@ -197,11 +212,11 @@ function Bio() {
 	}, []);
 
 	return (
-		<div className="about-section in-view" ref={bioSection}>
+		<section className="about-section in-view" ref={bioSection}>
 			<div className="inner-wrapper">
-				<div className="about-heading">
+				<header className="about-heading">
 					<span>{t('about_headings.bio')}</span>
-				</div>
+				</header>
 				<div className="responsive-row responsive-row--landscape about-content align-center bio">
 					<div className="bio-img" ref={bioImgWrap}>
 						<img
@@ -227,41 +242,61 @@ function Bio() {
 							<Trans i18nKey="bio.p1" />
 						</p>
 						<p ref={elm => (bioCopy.current[1] = elm)}>
-							<Trans i18nKey="bio.p2.part1" />
-							<a className="link-hover" href="https://www.cs.ubc.ca/" target="_blank" rel="noreferrer">
-								<Trans i18nKey="bio.p2.cpsc" />
-							</a>
-							<Trans i18nKey="bio.p2.and" />
-							<a className="link-hover" href="https://www.stat.ubc.ca/" target="_blank" rel="noreferrer">
-								<Trans i18nKey="bio.p2.stats" />
-							</a>
-							<Trans i18nKey="bio.p2.part2" />
-							<a
-								className="link-hover"
-								href="https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<Trans i18nKey="bio.p2.frontend_dev" />
-							</a>
-							<Trans i18nKey="bio.p2.part3" />
+							<Trans
+								i18nKey="bio.p2"
+								components={[
+									<strong key="bio-p2-strong" />,
+									<a
+										key="bio-p2-cpsc"
+										className="link-hover"
+										href="https://www.cs.ubc.ca/"
+										target="_blank"
+										rel="noreferrer"
+									>
+										Computer Science
+									</a>,
+									<a
+										key="bio-p2-stats"
+										className="link-hover"
+										href="https://www.stat.ubc.ca/"
+										target="_blank"
+										rel="noreferrer"
+									>
+										Statistics
+									</a>,
+									<a
+										key="bio-p2-frontend"
+										className="link-hover"
+										href="https://www.bcit.ca/programs/front-end-web-developer-certificate-full-time-6535cert/"
+										target="_blank"
+										rel="noreferrer"
+									>
+										Front-End Development
+									</a>,
+								]}
+							/>
 						</p>
 						<p ref={elm => (bioCopy.current[2] = elm)}>
-							<Trans i18nKey="bio.p3.part1" />
-							<a
-								className="link-hover"
-								href="https://soundcloud.com/ianespanto"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<Trans i18nKey="bio.p3.composer" />
-							</a>
-							<Trans i18nKey="bio.p3.part2" />
+							<Trans
+								i18nKey="bio.p3"
+								components={[
+									<strong key="bio-p3-strong" />,
+									<a
+										key="bio-p3-composer"
+										className="link-hover"
+										href="https://soundcloud.com/ianespanto"
+										target="_blank"
+										rel="noreferrer"
+									>
+										composing music
+									</a>,
+								]}
+							/>
 						</p>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
@@ -304,7 +339,7 @@ function SkillList({ isDesktopVers }) {
 		if (skillListRef.current && !isDesktopVers) {
 			new Flickity(skillListRef.current, { cellAlign: 'center', prevNextButtons: false });
 		}
-	}, [skillListRef]);
+	}, []);
 
 	return (
 		<div className={className} ref={skillListRef}>

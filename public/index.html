@@ -1,48 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" translate="no">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="canonical" href="https://ianespanto.github.io" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Ian Espanto, front-end web engineer based in British Columbia Canada specializing in developing custom CMS, modern websites and React web applications." />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
-    <meta property="og:title" content="Ian Espanto" />
-    <meta
-      property="og:description"
-      content="Ian Espanto, front-end web engineer based in British Columbia Canada specializing in developing custom CMS, modern websites and React web applications." />
-    <meta property="og:image" content="%PUBLIC_URL%/ogimg.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+	<head>
+		<meta charset="utf-8" />
+		<script>
+			(function () {
+				const redirect = window.location.search.match(/[?&]p=([^&]+)/);
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Ian Espanto</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app...</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+				if (!redirect) {
+					return;
+				}
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+				const restoredPath = decodeURIComponent(redirect[1]).replace(/~and~/g, '&');
+				const restoredQuery = (window.location.search.match(/[?&]q=([^&]+)/)?.[1] || '').replace(/~and~/g, '&');
+				const restoredHash = window.location.hash || '';
+				const nextUrl = restoredPath + (restoredQuery ? `?${restoredQuery}` : '') + restoredHash;
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+				window.history.replaceState(null, '', nextUrl);
+			})();
+		</script>
+		<link rel="canonical" href="https://ianespanto.github.io/" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<meta name="theme-color" content="#000000" />
+		<meta name="author" content="Ian Espanto" />
+		<meta
+			name="description"
+			content="Ian Espanto is a front-end web engineer in British Columbia, Canada building custom CMS platforms, modern websites, and React web applications."
+		/>
+		<link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+		<meta property="og:title" content="Ian Espanto | Front-End Web Engineer" />
+		<meta
+			property="og:description"
+			content="Ian Espanto is a front-end web engineer in British Columbia, Canada building custom CMS platforms, modern websites, and React web applications."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://ianespanto.github.io/" />
+		<meta property="og:image" content="%PUBLIC_URL%/ogimg.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Ian Espanto | Front-End Web Engineer" />
+		<meta
+			name="twitter:description"
+			content="Ian Espanto is a front-end web engineer in British Columbia, Canada building custom CMS platforms, modern websites, and React web applications."
+		/>
+		<meta name="twitter:image" content="https://ianespanto.github.io/ogimg.png" />
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<title>Ian Espanto | Front-End Web Engineer</title>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "Person",
+						"@id": "https://ianespanto.github.io/#person",
+						"name": "Ian Espanto",
+						"url": "https://ianespanto.github.io/",
+						"image": "https://ianespanto.github.io/ogimg.png",
+						"jobTitle": "Front-End Web Engineer",
+						"address": {
+							"@type": "PostalAddress",
+							"addressRegion": "British Columbia",
+							"addressCountry": "CA"
+						},
+						"sameAs": [
+							"https://github.com/ianespanto",
+							"https://codepen.io/ianespanto",
+							"https://wellfound.com/u/ianespanto",
+							"https://soundcloud.com/ianespanto"
+						]
+					},
+					{
+						"@type": "WebSite",
+						"@id": "https://ianespanto.github.io/#website",
+						"url": "https://ianespanto.github.io/",
+						"name": "Ian Espanto",
+						"description": "Portfolio website for Ian Espanto, front-end web engineer"
+					}
+				]
+			}
+		</script>
+	</head>
+	<body>
+		<noscript>You need to enable JavaScript to run this app...</noscript>
+		<div id="root"></div>
+	</body>
 </html>

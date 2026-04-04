@@ -1,52 +1,4 @@
-// Global
-
-$global-width: rem(1440);
-
-// Fonts
-
-$font-en: 'grotesk', Helvetica, sans-serif;
-$font-zh: 'grotesk', 'Noto Sans SC', Helvetica, sans-serif;
-$font-zh-tw: 'grotesk', 'Noto Sans TC', Helvetica, sans-serif;
-$font-jp: 'grotesk', 'Noto Sans JP', Helvetica, sans-serif;
-
-// $font-serif-en: 'Noto Serif', Helvetica, serif;
-// $font-serif-zh: 'Noto Serif', Noto Sans SC, serif;
-// $font-serif-zh-tw: 'Noto Serif', Noto Sans TC, serif;
-
-// UI Colors
-
-$mineshaft: #6c6c6c;
-$steel: #8b8b8b;
-$silver: #ababab;
-$iron: #e6e7e8;
-$sand: #f8f8f8;
-$white: #fff;
-$black: #282828;
-$deepblack: #000;
-
-$red: #ef6f6c;
-$violet: #340068;
-$snow: #fffcf9;
-$turquoise: #b1ede8;
-$aqua: #93c4c0;
-$deepred: #6d435a;
-$platinum: #efedea;
-
-// Icons
-$peach: #f9e3ae;
-$cyclamen: #ed7899;
-$paleaqua: #d1e4f3;
-
-// Projects
-$porter: #dee2e3;
-$echoedu: #e8e8ea;
-$tsp: #dfeef4;
-$blackjack: #e8e8e8;
-$gooner: #d7d7d7;
-$la: #dfdcd7;
-$asher: #e9dac7;
-
-// Breakpoints
+@use 'utilities' as *;
 
 $breakpoints: (
 	mini: 0,
@@ -60,15 +12,55 @@ $breakpoints: (
 	xlarge: rem(1440),
 );
 
-// Animation & Transition
+:root {
+	// font families
+	--font-en: 'grotesk', Helvetica, sans-serif;
+	--font-zh: 'grotesk', 'Noto Sans SC', Helvetica, sans-serif;
+	--font-jp: 'grotesk', 'Noto Sans JP', Helvetica, sans-serif;
 
-$bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
-$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
-$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
-$power3Out: cubic-bezier(0.26, 1, 0.48, 1);
-$power4In: cubic-bezier(0.64, 0, 0.78, 0);
-$power4Out: cubic-bezier(0.22, 1, 0.36, 1);
-$power4InOut: cubic-bezier(0.84, 0, 0.16, 1);
-$speed: 0.3s;
-$default-transition-duration: $speed;
+	// colors
+	--color-mineshaft: #6c6c6c;
+	--color-silver: #ababab;
+	--color-iron: #e6e7e8;
+	--color-sand: #f8f8f8;
+	--color-white: #fff;
+	--color-black: #282828;
+	--color-platinum: #efedea;
+	--color-peach: #f9e3ae;
+	--color-red: #ed7899;
+	--color-focus: #5cb8ff;
+
+	// color variations
+	--color-silver-7: #bdbdbd;
+	--color-silver-10: #c4c4c4;
+	--color-silver-15: #d1d1d1;
+	--color-sand-1: #fbfbfb;
+	--color-black-a15: rgba(40, 40, 40, 0.15);
+	--color-white-a85: rgba(255, 255, 255, 0.85);
+	--color-white-a98: rgba(255, 255, 255, 0.98);
+
+	// project colors
+	--color-project-sfu: #d6eae8;
+	--color-project-foundry: #f8efe0;
+	--color-project-clearseas-oil-spills: #bed8d8;
+	--color-project-ubc-med-pathways: #d0deea;
+	--color-project-gbf: #dfeef4;
+	--color-project-bcnu: #e8e8ea;
+	--color-project-underwater-noise: #c5e4ef;
+
+	// animation easings
+	--ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	--ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+	--ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+	--ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+	--ease-power-3-out: cubic-bezier(0.26, 1, 0.48, 1);
+	--ease-power-4-in: cubic-bezier(0.64, 0, 0.78, 0);
+	--ease-power-4-out: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-power-4-in-out: cubic-bezier(0.84, 0, 0.16, 1);
+
+	// animation speeds
+	--speed: 0.3s;
+	--speed-half: 0.15s;
+	--speed-1-5: 0.45s;
+	--speed-2: 0.6s;
+}

@@ -5,30 +5,26 @@ import bcnuImg from '../../assets/img/projects/bcnu.jpg';
 import foundryImg from '../../assets/img/projects/foundry.jpg';
 import gbfImg from '../../assets/img/projects/gbf.jpg';
 import ubcPathwaysImg from '../../assets/img/projects/ubc-pathways.jpg';
-import asherImg from '../../assets/img/projects/asher.jpg';
-import laImg from '../../assets/img/projects/la.jpg';
-import goonerImg from '../../assets/img/projects/gooner.jpg';
-import blackjackImg from '../../assets/img/projects/blackjack.jpg';
 
 export const projects = [
 	{
 		link: 'https://www.sfu.ca/',
 		id: 'sfu',
-		color: '#d6eae8',
+		color: 'var(--color-project-sfu)',
 		img: sfuImg,
 		tooltip: 'visit_site',
 	},
 	{
 		link: 'https://foundrybc.ca/',
 		id: 'foundry',
-		color: '#f8efe0',
+		color: 'var(--color-project-foundry)',
 		img: foundryImg,
 		tooltip: 'visit_site',
 	},
 	{
 		link: 'https://clearseas.org/en/who-pays-oil-spill/',
 		id: 'clearseas-oil-spills',
-		color: '#bed8d8',
+		color: 'var(--color-project-clearseas-oil-spills)',
 		img: clearseasImg1,
 		tooltip: 'visit_site',
 	},
@@ -38,28 +34,28 @@ export const projects = [
 	{
 		link: 'https://pathways.med.ubc.ca/issue-1/',
 		id: 'ubc-med-pathways',
-		color: '#d0deea',
+		color: 'var(--color-project-ubc-med-pathways)',
 		img: ubcPathwaysImg,
 		tooltip: 'visit_site',
 	},
 	{
 		link: 'https://grahamboeckhfoundation.org/',
 		id: 'gbf',
-		color: '#dfeef4',
+		color: 'var(--color-project-gbf)',
 		img: gbfImg,
 		tooltip: 'visit_site',
 	},
 	{
 		link: 'https://annualreport.bcnu.org/previous/report/2017/',
 		id: 'bcnu',
-		color: '#e8e8ea',
+		color: 'var(--color-project-bcnu)',
 		img: bcnuImg,
 		tooltip: 'visit_site',
 	},
 	{
 		link: 'https://clearseas.org/en/underwater-noise/',
 		id: 'underwater-noise',
-		color: '#c5e4ef',
+		color: 'var(--color-project-underwater-noise)',
 		img: clearseasImg2,
 		tooltip: 'visit_site',
 	},

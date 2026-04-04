@@ -1,5 +1,9 @@
+@use 'sass:map';
+@use 'utilities' as *;
+@use 'variables' as *;
+
 @function breakpoint($size) {
-	@return map-get($breakpoints, $size);
+	@return map.get($breakpoints, $size);
 }
 
 @mixin breakpoint($size) {
@@ -45,10 +49,36 @@
 	pointer-events: none;
 }
 
+@mixin noTransition {
+	transition: none !important;
+}
+
 @mixin verticalText {
 	-ms-writing-mode: tb-rl;
 	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
+}
+
+@mixin eastAsianLang {
+	html:lang(zh) &,
+	html:lang(jp) & {
+		@content;
+	}
+}
+
+@mixin focusOutlineInner($color: var(--color-focus), $width: rem(2)) {
+	&[data-focus-method='key']:focus-visible {
+		box-shadow: inset 0 0 0 $width $color;
+		outline: none;
+	}
+}
+
+@mixin focusOutlineOuter($color: var(--color-focus), $width: rem(2)) {
+	&[data-focus-method='key']:focus-visible {
+		box-shadow: none;
+		outline: $width solid $color;
+		outline-offset: rem(1);
+	}
 }
 
 @mixin responsiveText {
@@ -61,15 +91,18 @@
 	}
 }
 
-@mixin linkHover($color: $cyclamen, $weight: 600) {
+@mixin linkHover($color: var(--color-red), $weight: 600) {
 	color: $color;
 	font-weight: $weight;
 	cursor: pointer;
 	@include bpmin(landscape) {
-		transition: color $speed * 1.5;
+		transition: color var(--speed-1-5);
 		display: inline-block;
 		z-index: 1;
 		position: relative;
+		--underline-scale-x: 0;
+		--underline-opacity: 0.7;
+		--underline-origin-x: 100%;
 		&::after {
 			content: '';
 			position: absolute;
@@ -79,29 +112,28 @@
 			left: 0;
 			right: 0;
 			z-index: -1;
-			opacity: 0.7;
-			background: $peach;
-			transition: transform $speed * 1.5, opacity $speed * 1.5;
-			transform: scale(0, 1);
-			transform-origin: 100% 0%;
+			opacity: var(--underline-opacity);
+			background-color: var(--color-peach);
+			transform: scale(var(--underline-scale-x), 1);
+			transform-origin: var(--underline-origin-x) 0%;
+			@include noAction();
 		}
-		&:hover {
-			color: $black;
-			&::after {
-				opacity: 1;
-				transform: scale(1, 1);
-				transform-origin: 0% 0%;
-			}
+
+		&.is-link-hover-active {
+			color: var(--color-black);
 		}
 	}
 }
 
-@mixin underlined($color: $black, $weight: 500) {
+@mixin underlined($color: var(--color-black), $weight: 500) {
 	color: $color;
 	font-weight: $weight;
 	display: inline-block;
 	z-index: 1;
 	position: relative;
+	--underline-scale-x: 1;
+	--underline-opacity: 1;
+	--underline-origin-x: 0%;
 	&::after {
 		content: '';
 		position: absolute;
@@ -110,23 +142,26 @@
 		left: 0;
 		right: 0;
 		z-index: -1;
-		background: $peach;
+		background-color: var(--color-peach);
+		opacity: var(--underline-opacity);
+		transform: scale(var(--underline-scale-x), 1);
+		transform-origin: var(--underline-origin-x) 0%;
 	}
 }
 
-@mixin scrollOnHover($color: $mineshaft, $display: block) {
+@mixin scrollOnHover($color: var(--color-mineshaft), $display: block) {
 	position: relative;
 	overflow: hidden;
 	span[data-hover] {
 		display: $display;
-		transition: color $speed, transform $speed;
+		transition: color var(--speed), transform var(--speed);
 		&::after {
 			position: absolute;
 			width: 100%;
 			left: 0;
 			top: 100%;
 			content: attr(data-hover);
-			transition: opacity $speed;
+			transition: opacity var(--speed);
 			opacity: 0;
 			color: $color;
 		}
@@ -145,7 +180,7 @@
 }
 
 @mixin diagonalBackground(
-	$color: $sand,
+	$color: var(--color-sand),
 	$width: 5%,
 	$size: rem(25),
 	$angle: 45deg,
@@ -180,7 +215,7 @@
 	}
 }
 
-@mixin dottedBackground($color: $sand, $background: transparent) {
+@mixin dottedBackground($color: var(--color-sand), $background: transparent) {
 	background-image: -webkit-repeating-radial-gradient(
 		center center,
 		$color,
@@ -305,5 +340,18 @@
 
 	.char {
 		display: inline-block;
+	}
+}
+
+@mixin projectOverlay($background-color: null) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+
+	@if $background-color != null {
+		background-color: $background-color;
 	}
 }

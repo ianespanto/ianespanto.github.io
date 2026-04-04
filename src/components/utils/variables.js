@@ -34,8 +34,12 @@ export const langList = [
 	{ id: 'es', name: 'Español' },
 	{ id: 'fr', name: 'Français' },
 	{ id: 'jp', name: '日本語' },
-	{ id: 'zh-TW', name: '中文' },
+	{ id: 'zh', name: '中文' },
 ];
+
+export const langIds = langList.map(({ id }) => id);
+
+export const defaultLang = 'en';
 
 export const menuItems = [
 	{

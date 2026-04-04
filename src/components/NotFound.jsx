@@ -9,6 +9,8 @@ export default function NotFound() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
+	// route guard should only run on mount for this page
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		document.title = '404 · Ian Espanto';
 		gsap.set(window, { scrollTo: 0 });
@@ -22,9 +24,12 @@ export default function NotFound() {
 		<>
 			<main className="error row align-center">
 				<div className="inner-wrapper">
-					<div>
+					<section aria-labelledby="not-found-heading">
+						<h1 id="not-found-heading" className="hidden">
+							Page Not Found
+						</h1>
 						<p>Sorryyy, page not found &#x1F645;</p>
-					</div>
+					</section>
 				</div>
 			</main>
 		</>

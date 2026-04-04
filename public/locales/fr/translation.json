@@ -3,9 +3,9 @@
 	"frontend_engineer": "ingénieur front-end",
 	"menu": "Menu",
 	"close": "Fermer",
-	"copyright": "Droits d’auteur",
-	"rights": ". Tous droits réservés.",
-	"credits": "Crédits",
+	"copyright_line": "Droits d’auteur © {{year}} Ian Espanto. Tous droits réservés.",
+	"links": "Liens",
+	"credit": "Crédit",
 	"design": "Design",
 	"code": "Code",
 	"translation": "Traduction",
@@ -23,20 +23,8 @@
 	},
 	"bio": {
 		"p1": "Je suis Ian, un développeur front-end méticuleux basé en Colombie-Britannique, <strong>créant des sites web élégants et performants, des plateformes CMS personnalisées et des applications web dynamiques</strong> propulsées par JavaScript moderne et React.",
-		"p2": {
-			"part1": "<strong>Je m’épanouis à l’intersection du code, du design et de la logique</strong>. J’ai obtenu un baccalauréat en ",
-			"cpsc": "informatique",
-			"and": " et en ",
-			"stats": "statistiques",
-			"part2": " à l’UBC, puis j’ai terminé parmi les meilleurs du programme de ",
-			"frontend_dev": "développement front-end",
-			"part3": " du BCIT. Depuis, je consacre mon temps à transformer des idées complexes en expériences numériques claires et intuitives."
-		},
-		"p3": {
-			"part1": "Même si le développement est mon domaine principal, j’ai toujours été impliqué dans le domaine du design. Je maîtrise Photoshop et <strong>j’aime contribuer aux décisions d’interface utilisateur (UI) et d’expérience utilisateur (UX) pour que les projets soient aussi esthétiques que fonctionnels</strong>. En dehors du code, je joue du piano et ",
-			"composer": "compose de la musique",
-			"part2": " comme forme d’expression créative."
-		}
+		"p2": "<0>Je m’épanouis à l’intersection du code, du design et de la logique</0>. J’ai obtenu un baccalauréat en <1>informatique</1> et en <2>statistiques</2> à l’UBC, puis j’ai terminé parmi les meilleurs du programme de <3>développement front-end</3> du BCIT. Depuis, je consacre mon temps à transformer des idées complexes en expériences numériques claires et intuitives.",
+		"p3": "Même si le développement est mon domaine principal, j’ai toujours été impliqué dans le domaine du design. Je maîtrise Photoshop et <0>j’aime contribuer aux décisions d’interface utilisateur (UI) et d’expérience utilisateur (UX) pour que les projets soient aussi esthétiques que fonctionnels</0>. En dehors du code, je joue du piano et <1>compose de la musique</1> comme forme d’expression créative."
 	},
 	"skill_list": {
 		"programming_languages": "Langages de programmation",
@@ -86,11 +74,7 @@
 			"grad": "Vancouver (C.-B.), octobre 2015"
 		}
 	},
-	"bio_closing": {
-		"part1": "J’apporte un regard critique et une grande attention aux détails à chaque projet, cherchant toujours le bon équilibre entre fonction et forme. Pour moi, un excellent développement web, c’est bien plus qu’un code propre — c’est créer des expériences modernes, visuellement soignées et intuitives, qui sont réellement agréables à utiliser. Je suis toujours à la recherche de projets intéressants avec des gens formidables. Vous avez quelque chose en tête ? N’hésitez pas à ",
-		"contact_me": "me contacter",
-		"part2": "."
-	},
+	"bio_closing": "J’apporte un regard critique et une grande attention aux détails à chaque projet, cherchant toujours le bon équilibre entre fonction et forme. Pour moi, un excellent développement web, c’est bien plus qu’un code propre — c’est créer des expériences modernes, visuellement soignées et intuitives, qui sont réellement agréables à utiliser. Je suis toujours à la recherche de projets intéressants avec des gens formidables. Vous avez quelque chose en tête ? N’hésitez pas à <0>me contacter</0>.",
 	"projects": {
 		"sfu": {
 			"title": "Université Simon Fraser",
@@ -134,15 +118,8 @@
 		"view_project": "Voir le projet",
 		"play_game": "Jouer au jeu"
 	},
-	"learn_more_about_ian": {
-		"part1": "Tout ce que vous devez savoir sur ",
-		"ian": "Ian",
-		"part2": ""
-	},
-	"need_help": {
-		"part1": "Besoin d’aide ? ",
-		"part2": "Envoyez-moi un message !"
-	},
+	"learn_more_about_ian": "Tout ce que vous devez savoir sur <0>Ian</0>",
+	"need_help": "<0>Besoin d’aide ? </0><1>Envoyez-moi un message !</1>",
 	"download_resume": "Télécharger le CV",
 	"form": {
 		"name": "Nom",

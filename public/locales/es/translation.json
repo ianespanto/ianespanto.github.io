@@ -3,9 +3,9 @@
 	"frontend_engineer": "ingeniero front-end",
 	"menu": "Menú",
 	"close": "Cerrar",
-	"copyright": "Derechos de autor",
-	"rights": ". Todos los derechos reservados.",
-	"credits": "Créditos",
+	"copyright_line": "Derechos de autor © {{year}} Ian Espanto. Todos los derechos reservados.",
+	"links": "Enlaces",
+	"credit": "Crédito",
 	"design": "Diseño",
 	"code": "Código",
 	"translation": "Traducción",
@@ -23,20 +23,8 @@
 	},
 	"bio": {
 		"p1": "Soy Ian, un meticuloso desarrollador front-end radicado en BC, <strong>creando sitios web elegantes y de alto rendimiento, plataformas CMS personalizadas y aplicaciones web dinámicas</strong> impulsadas por JavaScript moderno y React.",
-		"p2": {
-			"part1": "<strong>Me desenvuelvo en la intersección del código, el diseño y la lógica</strong>. Con una Licenciatura en ",
-			"cpsc": "Ciencias de la Computación",
-			"and": " y ",
-			"stats": "Estadística",
-			"part2": " de la UBC, y habiendo terminado como uno de los mejores en el programa de ",
-			"frontend_dev": "Desarrollo Front-End",
-			"part3": " de BCIT, he pasado la última década transformando ideas complejas en experiencias digitales limpias e intuitivas."
-		},
-		"p3": {
-			"part1": "Aunque el desarrollo es mi enfoque principal, siempre he estado involucrado también en el mundo del diseño. Tengo experiencia con Photoshop y <strong>disfruto contribuir a las decisiones de UI y UX para que los proyectos luzcan tan bien como funcionan</strong>. Fuera del editor de código, disfruto tocar el piano y ",
-			"composer": "componer música",
-			"part2": " como una vía de expresión creativa."
-		}
+		"p2": "<0>Me desenvuelvo en la intersección del código, el diseño y la lógica</0>. Con una Licenciatura en <1>Ciencias de la Computación</1> y <2>Estadística</2> de la UBC, y habiendo terminado como uno de los mejores en el programa de <3>Desarrollo Front-End</3> de BCIT, he pasado la última década transformando ideas complejas en experiencias digitales limpias e intuitivas.",
+		"p3": "Aunque el desarrollo es mi enfoque principal, siempre he estado involucrado también en el mundo del diseño. Tengo experiencia con Photoshop y <0>disfruto contribuir a las decisiones de UI y UX para que los proyectos luzcan tan bien como funcionan</0>. Fuera del editor de código, disfruto tocar el piano y <1>componer música</1> como una vía de expresión creativa."
 	},
 	"skill_list": {
 		"programming_languages": "Lenguajes de programación",
@@ -86,11 +74,7 @@
 			"grad": "Vancouver, Columbia Británica, octubre 2015"
 		}
 	},
-	"bio_closing": {
-		"part1": "Aporto un ojo crítico y una gran atención al detalle a cada proyecto, buscando lograr el equilibrio adecuado entre función y forma. Para mí, un buen desarrollo web significa más que código limpio: se trata de crear experiencias modernas, visualmente pulidas e intuitivas que sean realmente agradables de usar. Siempre estoy en busca de proyectos interesantes con gente increíble. ¿Tienes algo en mente? No dudes en ",
-		"contact_me": "contactarme",
-		"part2": "."
-	},
+	"bio_closing": "Aporto un ojo crítico y una gran atención al detalle a cada proyecto, buscando lograr el equilibrio adecuado entre función y forma. Para mí, un buen desarrollo web significa más que código limpio: se trata de crear experiencias modernas, visualmente pulidas e intuitivas que sean realmente agradables de usar. Siempre estoy en busca de proyectos interesantes con gente increíble. ¿Tienes algo en mente? No dudes en <0>contactarme</0>.",
 	"projects": {
 		"sfu": {
 			"title": "Universidad Simon Fraser",
@@ -134,15 +118,8 @@
 		"view_project": "Ver proyecto",
 		"play_game": "Jugar juego"
 	},
-	"learn_more_about_ian": {
-		"part1": "Todo lo que necesitas saber sobre ",
-		"ian": "Ian",
-		"part2": ""
-	},
-	"need_help": {
-		"part1": "¿Necesitas ayuda? ",
-		"part2": "¡Envíame un mensaje!"
-	},
+	"learn_more_about_ian": "Todo lo que necesitas saber sobre <0>Ian</0>",
+	"need_help": "<0>¿Necesitas ayuda? </0><1>¡Envíame un mensaje!</1>",
 	"download_resume": "Descargar currículum",
 	"form": {
 		"name": "Nombre",

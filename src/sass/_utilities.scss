@@ -1,3 +1,7 @@
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:meta';
+
 // Unit Calculation
 // -------------------------
 
@@ -6,7 +10,7 @@ $global-font-size: 100% !default;
 /// @param {Number} $num - Number to strip unit from.
 /// @returns {Number} The same number, sans unit.
 @function strip-unit($num) {
-	@return $num / ($num * 0 + 1);
+	@return math.div($num, $num * 0 + 1);
 }
 
 /// Converts one or more pixel values into matching rem values.
@@ -15,7 +19,7 @@ $global-font-size: 100% !default;
 /// @returns {List} A list of converted values.
 @function rem($values, $base: null) {
 	$rem-values: ();
-	$count: length($values);
+	$count: list.length($values);
 
 	// If no base is defined, defer to the global font size
 	@if $base == null {
@@ -25,7 +29,7 @@ $global-font-size: 100% !default;
 	// If the base font size is a %, then multiply it by 16px
 	// This is because 100% font size = 16px in most all browsers
 	@if unit($base) == '%' {
-		$base: ($base / 100%) * 16px;
+		$base: math.div($base, 100%) * 16px;
 	}
 
 	@if $count == 1 {
@@ -33,7 +37,7 @@ $global-font-size: 100% !default;
 	}
 
 	@for $i from 1 through $count {
-		$rem-values: append($rem-values, -to-rem(nth($values, $i), $base));
+		$rem-values: list.append($rem-values, -to-rem(list.nth($values, $i), $base));
 	}
 
 	@return $rem-values;
@@ -45,14 +49,14 @@ $global-font-size: 100% !default;
 /// @returns {Number} A number in rems, calculated based on the given value and the base pixel value. rem values are passed through as is.
 @function -to-rem($value, $base: null) {
 	// Check if the value is a number
-	@if type-of($value) != 'number' {
-		@warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+	@if meta.type-of($value) != 'number' {
+		@warn meta.inspect($value) + ' was passed to rem-calc(), which is not a number.';
 		@return $value;
 	}
 
 	// Calculate rem if units for $value is not rem
 	@if unit($value) != 'rem' {
-		$value: strip-unit($value) / strip-unit($base) * 1rem;
+		$value: math.div(strip-unit($value), strip-unit($base)) * 1rem;
 	}
 
 	// Turn 0rem into 0

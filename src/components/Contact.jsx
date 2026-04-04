@@ -4,7 +4,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
+import { viewport } from './utils/helpers';
 
 export default function Contact() {
 	gsap.registerPlugin(ScrollToPlugin);
@@ -14,6 +15,7 @@ export default function Contact() {
 	const location = useLocation();
 
 	const fadeInElms = useRef([]);
+	const contactInfoRef = useRef();
 	const form = useRef();
 	const nameRef = useRef();
 	const emailRef = useRef();
@@ -111,13 +113,15 @@ export default function Contact() {
 							setSuccess(false);
 							setFailed(true);
 							setSending(false);
-						}
+						},
 					);
 				}
 			}
 		}
 	};
 
+	// route guard and entrance animation should only run on mount for this page
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		// second layer of security measure, disable form when a send request is in progress
 		sending ? form.current.classList.add('no-action') : form.current.classList.remove('no-action');
@@ -131,8 +135,13 @@ export default function Contact() {
 			navigate('/contact', { replace: true });
 		}
 
-		if (fadeInElms?.current?.length > 0) {
-			gsap.from(fadeInElms.current, {
+		const fadeInTargets =
+			viewport().w > 640
+				? [fadeInElms.current[0], contactInfoRef.current, fadeInElms.current[3]]
+				: [fadeInElms.current[0], fadeInElms.current[1], fadeInElms.current[2], fadeInElms.current[3]];
+
+		if (fadeInTargets.length > 0) {
+			gsap.from(fadeInTargets.filter(Boolean), {
 				delay: 0.4,
 				duration: 1,
 				ease: 'power4.inOut',
@@ -147,12 +156,14 @@ export default function Contact() {
 		<>
 			<main className="contact">
 				<div className="inner-wrapper inner-wrapper--narrow">
-					<div className="hero-area">
+					<header className="hero-area">
 						<h1 className="hero-heading" ref={elm => (fadeInElms.current[0] = elm)}>
-							<span>{t('need_help.part1')}</span>
-							<span>{t('need_help.part2')}</span>
+							<Trans
+								i18nKey="need_help"
+								components={[<span key="need-help-part1" />, <span key="need-help-part2" />]}
+							/>
 						</h1>
-						<div className="contact-info responsive-row responsive-row--medium">
+						<address className="contact-info responsive-row responsive-row--medium" ref={contactInfoRef}>
 							<div className="contact-email" ref={elm => (fadeInElms.current[1] = elm)}>
 								<a
 									className="link-hover link-hover--light"
@@ -168,9 +179,12 @@ export default function Contact() {
 									{t('download_resume')}
 								</a>
 							</div>
-						</div>
-					</div>
-					<div className="form-container" ref={elm => (fadeInElms.current[3] = elm)}>
+						</address>
+					</header>
+					<section className="form-container" ref={elm => (fadeInElms.current[3] = elm)} aria-labelledby="contact-form-heading">
+						<h2 id="contact-form-heading" className="hidden">
+							Contact Form
+						</h2>
 						{success || (
 							<form onSubmit={sendEmail} noValidate ref={form}>
 								<div className="grid grid--gutters">
@@ -293,7 +307,7 @@ export default function Contact() {
 								{t('form.failed')}
 							</motion.p>
 						)}
-					</div>
+					</section>
 				</div>
 			</main>
 		</>

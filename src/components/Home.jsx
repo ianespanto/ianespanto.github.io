@@ -5,7 +5,8 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { viewport, getPosition, delayRedirect } from './utils/helpers';
 import { projects } from './utils/projects';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
+import { createQueuedUnderlineController, getUnderlineVars } from './utils/underlineAnimations';
 
 export default function Home({
 	pageTransInProgress,
@@ -25,11 +26,13 @@ export default function Home({
 	const scrollDownWrap = useRef(null);
 	const homeHeadingWrapper = useRef(null);
 	const projectsRevealed = useRef(0);
+	const [revealedCount, setRevealedCount] = useState(0);
 	const [showDownArrow, setShowDownArrow] = useState(true);
 
 	useEffect(() => {
 		if (!pageTransInProgress && homeHeadingWrapper.current) {
 			const animatedHeadings = gsap.timeline({ delay: 0.8 });
+			gsap.set(subheading.current, getUnderlineVars({ open: false, origin: '0%', inactiveOpacity: 0.6 }));
 			animatedHeadings.from(charRef.current, {
 				duration: 1,
 				ease: 'elastic.out(1, 0.4)',
@@ -39,7 +42,16 @@ export default function Home({
 				clearProps: 'all',
 				stagger: 0.05,
 			});
-			animatedHeadings.from(subheading.current, 0.8, { alpha: 0, clearProps: 'all' }, '-=1.2');
+			animatedHeadings.from(subheading.current, { duration: 0.8, alpha: 0, clearProps: 'all' }, '-=1.2');
+			animatedHeadings.to(
+				subheading.current,
+				{
+					duration: 0.8,
+					ease: 'power4.out',
+					...getUnderlineVars({ open: true, origin: '0%', inactiveOpacity: 0.6 }),
+				},
+				'-=1.2'
+			);
 		} else if (!isInitialLoad && homeHeadingWrapper.current) {
 			const animatedHeadings = gsap.timeline({ delay: 0.2 });
 			animatedHeadings.to(charRef.current, {
@@ -49,13 +61,23 @@ export default function Home({
 				alpha: 0,
 				stagger: 0.04,
 			});
-			animatedHeadings.to(subheading.current, 0.8, { alpha: 0 }, '-=.8');
+			animatedHeadings.set(subheading.current, { '--underline-origin-x': '100%' }, 0);
+			animatedHeadings.to(
+				subheading.current,
+				{
+					duration: 0.6,
+					ease: 'power4.inOut',
+					...getUnderlineVars({ open: false, origin: '100%', inactiveOpacity: 0.6 }),
+				},
+				0
+			);
+			animatedHeadings.to(subheading.current, { duration: 0.8, alpha: 0 }, '-=.8');
 		}
 	}, [pageTransInProgress]);
 
 	useEffect(() => {
 		if (scrollDownWrap.current) {
-			if (projectsRevealed.current === 0) {
+			if (revealedCount === 0) {
 				// Down arrow animation
 				gsap.from(scrollDownWrap.current, {
 					duration: 0.6,
@@ -79,16 +101,16 @@ export default function Home({
 				});
 			}
 		}
-	}, [projectsRevealed.current]);
+	}, [revealedCount]);
 
 	useEffect(() => {
 		if (homeHeadingWrapper.current && giantName.current && subheading.current) {
 			const deltaY1 = Math.min(scrollTop / 10, 50);
 			const deltaY2 = Math.min(scrollTop / 20, 25);
 			const deltaA = Math.max(1 - scrollTop / 500, 0);
-			gsap.to(giantName.current, 0.5, { y: deltaY1 });
-			gsap.to(subheading.current, 0.5, { y: deltaY2 });
-			gsap.to(homeHeadingWrapper.current, 0.5, { alpha: deltaA });
+			gsap.to(giantName.current, { duration: 0.5, y: deltaY1 });
+			gsap.to(subheading.current, { duration: 0.5, y: deltaY2 });
+			gsap.to(homeHeadingWrapper.current, { duration: 0.5, alpha: deltaA });
 		}
 	}, [scrollTop]);
 
@@ -99,12 +121,12 @@ export default function Home({
 		if (location.pathname !== '/') {
 			navigate('/', { replace: true });
 		}
-	}, []);
+	}, [location.pathname, navigate]);
 
 	return (
 		<>
 			<main className="home">
-				<div className="home-intro">
+				<header className="home-intro">
 					<div className="inner-wrapper">
 						<div className="row">
 							<div className="home-about" ref={homeHeadingWrapper}>
@@ -131,11 +153,12 @@ export default function Home({
 							</div>
 						)}
 					</div>
-				</div>
+				</header>
 				<Projects
 					scrollTop={scrollTop}
 					windowSize={windowSize}
 					projectsRevealed={projectsRevealed}
+					setRevealedCount={setRevealedCount}
 					pageTransInProgress={pageTransInProgress}
 					setPageTransInProgress={setPageTransInProgress}
 					navigate={navigate}
@@ -145,10 +168,21 @@ export default function Home({
 	);
 }
 
-function Projects({ scrollTop, windowSize, projectsRevealed, pageTransInProgress, setPageTransInProgress, navigate }) {
+function Projects({
+	scrollTop,
+	windowSize,
+	projectsRevealed,
+	setRevealedCount,
+	pageTransInProgress,
+	setPageTransInProgress,
+	navigate,
+}) {
 	return (
-		<div className="work">
+		<section className="work" aria-labelledby="selected-work-heading">
 			<div className="inner-wrapper inner-wrapper--large">
+				<h2 id="selected-work-heading" className="hidden">
+					Selected Work
+				</h2>
 				<div className="pl row wrap">
 					{projects.map((project, i) => (
 						<Project
@@ -158,6 +192,7 @@ function Projects({ scrollTop, windowSize, projectsRevealed, pageTransInProgress
 							scrollTop={scrollTop}
 							windowSize={windowSize}
 							projectsRevealed={projectsRevealed}
+							setRevealedCount={setRevealedCount}
 							pageTransInProgress={pageTransInProgress}
 							setPageTransInProgress={setPageTransInProgress}
 							navigate={navigate}
@@ -165,7 +200,7 @@ function Projects({ scrollTop, windowSize, projectsRevealed, pageTransInProgress
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
@@ -175,6 +210,7 @@ function Project({
 	scrollTop,
 	windowSize,
 	projectsRevealed,
+	setRevealedCount,
 	pageTransInProgress,
 	setPageTransInProgress,
 	navigate,
@@ -188,6 +224,8 @@ function Project({
 	const pCopy = useRef([]);
 	const pTooltip = useRef(null);
 	const pFooter = useRef(null);
+	const pUnderline = useRef(null);
+	const underlineController = useRef(null);
 
 	const angle = 7;
 	const projectRemainer = i % 4;
@@ -213,6 +251,7 @@ function Project({
 		if (heightInView > alpha && !animated && !pageTransInProgress) {
 			setAnimated(true);
 			projectsRevealed.current += 1;
+			setRevealedCount(projectsRevealed.current);
 			pItem.current.classList.add('in-view');
 
 			let delay = windowSize.w > 860 ? (i % 2 === 0 ? 0.2 : 0.4) : 0.2;
@@ -230,12 +269,12 @@ function Project({
 			tl.from(
 				pImg.current,
 				{ duration: 1, ease: 'power4.inOut', x: -15, scale: 1.05, alpha: 0, clearProps: 'all' },
-				'l+=.9'
+				'l+=.9',
 			);
 			tl.to(
 				pOverlays.current,
 				{ duration: 1, ease: 'power4.inOut', transformOrigin: '100% 0%', scaleX: 0, stagger: 0.05 },
-				'l+=.9'
+				'l+=.9',
 			);
 			tl.set(pOverlays.current, { alpha: 0, stagger: 0.05 }, 'l+=1.9');
 
@@ -249,7 +288,24 @@ function Project({
 				}
 			});
 		}
-	}, [scrollTop, animated, windowSize, pageTransInProgress]);
+	}, [animated, i, id, pageTransInProgress, projectsRevealed, scrollTop, setRevealedCount, windowSize]);
+
+	useEffect(() => {
+		if (!pUnderline.current || isAbout) {
+			return;
+		}
+
+		underlineController.current = createQueuedUnderlineController({
+			element: pUnderline.current,
+			inactiveOpacity: 0.6,
+		});
+		underlineController.current.reset();
+
+		return () => {
+			underlineController.current?.cleanup();
+			underlineController.current = null;
+		};
+	}, [isAbout]);
 
 	const pMouseEnterHandler = e => {
 		if (viewport().w > 1024) {
@@ -258,8 +314,9 @@ function Project({
 
 			if (!isAbout) {
 				pFooter.current.classList.add('active');
+				underlineController.current?.enter();
 				gsap.set(pTooltip.current, { x: offsetX, y: offsetY + 40, z: 15, scale: 0.6 });
-				gsap.to(pTooltip.current, 0.4, { alpha: 0.65 });
+				gsap.to(pTooltip.current, { duration: 0.4, alpha: 0.65 });
 			}
 		}
 	};
@@ -298,6 +355,7 @@ function Project({
 		if (viewport().w > 1024) {
 			if (!isAbout) {
 				pFooter.current.classList.remove('active');
+				underlineController.current?.leave();
 				gsap.to(pTooltip.current, { duration: 0.4, alpha: 0, scale: 0.6 });
 			}
 			gsap.to(pImg.current, {
@@ -313,7 +371,7 @@ function Project({
 
 	return (
 		<>
-			<div className="pl__i jello row align-center" ref={pItem}>
+			<article className="pl__i jello row align-center" ref={pItem}>
 				{id === 'about' || (
 					<div className="pl__inner">
 						<a
@@ -346,7 +404,7 @@ function Project({
 								<span className="pl__copy" ref={elm => (pCopy.current[0] = elm)}>
 									{t(`projects.${id}.title`)}
 								</span>
-								<span className="pl__u" style={theme}></span>
+								<span className="pl__u" style={theme} ref={pUnderline}></span>
 								<span className="pl__o" style={theme} ref={elm => (pOverlays.current[1] = elm)}></span>
 							</p>
 							<div className="pl__in responsive-text">
@@ -388,9 +446,10 @@ function Project({
 						<div className="extra-container pl__tl no-action" ref={pImg}>
 							<div className="extra-link">
 								<span>
-									{t('learn_more_about_ian.part1')}
-									<strong>{t('learn_more_about_ian.ian')}</strong>
-									{t('learn_more_about_ian.part2')}
+									<Trans
+										i18nKey="learn_more_about_ian"
+										components={[<strong key="learn-more-about-ian-strong" />]}
+									/>
 								</span>
 							</div>
 							<div className="extra-graphics">
@@ -400,7 +459,7 @@ function Project({
 						</div>
 					</NavLink>
 				)}
-			</div>
+			</article>
 		</>
 	);
 }

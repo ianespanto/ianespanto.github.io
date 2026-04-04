@@ -1,14 +1,18 @@
+@use 'globals' as *;
+
 // Header
-header {
+.site-header {
 	position: fixed;
 	width: 100%;
 	z-index: 50;
-	background-color: rgba($white, 0.85);
+	background-color: var(--color-white-a85);
 	backdrop-filter: blur(5px);
 	padding: 0 rem(25);
 	top: 0;
 	left: 0;
-	transition: opacity $speed, transform 1s $easeInOutQuart;
+	transition:
+		opacity var(--speed),
+		transform 1s var(--ease-in-out-quart);
 	height: rem(50);
 	font-size: rem(14);
 	@include noSelect;
@@ -33,7 +37,7 @@ header {
 
 .header {
 	height: 100%;
-	border-bottom: rem(1) solid $sand;
+	border-bottom: rem(1) solid var(--color-sand);
 	padding: 0 rem(5);
 	text-transform: capitalize;
 
@@ -42,14 +46,14 @@ header {
 		.logo {
 			height: rem(8);
 			width: rem(8);
-			border: rem(2) lighten($silver, 15%) solid;
+			border: rem(2) solid var(--color-silver-15);
 			border-radius: 50%;
-			transition: border-color $speed * 2;
+			transition: border-color var(--speed-2);
 		}
 	}
 }
 
-nav {
+.site-header nav {
 	ul {
 		display: flex;
 		li {
@@ -63,7 +67,7 @@ nav {
 				font-weight: 500 !important;
 				line-height: 1.8;
 				&.current {
-					color: $silver;
+					color: var(--color-silver);
 					@include noAction;
 				}
 			}
@@ -73,10 +77,10 @@ nav {
 
 .mn-trigger {
 	cursor: pointer;
-	color: $silver;
+	color: var(--color-silver);
 }
 
-nav,
+.site-header nav,
 .mn-trigger {
 	display: inline-flex;
 }
@@ -84,20 +88,20 @@ nav,
 // Footer
 .footer {
 	width: 100%;
-	background-color: $white;
+	background-color: var(--color-white);
 	@include noSelect;
 
 	.footer-nav {
-		border-top: rem(1) solid $sand;
+		border-top: rem(1) solid var(--color-sand);
 		letter-spacing: rem(0.5);
 		font-size: rem(13);
 		text-align: center;
-		color: $silver;
+		color: var(--color-silver);
 		line-height: 1.4;
 		padding: rem(30) 0;
 
 		.copyright {
-			color: $silver;
+			color: var(--color-silver);
 			margin-bottom: rem(10);
 		}
 
@@ -112,7 +116,7 @@ nav,
 				right: rem(-10);
 				height: 60%;
 				width: rem(1);
-				background-color: $iron;
+				background-color: var(--color-iron);
 			}
 
 			&:last-of-type {
@@ -126,13 +130,17 @@ nav,
 		a,
 		.tooltipTrigger {
 			display: inline-block;
-			color: $silver;
+			color: var(--color-silver);
 			cursor: pointer;
-			transition: color $speed;
+			transition: color var(--speed);
+
+			@include eastAsianLang {
+				text-underline-offset: rem(2);
+			}
 
 			@include bpmin(landscape) {
 				&:hover {
-					color: $black;
+					color: var(--color-black);
 					text-decoration: underline;
 				}
 			}
@@ -140,23 +148,32 @@ nav,
 	}
 
 	.tooltipTrigger {
+		padding: 0;
+		border: 0;
+		background: transparent;
+		font: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+
 		&.active {
-			color: $black;
+			color: var(--color-black);
 			text-decoration: underline;
 		}
 	}
 
 	.tooltip {
 		position: absolute;
-		color: $silver;
+		color: var(--color-silver);
 		padding: rem(25) rem(10);
-		min-width: rem(190);
+		min-width: rem(180);
 		bottom: rem(34);
-		box-shadow: rem(2) rem(2) rem(30) $platinum, 0 0 rem(10) $platinum;
-		background-color: rgba($white, 0.98);
-		border: rem(1) solid $platinum;
+		box-shadow:
+			rem(2) rem(2) rem(30) var(--color-platinum),
+			0 0 rem(10) var(--color-platinum);
+		background-color: var(--color-white-a98);
+		border: rem(1) solid var(--color-platinum);
 		z-index: 1;
-		transform-origin: 50% rem(180);
+		transform-origin: 50% 100%;
 		left: 50%;
 		border-radius: rem(6);
 		line-height: 2;
@@ -165,10 +182,15 @@ nav,
 
 		&--lang {
 			min-width: rem(130);
-			padding: rem(15) rem(10);
+			padding: rem(10);
 		}
 
-		&--credits {
+		&--links {
+			min-width: rem(120);
+			padding: rem(15);
+		}
+
+		&--credit {
 			> div {
 				> span {
 					display: block;
@@ -190,7 +212,7 @@ nav,
 			position: absolute;
 			width: 0;
 			height: 0;
-			border-right: rem(0) solid transparent;
+			border-right: 0 solid transparent;
 		}
 		&::before {
 			left: 50%;
@@ -198,7 +220,7 @@ nav,
 			bottom: rem(-15);
 			border-left: rem(14) solid transparent;
 			border-right: rem(14) solid transparent;
-			border-top: rem(14) solid $platinum;
+			border-top: rem(14) solid var(--color-platinum);
 		}
 		&::after {
 			left: 50%;
@@ -206,24 +228,41 @@ nav,
 			bottom: rem(-13);
 			border-left: rem(14) solid transparent;
 			border-right: rem(14) solid transparent;
-			border-top: rem(14) solid $white;
+			border-top: rem(14) solid var(--color-white);
 		}
 	}
 
 	.langOption {
+		display: block;
+		width: 100%;
 		padding: rem(4) 0;
+		color: var(--color-silver);
 		cursor: pointer;
-		transition: color $speed;
+		transition: color var(--speed);
+		border: 0;
+		background: transparent;
+		appearance: none;
+		border-radius: 0;
+		font: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+		text-align: center;
+		@include focusOutlineInner();
+
+		&:focus,
+		&:active {
+			color: var(--color-silver);
+		}
 
 		&.current {
-			background-color: $sand;
-			color: $mineshaft;
+			background-color: var(--color-sand);
+			color: var(--color-mineshaft);
 			@include noAction;
 		}
 
 		@include bpmin(landscape) {
 			&:hover {
-				color: $mineshaft;
+				color: var(--color-mineshaft);
 			}
 		}
 	}

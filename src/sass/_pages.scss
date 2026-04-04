@@ -1,3 +1,5 @@
+@use 'globals' as *;
+
 // .transBox {
 // 	position: fixed;
 // 	inset: 0;
@@ -21,7 +23,7 @@ main.about {
 		top: 0;
 		height: rem(1);
 		width: 85%;
-		background-color: $sand;
+		background-color: var(--color-sand);
 		z-index: 1;
 		@include horizontalCenter;
 	}
@@ -47,7 +49,7 @@ main.about {
 	top: rem(-12);
 	left: 0;
 	width: 100%;
-	color: lighten($silver, 7%);
+	color: var(--color-silver-7);
 	opacity: 0;
 
 	.in-view & {
@@ -100,7 +102,7 @@ main.about {
 	}
 	@include bpmax(large) {
 		> span {
-			background-color: $white;
+			background-color: var(--color-white);
 		}
 	}
 }
@@ -141,8 +143,7 @@ main.about {
 	@include clipBox;
 
 	&__overlay {
-		@extend .pl__o;
-		background-color: $sand;
+		@include projectOverlay(var(--color-sand));
 	}
 
 	@include bpmax(landscape) {
@@ -177,7 +178,7 @@ main.about {
 		.sl__i {
 			width: rem(260);
 			max-width: 100%;
-			transition: transform $speed * 2, opacity $speed * 2;
+			transition: transform var(--speed-2), opacity var(--speed-2);
 			opacity: 0.4;
 			transform: scale(0.8);
 
@@ -204,8 +205,8 @@ main.about {
 				margin: 0 rem(6);
 				opacity: 0.3;
 				transform: scale(0.8);
-				background-color: $silver;
-				transition: opacity $speed, transform $speed;
+				background-color: var(--color-silver);
+				transition: opacity var(--speed), transform var(--speed);
 				&.is-selected {
 					transform: scale(1);
 					opacity: 0.8;
@@ -228,7 +229,7 @@ main.about {
 		left: 0;
 		top: 0;
 		width: 100%;
-		transition: opacity $speed * 2;
+		transition: opacity var(--speed-2);
 	}
 	.color-icon {
 		top: 0;
@@ -300,7 +301,7 @@ main.about {
 					width: rem(4);
 					left: rem(5);
 					border-radius: 50%;
-					border: rem(1) solid $black;
+					border: rem(1) solid var(--color-black);
 					box-sizing: border-box;
 					@include bpmin(small) {
 						left: rem(3);
@@ -314,7 +315,7 @@ main.about {
 			}
 			&.footnote {
 				font-size: rem(12);
-				color: $silver;
+				color: var(--color-silver);
 				@include bpmin(medium) {
 					font-size: rem(13);
 				}
@@ -432,7 +433,7 @@ main.about {
 	.hero-area {
 		padding: rem(120) 0;
 		margin-bottom: rem(80);
-		border-bottom: rem(1) solid $sand;
+		border-bottom: rem(1) solid var(--color-sand);
 	}
 	.form-container {
 		margin-bottom: rem(150);
@@ -466,7 +467,7 @@ main.about {
 				@include noAction;
 				top: rem(7);
 				right: rem(-30);
-				color: $platinum;
+				color: var(--color-platinum);
 			}
 		}
 		.hero-area {
@@ -477,5 +478,5 @@ main.about {
 
 .error {
 	text-align: center;
-	color: $black;
+	color: var(--color-black);
 }

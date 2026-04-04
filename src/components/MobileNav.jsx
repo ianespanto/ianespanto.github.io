@@ -10,11 +10,9 @@ export default function MobileNav({
 	setPageTransInProgress,
 	mobileNavOpen,
 	setMobileNavOpen,
-	creditTooltipOpen,
-	setCreditTooltipOpen,
+	activeFooterTooltip,
+	setActiveFooterTooltip,
 	windowSize,
-	langTooltipOpen,
-	setLangTooltipOpen,
 	lang,
 	setLang,
 }) {
@@ -39,13 +37,18 @@ export default function MobileNav({
 	}, [windowSize]);
 
 	return (
-		<div className={`mn ${mobileNavOpen ? 'is-open' : 'no-action'}`} ref={mnRef}>
+		<div
+			className={`mn ${mobileNavOpen ? 'is-open' : 'no-action'}`}
+			ref={mnRef}
+			aria-hidden={!mobileNavOpen}
+			inert={!mobileNavOpen ? '' : undefined}
+		>
 			<div className="mn-header row">
 				<div className="mn-close" onClick={() => setMobileNavOpen(false)}>
 					<span>{t('close')}</span>
 				</div>
 			</div>
-			<div className="mn-items column align-center">
+			<nav className="mn-items column align-center" aria-label="Mobile">
 				{menuItems.map(({ id, link }, i) => (
 					<div
 						key={'mobileNavLink_' + i + '_' + id}
@@ -56,14 +59,12 @@ export default function MobileNav({
 						</NavLink>
 					</div>
 				))}
-			</div>
+			</nav>
 			<div className="mn-footer footer">
 				<Footer
 					isMobileNav={true}
-					creditTooltipOpen={creditTooltipOpen}
-					setCreditTooltipOpen={setCreditTooltipOpen}
-					langTooltipOpen={langTooltipOpen}
-					setLangTooltipOpen={setLangTooltipOpen}
+					activeTooltip={activeFooterTooltip}
+					setActiveTooltip={setActiveFooterTooltip}
 					lang={lang}
 					setLang={setLang}
 				/>
