@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://ianespanto.github.io/</loc>
+		<lastmod>2024-04-03</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+		<image:image>
+			<image:loc>https://ianespanto.github.io/ogimg.png</image:loc>
+			<image:title>Ian Espanto - Front-End Web Engineer</image:title>
+			<image:caption>Portfolio website showcasing front-end development work</image:caption>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://ianespanto.github.io/about</loc>
+		<lastmod>2024-04-03</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://ianespanto.github.io/contact</loc>
+		<lastmod>2024-04-03</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.6</priority>
 	</url>
 </urlset>
