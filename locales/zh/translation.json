@@ -3,7 +3,7 @@
 	"frontend_engineer": "前端工程师",
 	"menu": "菜单",
 	"close": "关闭",
-	"copyright_line": "版权 © {{year}} Ian Espanto。保留所有权利。",
+	"copyright_line": "版权 © {{year}} Ian Espanto",
 	"links": "链接",
 	"credit": "鸣谢",
 	"design": "设计",
@@ -37,7 +37,7 @@
 	},
 	"jobs": {
 		"sfu": {
-			"company": "西蒙弗雷泽大学",
+			"company": "西蒙菲莎大学",
 			"role": "应用开发工程师",
 			"time": "2022 年 7 月 - 至今",
 			"description": "作为 SFU 中央 IT 服务团队的唯一前端专家，主导所有前端开发并为全校的网页应用生态系统提供技术支持。负责构建和维护 SFU 的自定义网页应用程序，包括其 Adobe Experience Manager（AEM）内容管理系统，每天有数千名教职员工使用该系统创建和管理各自的部门与学院网站。",
@@ -76,25 +76,25 @@
 	},
 	"bio_closing": "我为每一个项目都带来严谨的视角和出色的细节关注，致力于在功能与美感之间取得平衡。对我而言，优秀的网页开发不仅是干净的代码，更是打造现代、美观且直观的使用体验。我始终在寻找有趣的项目和志同道合的人合作。如果你有想法，欢迎<0>联系我</0>。",
 	"projects": {
-		"flexstats": {
-			"title": "Flexstats",
-			"footnote": "React 应用程序",
-			"description": "从头开始独立由 React 构建的利用 API 来显示一个以太坊矿池的动态数据的双语言网络应用程序"
-		},
-		"clearseas-oil-spills": {
-			"title": "Clear Seas",
-			"footnote": "Wordpress 微型网站",
-			"description": "为 Clear Seas 加拿大海运中心用 Wordpress 管理系统构建的六个双语言微型网站之一"
+		"sfu": {
+			"title": "西门菲莎大学",
+			"footnote": "Adobe Experience Manager",
+			"description": "一个大型 AEM 平台，使数千名教职员工能够轻松创建并管理自己的网站。"
 		},
 		"foundry": {
 			"title": "Foundry BC",
 			"footnote": "Wordpress 大型网站",
 			"description": "为一个非盈利组织制作的 BC 省青年用来寻找他们需要的服务和帮助的大型 Wordpress 网站"
 		},
-		"youth-service-finder": {
-			"title": "青年服务查找器",
-			"footnote": "地点地图应用程序",
-			"description": "对从 API 获取的数据进行分组并允许用户来用搜索和过滤本地服务的 Foundry 应用程序"
+		"clearseas-oil-spills": {
+			"title": "Clear Seas",
+			"footnote": "Wordpress 微型网站",
+			"description": "为 Clear Seas 加拿大海运中心用 Wordpress 管理系统构建的六个双语言微型网站之一"
+		},
+		"ubc-med-pathways": {
+			"title": "UBC Med Pathways",
+			"footnote": "大学数字杂志",
+			"description": "UBC 医学院的数字杂志，展示多个期刊以及各种自定义互动组件。"
 		},
 		"gbf": {
 			"title": "Graham Boeckh Foundation",

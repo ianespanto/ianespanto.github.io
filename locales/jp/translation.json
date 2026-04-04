@@ -3,7 +3,7 @@
 	"frontend_engineer": "フロントエンジニア",
 	"menu": "メニュー",
 	"close": "閉じる",
-	"copyright_line": "著作権 © {{year}} Ian Espanto。全著作権所有。",
+	"copyright_line": "著作権 © {{year}} Ian Espanto",
 	"links": "リンク",
 	"credits": "クレジット",
 	"design": "デザイン",
@@ -107,7 +107,7 @@
 			"description": "BC 州看護師組合向けに、ゼロからデザインされた完全カスタムテーマで構築されたパンフレット型 WordPress サイト。"
 		},
 		"underwater-noise": {
-			"title": "水中騒音",
+			"title": "Underwater Noise",
 			"footnote": "WordPress マイクロサイト",
 			"description": "Clear Seas 向けに構築された 6 つのバイリンガルマイクロサイトのもう 1 つで、オーダーメイドの WordPress テーマを特徴としています。"
 		}
