@@ -3,7 +3,7 @@
 	"frontend_engineer": "ingénieur front-end",
 	"menu": "Menu",
 	"close": "Fermer",
-	"copyright_line": "Droits d’auteur © {{year}} Ian Espanto. Tous droits réservés.",
+	"copyright_line": "Droits d’auteur © {{year}} Ian Espanto",
 	"links": "Liens",
 	"credit": "Crédit",
 	"design": "Design",
@@ -132,5 +132,7 @@
 		"sending": "Envoi en cours…",
 		"sent": "Votre message a été envoyé. Je vous reviens sous peu !",
 		"failed": "Oups… Quelque chose a mal tourné. Veuillez réessayer plus tard ou utiliser les coordonnées ci-dessus."
-	}
+	},
+	"page_not_found": "Désolé, page non trouvée",
+	"return_to_home": "Retour à l'accueil"
 }

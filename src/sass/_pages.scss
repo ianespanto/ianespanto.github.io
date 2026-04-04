@@ -58,9 +58,10 @@ main.about {
 
 	&:lang(en),
 	&:lang(es),
-	&:lang(fr) {
+	&:lang(fr),
+	&:lang(tl) {
 		text-transform: uppercase;
-		font-weight: 500;
+		font-weight: var(--font-weight-medium);
 	}
 	> span {
 		font-size: rem(10);
@@ -87,7 +88,8 @@ main.about {
 		transition: opacity 1s 0.5s;
 		&:lang(en),
 		&:lang(es),
-		&:lang(fr) {
+		&:lang(fr),
+		&:lang(tl) {
 			transform: rotate(-90deg) translateX(-100%) translateX(rem(-10));
 			transform-origin: 0% 0%;
 		}
@@ -178,7 +180,9 @@ main.about {
 		.sl__i {
 			width: rem(260);
 			max-width: 100%;
-			transition: transform var(--speed-2), opacity var(--speed-2);
+			transition:
+				transform var(--speed-2),
+				opacity var(--speed-2);
 			opacity: 0.4;
 			transform: scale(0.8);
 
@@ -206,7 +210,9 @@ main.about {
 				opacity: 0.3;
 				transform: scale(0.8);
 				background-color: var(--color-silver);
-				transition: opacity var(--speed), transform var(--speed);
+				transition:
+					opacity var(--speed),
+					transform var(--speed);
 				&.is-selected {
 					transform: scale(1);
 					opacity: 0.8;
@@ -400,7 +406,7 @@ main.about {
 // CONTACT PAGE
 .contact {
 	.hero-heading {
-		font-weight: 600;
+		font-weight: var(--font-weight-semi-bold);
 		line-height: 1.4;
 		margin-bottom: rem(40);
 		font-size: rem(35);
@@ -424,7 +430,7 @@ main.about {
 		a {
 			line-height: 1.7;
 			display: block;
-			font-weight: 500;
+			font-weight: var(--font-weight-medium);
 		}
 	}
 	.contact-email {
@@ -479,4 +485,21 @@ main.about {
 .error {
 	text-align: center;
 	color: var(--color-black);
+
+	&__heading {
+		font-size: rem(100);
+		font-weight: var(--font-weight-bold);
+	}
+
+	&__text {
+		span {
+			&:first-of-type {
+				margin-right: rem(5);
+			}
+		}
+	}
+
+	&__return {
+		margin-top: rem(15);
+	}
 }

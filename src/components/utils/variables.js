@@ -33,6 +33,7 @@ export const langList = [
 	{ id: 'en', name: 'English' },
 	{ id: 'es', name: 'Español' },
 	{ id: 'fr', name: 'Français' },
+	{ id: 'tl', name: 'Tagalog' },
 	{ id: 'jp', name: '日本語' },
 	{ id: 'zh', name: '中文' },
 ];

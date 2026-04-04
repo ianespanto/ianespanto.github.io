@@ -15,27 +15,6 @@ h5,
 	margin-bottom: 0;
 	font-weight: 600;
 }
-// h1 {
-// 	font-size: rem(42);
-// 	@include bpmin(medium) {
-// 		font-size: rem(52);
-// 	}
-// 	@include bpmin(portrait) {
-// 		font-size: rem(62);
-// 	}
-// }
-// h2 { font-size: rem(36); }
-// h3 { font-size: rem(30); }
-// h4 {
-// 	font-size: rem(27);
-// 	@include bpmin(small) {
-// 		font-size: rem(34);
-// 	}
-// 	@include bpmin(landscape) {
-// 		font-size: rem(42);
-// 	}
-// }
-// h5 { font-size: rem(22); }
 
 // Paragraphs
 // -------------------------
@@ -90,7 +69,8 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 			font-weight: 700;
 		}
 		src: url('../assets/fonts/#{$font-face}/#{$font-face}.eot');
-		src: url('../assets/fonts/#{$font-face}/#{$font-face}.eot?#iefix') format('embedded-opentype'),
+		src:
+			url('../assets/fonts/#{$font-face}/#{$font-face}.eot?#iefix') format('embedded-opentype'),
 			url('../assets/fonts/#{$font-face}/#{$font-face}.woff2') format('woff2'),
 			url('../assets/fonts/#{$font-face}/#{$font-face}.woff') format('woff'),
 			url('../assets/fonts/#{$font-face}/#{$font-face}.ttf') format('truetype'),
@@ -108,11 +88,26 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 	font-style: normal;
 	font-weight: 400;
 	src: url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-regular.eot');
-	src: url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-regular.eot?#iefix') format('embedded-opentype'),
+	src:
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-regular.eot?#iefix') format('embedded-opentype'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-regular.woff2') format('woff2'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-regular.woff') format('woff'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-regular.ttf') format('truetype'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-regular.svg#NotoSansJP') format('svg');
+}
+/* noto-sans-jp-500 - japanese */
+@font-face {
+	font-display: block;
+	font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-500.eot');
+	src:
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-500.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-500.woff2') format('woff2'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-500.woff') format('woff'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-500.ttf') format('truetype'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-500.svg#NotoSansJP') format('svg');
 }
 /* noto-sans-jp-600 - japanese */
 @font-face {
@@ -121,11 +116,26 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 	font-style: normal;
 	font-weight: 600;
 	src: url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-600.eot');
-	src: url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-600.eot?#iefix') format('embedded-opentype'),
+	src:
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-600.eot?#iefix') format('embedded-opentype'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-600.woff2') format('woff2'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-600.woff') format('woff'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-600.ttf') format('truetype'),
 		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-600.svg#NotoSansJP') format('svg');
+}
+/* noto-sans-jp-700 - japanese */
+@font-face {
+	font-display: block;
+	font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-700.eot');
+	src:
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-700.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-700.woff2') format('woff2'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-700.woff') format('woff'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-700.ttf') format('truetype'),
+		url('../assets/fonts/noto-sans-jp/noto-sans-jp-v56-japanese-700.svg#NotoSansJP') format('svg');
 }
 
 /* noto-sans-sc-regular - chinese-simplified */
@@ -135,12 +145,28 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 	font-style: normal;
 	font-weight: 400;
 	src: url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-regular.eot');
-	src: url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-regular.eot?#iefix')
+	src:
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-regular.eot?#iefix')
 			format('embedded-opentype'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-regular.woff2') format('woff2'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-regular.woff') format('woff'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-regular.ttf') format('truetype'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-regular.svg#NotoSansSC') format('svg');
+}
+/* noto-sans-sc-500 - chinese-simplified */
+@font-face {
+	font-display: block;
+	font-family: 'Noto Sans SC';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-500.eot');
+	src:
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-500.eot?#iefix')
+			format('embedded-opentype'),
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-500.woff2') format('woff2'),
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-500.woff') format('woff'),
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-500.ttf') format('truetype'),
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-500.svg#NotoSansSC') format('svg');
 }
 /* noto-sans-sc-600 - chinese-simplified */
 @font-face {
@@ -149,41 +175,28 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 	font-style: normal;
 	font-weight: 600;
 	src: url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-600.eot');
-	src: url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-600.eot?#iefix')
+	src:
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-600.eot?#iefix')
 			format('embedded-opentype'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-600.woff2') format('woff2'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-600.woff') format('woff'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-600.ttf') format('truetype'),
 		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-600.svg#NotoSansSC') format('svg');
 }
-
-/* noto-sans-tc-regular - chinese-traditional */
+/* noto-sans-sc-700 - chinese-simplified */
 @font-face {
 	font-display: block;
-	font-family: 'Noto Sans TC';
+	font-family: 'Noto Sans SC';
 	font-style: normal;
-	font-weight: 400;
-	src: url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-regular.eot');
-	src: url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-regular.eot?#iefix')
+	font-weight: 700;
+	src: url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-700.eot');
+	src:
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-700.eot?#iefix')
 			format('embedded-opentype'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-regular.woff2') format('woff2'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-regular.woff') format('woff'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-regular.ttf') format('truetype'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-regular.svg#NotoSansTC') format('svg');
-}
-/* noto-sans-tc-600 - chinese-traditional */
-@font-face {
-	font-display: block;
-	font-family: 'Noto Sans TC';
-	font-style: normal;
-	font-weight: 600;
-	src: url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-600.eot');
-	src: url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-600.eot?#iefix')
-			format('embedded-opentype'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-600.woff2') format('woff2'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-600.woff') format('woff'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-600.ttf') format('truetype'),
-		url('../assets/fonts/noto-sans-tc/noto-sans-tc-v39-chinese-traditional-600.svg#NotoSansTC') format('svg');
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-700.woff2') format('woff2'),
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-700.woff') format('woff'),
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-700.ttf') format('truetype'),
+		url('../assets/fonts/noto-sans-sc/noto-sans-sc-v40-chinese-simplified-700.svg#NotoSansSC') format('svg');
 }
 
 // Icons
@@ -192,7 +205,8 @@ $fonts: 'hkgrotesk-light' 'hkgrotesk-regular' 'hkgrotesk-medium' 'hkgrotesk-semi
 @font-face {
 	font-family: 'icons';
 	src: url('../assets/fonts/icons/icons.eot?f53qb7');
-	src: url('../assets/fonts/icons/icons.eot?f53qb7#iefix') format('embedded-opentype'),
+	src:
+		url('../assets/fonts/icons/icons.eot?f53qb7#iefix') format('embedded-opentype'),
 		url('../assets/fonts/icons/icons.ttf?f53qb7') format('truetype'),
 		url('../assets/fonts/icons/icons.woff?f53qb7') format('woff'),
 		url('../assets/fonts/icons/icons.svg?f53qb7#icons') format('svg');

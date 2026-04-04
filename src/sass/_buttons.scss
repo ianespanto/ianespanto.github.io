@@ -2,7 +2,7 @@
 
 .btn {
 	border: rem(1) solid;
-	font-weight: 400;
+	font-weight: var(--font-weight-regular);
 	// text-transform: lowercase;
 	font-size: rem(16);
 	padding: 0 rem(15);
@@ -13,7 +13,9 @@
 	display: inline-block;
 	letter-spacing: rem(0.35);
 	@include noSelect;
-	transition: background var(--speed), border-color var(--speed);
+	transition:
+		background var(--speed),
+		border-color var(--speed);
 
 	&:hover {
 		cursor: pointer;

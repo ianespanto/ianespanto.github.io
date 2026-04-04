@@ -154,7 +154,9 @@
 	overflow: hidden;
 	span[data-hover] {
 		display: $display;
-		transition: color var(--speed), transform var(--speed);
+		transition:
+			color var(--speed),
+			transform var(--speed);
 		&::after {
 			position: absolute;
 			width: 100%;
@@ -332,7 +334,7 @@
 }
 
 @mixin giantName {
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 	text-transform: lowercase;
 	font-size: min(10vw, rem(100));
 	letter-spacing: min(1vw, rem(10));

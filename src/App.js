@@ -136,7 +136,15 @@ export default function App() {
 							}
 						/>
 						<Route path="/contact" element={<Contact />} />
-						<Route path="/*" element={<NotFound pageTransInProgress={pageTransInProgress} />} />
+						<Route
+							path="/*"
+							element={
+								<NotFound
+									pageTransInProgress={pageTransInProgress}
+									setPageTransInProgress={setPageTransInProgress}
+								/>
+							}
+						/>
 					</Routes>
 					<footer className="show-medium main-footer footer">
 						<Footer

@@ -32,9 +32,9 @@ export default function Footer({ isMobileNav, activeTooltip, setActiveTooltip, l
 	const { t } = useTranslation();
 	const { handleGroupBlur, handleTooltipSelection, handleTriggerFocus, isTooltipOpen, setTooltipRef, toggleTooltip } =
 		useTooltipControls({
-		activeTooltip,
-		setActiveTooltip,
-		tooltipNames: ['links', 'credit', 'lang'],
+			activeTooltip,
+			setActiveTooltip,
+			tooltipNames: ['links', 'credit', 'lang'],
 		});
 
 	const tooltipItems = [
@@ -98,7 +98,7 @@ export default function Footer({ isMobileNav, activeTooltip, setActiveTooltip, l
 					<button
 						key={`langListItem_${i}`}
 						type="button"
-						className={`langOption ${id}${lang === id ? ' current' : ''}`}
+						className={`langOption langOption--${id} ${id}${lang === id ? ' current' : ''}`}
 						onClick={() => setLang(id)}
 					>
 						<span>{name}</span>
@@ -111,9 +111,6 @@ export default function Footer({ isMobileNav, activeTooltip, setActiveTooltip, l
 	return (
 		<div className="inner-wrapper">
 			<nav className="footer-nav" aria-label={isMobileNav ? 'Mobile footer' : 'Footer'}>
-				<div className="copyright">
-					<span>{t('copyright_line', { year: new Date().getFullYear() })}</span>
-				</div>
 				<ul>
 					{tooltipItems.map(({ name, label, id, panelClassName, triggerClassName, content }) => (
 						<li key={name} ref={setTooltipRef(name, 'group')} onBlur={e => handleGroupBlur(name, e)}>
@@ -147,6 +144,9 @@ export default function Footer({ isMobileNav, activeTooltip, setActiveTooltip, l
 						</li>
 					))}
 				</ul>
+				<div className="copyright">
+					<span>{t('copyright_line', { year: new Date().getFullYear() })}</span>
+				</div>
 			</nav>
 		</div>
 	);

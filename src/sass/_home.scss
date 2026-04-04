@@ -1,7 +1,9 @@
 @use 'globals' as *;
 
 main {
-	transition: transform 1s var(--ease-in-out-quart), opacity 1s var(--ease-in-out-quart);
+	transition:
+		transform 1s var(--ease-in-out-quart),
+		opacity 1s var(--ease-in-out-quart);
 	min-height: 100vh;
 	position: relative;
 	padding-top: rem(50);
@@ -28,7 +30,7 @@ main {
 
 .subheading {
 	@include underlined();
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 }
 
 .home-about {
@@ -149,7 +151,9 @@ main {
 				background-color: var(--color-platinum);
 				margin: 0 auto;
 				transform: rotate(-45deg);
-				transition: background-color 0.4s, width 0.4s;
+				transition:
+					background-color 0.4s,
+					width 0.4s;
 			}
 			.circle {
 				@include absoluteCenter;
@@ -158,7 +162,9 @@ main {
 				border: rem(1) solid var(--color-platinum);
 				border-radius: 50%;
 				background-color: var(--color-sand-1);
-				transition: background-color 0.4s, border-color 0.4s;
+				transition:
+					background-color 0.4s,
+					border-color 0.4s;
 			}
 		}
 		.extra-container,
@@ -215,7 +221,7 @@ main {
 		font-size: rem(22);
 		color: var(--color-black);
 		line-height: 1.3;
-		font-weight: 600;
+		font-weight: var(--font-weight-semi-bold);
 	}
 
 	// Project underline
@@ -272,7 +278,9 @@ main {
 	&__fn {
 		display: inline-block;
 		position: relative;
-		transition: transform 0.4s, opacity 0.4s;
+		transition:
+			transform 0.4s,
+			opacity 0.4s;
 	}
 
 	@include bpmin(landscape) {
